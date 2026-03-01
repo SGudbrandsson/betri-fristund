@@ -98,18 +98,49 @@
 
   function isValidActivity(card) {
     const t = card.title;
-    if (/keikogi|æfingagalli/i.test(t)) return false;
-    if (/gjafakort|gift\s*card/i.test(t)) return false;
+    // "Get Together" spam duplicates from hvirfill-indexer
+    if (/^Get Together/i.test(t)) return false;
+    // Membership fees
+    if (/félagsgjald/i.test(t)) return false;
+    // Gift certificates and gift cards
+    if (/gjafabréf|gjafakort|gift\s*card/i.test(t)) return false;
+    // Merchandise and clothing
+    if (/keikogi|æfingagalli|fatnaður/i.test(t)) return false;
+    // Appeal fees
     if (/^áfrýjunargjald$/i.test(t)) return false;
+    // Subscriptions, annual passes, membership cards, annual fees
+    if (/áskrift|árskort|ársgjald|staðgreidd kort|námsmannakort|félagsskírteini/i.test(t)) return false;
+    // Payments and receipts
+    if (/^greiðsla\b|^kvittun\b/i.test(t)) return false;
+    // Practice fees (any tag)
+    if (/æfingagj[aö]/i.test(t)) return false;
+    // Donations, fundraising, sponsorship
+    if (/almannaheill|styrktarlína|styrktaraðilar/i.test(t)) return false;
+    // Competition passes (not activities)
+    if (/keppnispassi/i.test(t)) return false;
+    // Generic standalone fee words with single 'other' tag
     if (card.tags.length === 1 && card.tags[0] === 'other') {
       if (/\bgjald\b|\bgjöld\b/i.test(t) && !/æfing|þjálfun|námskeið|leikskóli/i.test(t)) {
         return false;
       }
     }
-    if (/world\s*class/i.test(t) && /gjafakort|gift/i.test(t)) return false;
-    if (/^greiðsla\b|^kvittun\b/i.test(t)) return false;
+    // Supporters clubs
+    if (/stuðningsfélagar/i.test(t)) return false;
+    // Donations to elite teams (but not frístundastyrkur)
+    if (/\bstyrkur\b|\bstyrkir\b/i.test(t) && !/frístundastyrkur/i.test(t)) return false;
+    // Foreign-language membership fees
+    if (/mokestis/i.test(t)) return false;
+    // Bus passes, school escorts
+    if (/fylkisrút/i.test(t)) return false;
+    if (/\bfylgd\b/i.test(t)) return false;
+    // Card/pass purchases, subscription periods
+    if (/^Kort\b|opið kort|stakir mánuðir/i.test(t)) return false;
     return true;
   }
+
+  // ── Configuration: Smart pagination ───────────────────────────────
+
+  const MIN_RESULTS = 6;  // Minimum valid cards to accumulate before showing
 
   // ── State ─────────────────────────────────────────────────────────
 
@@ -127,6 +158,48 @@
     error: null,
     hasSearched: false,
   };
+
+  // ── URL State ────────────────────────────────────────────────────
+
+  function stateToUrl() {
+    const params = new URLSearchParams();
+    if (state.age) params.set('age', state.age);
+    if (state.from) params.set('from', state.from);
+    if (state.to) params.set('to', state.to);
+    if (state.tags) params.set('tags', state.tags);
+    if (state.postCode) params.set('postCode', state.postCode);
+    if (state.sortBy) params.set('sortBy', state.sortBy);
+    if (state.page > 1) params.set('page', String(state.page));
+    return params.toString();
+  }
+
+  function urlToState() {
+    const params = new URLSearchParams(window.location.search);
+    const defaults = getDefaultDates();
+    state.age = params.get('age') || '';
+    state.from = params.get('from') || defaults.from;
+    state.to = params.get('to') || defaults.to;
+    state.tags = params.get('tags') || '';
+    state.postCode = params.get('postCode') || '';
+    state.sortBy = params.get('sortBy') || '';
+    state.page = parseInt(params.get('page'), 10) || 1;
+  }
+
+  function syncFormFromState() {
+    ageSelect.value = state.age;
+    ageWelcome.value = state.age;
+    dateFrom.value = state.from;
+    dateTo.value = state.to;
+    locationSelect.value = state.postCode;
+    sortSelect.value = state.sortBy;
+    updateTagChips();
+  }
+
+  function pushUrl() {
+    const qs = stateToUrl();
+    const url = qs ? `?${qs}` : window.location.pathname;
+    history.pushState(null, '', url);
+  }
 
   // ── DOM refs ──────────────────────────────────────────────────────
 
@@ -269,6 +342,28 @@
     throw new Error('Ekki tókst að ná sambandi við frístund.is');
   }
 
+  // ── Smart pagination: auto-fetch until enough valid results ──────
+
+  async function fetchFiltered() {
+    let allFiltered = [];
+    let pageInfo = null;
+    let apiPage = state.page;
+
+    while (true) {
+      state.page = apiPage;
+      const data = await fetchPage();
+      const filtered = (data.cards || []).filter(isValidActivity);
+      allFiltered = allFiltered.concat(filtered);
+      pageInfo = data.pageInfo || null;
+
+      if (allFiltered.length >= MIN_RESULTS || !pageInfo?.hasNextPage) break;
+      apiPage++;
+    }
+
+    state.page = apiPage;
+    return { cards: allFiltered, pageInfo };
+  }
+
   // ── UI: Populate dropdowns ────────────────────────────────────────
 
   function populateAgeOptions(selectEl) {
@@ -401,9 +496,8 @@
       return;
     }
     resultsInfo.hidden = false;
-    const total = state.pageInfo.itemCount;
     const shown = state.cards.length;
-    resultsInfo.innerHTML = `<strong>${shown}</strong> af <strong>${total}</strong> niðurstöðum`;
+    resultsInfo.innerHTML = `<strong>${shown}</strong> niðurstöður sýndar`;
   }
 
   function updateLoadMore() {
@@ -446,9 +540,7 @@
     state.sortBy = sortSelect.value;
   }
 
-  async function search(append) {
-    readFilters();
-
+  async function performSearch(append) {
     if (!append) {
       state.page = 1;
       state.cards = [];
@@ -461,11 +553,10 @@
     updateLoadMore();
 
     try {
-      const data = await fetchPage();
-      const filtered = (data.cards || []).filter(isValidActivity);
+      const { cards: filtered, pageInfo } = await fetchFiltered();
 
       state.cards = append ? state.cards.concat(filtered) : filtered;
-      state.pageInfo = data.pageInfo || null;
+      state.pageInfo = pageInfo;
       state.loading = false;
 
       if (state.cards.length === 0 && !state.pageInfo?.hasNextPage) {
@@ -489,20 +580,34 @@
     }
   }
 
+  async function search(append) {
+    readFilters();
+    if (!append) {
+      state.page = 1;
+      state.cards = [];
+    }
+    pushUrl();
+    await performSearch(append);
+  }
+
   async function loadMore() {
     if (state.loading || !state.pageInfo?.hasNextPage) return;
     state.page++;
     await search(true);
   }
 
-  function clearFilters() {
+  function resetToWelcome() {
     const defaults = getDefaultDates();
     dateFrom.value = defaults.from;
     dateTo.value = defaults.to;
     locationSelect.value = '';
     sortSelect.value = '';
     ageSelect.value = '';
+    state.age = '';
+    state.from = defaults.from;
+    state.to = defaults.to;
     state.tags = '';
+    state.postCode = '';
     state.sortBy = '';
     state.page = 1;
     state.cards = [];
@@ -516,10 +621,14 @@
     errorState.hidden = true;
     loadingState.hidden = true;
     resultsGrid.hidden = false;
-    // Go back to welcome
     filtersEl.hidden = true;
     welcomeEl.hidden = false;
     ageWelcome.value = '';
+  }
+
+  function clearFilters() {
+    resetToWelcome();
+    history.pushState(null, '', window.location.pathname);
   }
 
   // ── Event binding ─────────────────────────────────────────────────
@@ -550,6 +659,19 @@
         if (e.key === 'Enter') search(false);
       });
     });
+
+    // Browser back/forward navigation
+    window.addEventListener('popstate', () => {
+      const params = new URLSearchParams(window.location.search);
+      if (params.has('age') || params.has('tags') || params.has('postCode')) {
+        urlToState();
+        syncFormFromState();
+        showFiltersView();
+        performSearch(false);
+      } else {
+        resetToWelcome();
+      }
+    });
   }
 
   // ── Init ──────────────────────────────────────────────────────────
@@ -565,6 +687,15 @@
 
     renderTagChips();
     bindEvents();
+
+    // Restore state from URL if query params exist
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('age') || params.has('tags') || params.has('postCode')) {
+      urlToState();
+      syncFormFromState();
+      showFiltersView();
+      performSearch(false);
+    }
   }
 
   document.addEventListener('DOMContentLoaded', init);
