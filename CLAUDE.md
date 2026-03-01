@@ -11,7 +11,7 @@ betri-fristund/
   CLAUDE.md          # This file
   tests.js           # Test suite (node tests.js)
   .gitignore
-  public/            # Served by GitHub Pages
+  docs/              # Served by GitHub Pages
     index.html       # Single page HTML
     app.js           # All application logic (vanilla JS IIFE)
     styles.css       # All styles (mobile-first, no preprocessor)
@@ -41,9 +41,9 @@ test (skipped when offline). All tests must pass before pushing.
 
 ## Deployment
 
-The app is deployed via GitHub Pages from the `public/` directory on the `main`
+The app is deployed via GitHub Pages from the `docs/` directory on the `main`
 branch. In GitHub repo Settings > Pages, set Source to "Deploy from a branch",
-select `main` branch and `/public` folder.
+select `main` branch and `/docs` folder.
 
 ## Development Workflow
 
@@ -51,7 +51,7 @@ select `main` branch and `/public` folder.
 - Keep everything vanilla JS — no npm, no build tools, no frameworks
 - Update `tests.js` when changing pure functions (functions are duplicated for
   Node.js testing since `app.js` runs as a browser IIFE)
-- Test locally by opening `public/index.html` in a browser
+- Test locally by opening `docs/index.html` in a browser
 - Run `node tests.js` before pushing
 
 ## Key Architecture
