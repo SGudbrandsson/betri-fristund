@@ -223,20 +223,24 @@
   function parseNextData(html) {
     const marker = '<script id="__NEXT_DATA__" type="application/json">';
     let start = html.indexOf(marker);
+    let data;
     if (start !== -1) {
       const jsonStart = start + marker.length;
       const jsonEnd = html.indexOf('</script>', jsonStart);
-      return JSON.parse(html.substring(jsonStart, jsonEnd));
+      data = JSON.parse(html.substring(jsonStart, jsonEnd));
+    } else {
+      // Fallback: look for any script with __NEXT_DATA__
+      const alt = '__NEXT_DATA__';
+      const altIdx = html.indexOf(alt);
+      if (altIdx === -1) throw new Error('Gat ekki lesið gögn');
+      const scriptStart = html.lastIndexOf('<script', altIdx);
+      const scriptEnd = html.indexOf('</script>', altIdx);
+      if (scriptStart === -1 || scriptEnd === -1) throw new Error('Gat ekki lesið gögn');
+      const tagEnd = html.indexOf('>', scriptStart) + 1;
+      data = JSON.parse(html.substring(tagEnd, scriptEnd));
     }
-    // Fallback: look for any script with __NEXT_DATA__
-    const alt = '__NEXT_DATA__';
-    const altIdx = html.indexOf(alt);
-    if (altIdx === -1) throw new Error('Gat ekki lesið gögn');
-    const scriptStart = html.lastIndexOf('<script', altIdx);
-    const scriptEnd = html.indexOf('</script>', altIdx);
-    if (scriptStart === -1 || scriptEnd === -1) throw new Error('Gat ekki lesið gögn');
-    const tagEnd = html.indexOf('>', scriptStart) + 1;
-    return JSON.parse(html.substring(tagEnd, scriptEnd));
+    // Support both { pageProps: ... } and { props: { pageProps: ... } }
+    return data.props || data;
   }
 
   async function fetchPage() {
