@@ -441,6 +441,11 @@ const TRANSLATIONS = {
     viewDetails: 'Skoða nánar',
     ageYear: 'ára',
     resultsCount: 'niðurstöður sýndar',
+    hiddenCount: 'óskylt falið',
+    showHidden: 'Sýna falið',
+    hideHidden: 'Fela aftur',
+    aboutTitle: 'Af hverju þessi síða?',
+    aboutText: 'Frístund.is inniheldur félagsgjöld, gjafabréf, búnað og annað sem er ekki starfsemi fyrir börn. Þessi síða sýnir eingöngu raunverulega frístund — sumarbúðir, íþróttir, list og námskeið — svo þú finnir það sem skiptir máli, hraðar.',
   },
   en: {
     tagline: 'What should your child do this summer?',
@@ -476,6 +481,11 @@ const TRANSLATIONS = {
     viewDetails: 'View details',
     ageYear: 'years old',
     resultsCount: 'results shown',
+    hiddenCount: 'non-activities hidden',
+    showHidden: 'Show hidden',
+    hideHidden: 'Hide again',
+    aboutTitle: 'Why this page?',
+    aboutText: 'Frístund.is lists membership fees, gift cards, merchandise and other items that aren\'t actual activities for kids. This page shows only real activities — summer camps, sports, arts and courses — so you find what matters, faster.',
   },
 };
 
@@ -578,6 +588,7 @@ const htmlI18nKeys = [
   'loadMore', 'emptyTitle', 'emptyText',
   'errorTitle', 'errorText', 'retryBtn', 'loadingText',
   'footerData', 'footerNote',
+  'aboutTitle', 'aboutText',
 ];
 
 let allCovered = true;

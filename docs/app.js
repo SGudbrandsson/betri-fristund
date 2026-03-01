@@ -111,6 +111,11 @@
       viewDetails: 'Skoða nánar',
       ageYear: 'ára',
       resultsCount: 'niðurstöður sýndar',
+      hiddenCount: 'óskylt falið',
+      showHidden: 'Sýna falið',
+      hideHidden: 'Fela aftur',
+      aboutTitle: 'Af hverju þessi síða?',
+      aboutText: 'Frístund.is inniheldur félagsgjöld, gjafabréf, búnað og annað sem er ekki starfsemi fyrir börn. Þessi síða sýnir eingöngu raunverulega frístund — sumarbúðir, íþróttir, list og námskeið — svo þú finnir það sem skiptir máli, hraðar.',
     },
     en: {
       tagline: 'What should your child do this summer?',
@@ -146,6 +151,11 @@
       viewDetails: 'View details',
       ageYear: 'years old',
       resultsCount: 'results shown',
+      hiddenCount: 'non-activities hidden',
+      showHidden: 'Show hidden',
+      hideHidden: 'Hide again',
+      aboutTitle: 'Why this page?',
+      aboutText: 'Frístund.is lists membership fees, gift cards, merchandise and other items that aren\'t actual activities for kids. This page shows only real activities — summer camps, sports, arts and courses — so you find what matters, faster.',
     },
   };
 
@@ -232,6 +242,9 @@
     loading: false,
     error: null,
     hasSearched: false,
+    hiddenCards: [],
+    hiddenCount: 0,
+    showHidden: false,
     lang: (() => { try { return localStorage.getItem('lang'); } catch (_) { return null; } })() || 'is',
   };
 
@@ -300,7 +313,18 @@
   const errorState = $('#error-state');
   const errorMessage = $('#error-message');
   const retryBtn = $('#retry-btn');
+  const aboutToggle = $('#about-toggle');
+  const aboutBody = $('#about-body');
   const langToggle = $('#lang-toggle');
+
+  // Bind about toggle — early binding
+  if (aboutToggle && aboutBody) {
+    aboutToggle.addEventListener('click', () => {
+      const open = aboutBody.hidden;
+      aboutBody.hidden = !open;
+      aboutToggle.setAttribute('aria-expanded', String(open));
+    });
+  }
 
   // Bind lang toggle immediately — not inside init()/bindEvents()
   // so it works even if other init steps fail
@@ -471,14 +495,21 @@
 
   async function fetchFiltered() {
     let allFiltered = [];
+    let allHidden = [];
     let pageInfo = null;
     let apiPage = state.page;
 
     while (true) {
       state.page = apiPage;
       const data = await fetchPage();
-      const filtered = (data.cards || []).filter(isValidActivity);
-      allFiltered = allFiltered.concat(filtered);
+      const allCards = data.cards || [];
+      allCards.forEach((card) => {
+        if (isValidActivity(card)) {
+          allFiltered.push(card);
+        } else {
+          allHidden.push(card);
+        }
+      });
       pageInfo = data.pageInfo || null;
 
       if (allFiltered.length >= MIN_RESULTS || !pageInfo?.hasNextPage) break;
@@ -486,7 +517,7 @@
     }
 
     state.page = apiPage;
-    return { cards: allFiltered, pageInfo };
+    return { cards: allFiltered, hiddenCards: allHidden, pageInfo };
   }
 
   // ── UI: Populate dropdowns ────────────────────────────────────────
@@ -633,9 +664,16 @@
   }
 
   function reRenderCards() {
-    if (state.cards.length === 0) return;
+    if (state.cards.length === 0 && state.hiddenCards.length === 0) return;
     resultsGrid.innerHTML = '';
     state.cards.forEach((card) => resultsGrid.appendChild(renderCard(card)));
+    if (state.showHidden) {
+      state.hiddenCards.forEach((card) => {
+        const el = renderCard(card);
+        el.classList.add('card--hidden');
+        resultsGrid.appendChild(el);
+      });
+    }
   }
 
   function updateResultsInfo() {
@@ -644,8 +682,23 @@
       return;
     }
     resultsInfo.hidden = false;
-    const shown = state.cards.length;
-    resultsInfo.innerHTML = `<strong>${shown}</strong> ${t('resultsCount')}`;
+    const shown = state.showHidden ? state.cards.length + state.hiddenCount : state.cards.length;
+    let html = `<strong>${shown}</strong> ${t('resultsCount')}`;
+    if (state.hiddenCount > 0) {
+      html += ` · <strong>${state.hiddenCount}</strong> ${t('hiddenCount')}`;
+      const toggleLabel = state.showHidden ? t('hideHidden') : t('showHidden');
+      html += ` <button type="button" class="hidden-toggle" id="hidden-toggle">${toggleLabel}</button>`;
+    }
+    resultsInfo.innerHTML = html;
+    // Bind toggle
+    const toggleBtn = document.getElementById('hidden-toggle');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        state.showHidden = !state.showHidden;
+        reRenderCards();
+        updateResultsInfo();
+      });
+    }
   }
 
   function updateLoadMore() {
@@ -692,6 +745,9 @@
     if (!append) {
       state.page = 1;
       state.cards = [];
+      state.hiddenCards = [];
+      state.hiddenCount = 0;
+      state.showHidden = false;
     }
 
     state.loading = true;
@@ -701,9 +757,11 @@
     updateLoadMore();
 
     try {
-      const { cards: filtered, pageInfo } = await fetchFiltered();
+      const { cards: filtered, hiddenCards, pageInfo } = await fetchFiltered();
 
       state.cards = append ? state.cards.concat(filtered) : filtered;
+      state.hiddenCards = append ? state.hiddenCards.concat(hiddenCards) : hiddenCards;
+      state.hiddenCount = state.hiddenCards.length;
       state.pageInfo = pageInfo;
       state.loading = false;
 
@@ -759,6 +817,9 @@
     state.sortBy = '';
     state.page = 1;
     state.cards = [];
+    state.hiddenCards = [];
+    state.hiddenCount = 0;
+    state.showHidden = false;
     state.pageInfo = null;
     state.hasSearched = false;
     updateTagChips();
