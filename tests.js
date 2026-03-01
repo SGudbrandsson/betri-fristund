@@ -96,6 +96,7 @@ function getCardIcon(tags) {
 
 function isValidActivity(card) {
   const t = card.title;
+  const desc = card.description || '';
   if (/^Get Together/i.test(t)) return false;
   if (/félagsgjald/i.test(t)) return false;
   if (/gjafabréf|gjafakort|gift\s*card/i.test(t)) return false;
@@ -112,6 +113,7 @@ function isValidActivity(card) {
     }
   }
   if (/stuðningsfélagar/i.test(t)) return false;
+  if (/stuðningsaðili/i.test(t)) return false;
   if (/\bstyrkur\b|\bstyrkir\b/i.test(t) && !/frístundastyrkur/i.test(t)) return false;
   if (/mokestis/i.test(t)) return false;
   if (/fylkisrút/i.test(t)) return false;
@@ -147,6 +149,12 @@ function isValidActivity(card) {
   if (/^Ultraform$/i.test(club)) return false;
   // The Dance Space: adult fitness classes (keep kids cheerleading)
   if (/^The Dance Space/i.test(club) && /\bpilates\b|\baerobics\b|\baerial\s+yoga\b/i.test(t)) return false;
+  // Description-based checks (for enriched data)
+  if (desc) {
+    if (/\bgjafakort\b/i.test(desc)) return false;
+    if (/stuðningsmannaklúbb/i.test(desc)) return false;
+    if (/marka\s+fótspor/i.test(desc)) return false;
+  }
   return true;
 }
 
@@ -442,6 +450,19 @@ assert(!isValidActivity({ title: 'Step aerobics | March', tags: ['gym', 'dance']
 assert(!isValidActivity({ title: 'Aerial Yoga | March', tags: ['gym', 'yoga', 'dance'], clubname: 'The Dance Space Reykjavík' }), 'rejects Dance Space aerial yoga');
 assert(isValidActivity({ title: 'Cheerleading for 5-8 y.o.', tags: ['gym', 'dance'], clubname: 'The Dance Space Reykjavík' }), 'allows Dance Space cheerleading');
 
+// Supporter/patron titles
+assert(!isValidActivity({ title: 'Stuðningsaðili Ægisbúa', tags: ['scouts'] }), 'rejects stuðningsaðili');
+assert(!isValidActivity({ title: 'Stuðningsaðili Fjölnis', tags: ['football'] }), 'rejects stuðningsaðili variant');
+
+// Description-based: gift cards in descriptions
+assert(!isValidActivity({ title: 'Þematengt frönskunámskeið (16 klst.)', tags: ['other'], description: 'Þetta gjafakort gildir fyrir þematengt frönskunámskeið' }), 'rejects gjafakort in description');
+assert(isValidActivity({ title: 'Frönskunámskeið', tags: ['language_courses'], description: 'Lærðu frönsku í sumar' }), 'allows course without gjafakort');
+
+// Description-based: supporter clubs
+assert(!isValidActivity({ title: '112an', tags: ['football'], description: '112an stuðningsmannaklúbbur Fjölnis' }), 'rejects stuðningsmannaklúbbur in description');
+assert(!isValidActivity({ title: 'Valssporið', tags: ['handball'], description: 'sem vilja marka fótspor í sögu Vals' }), 'rejects marka fótspor in description');
+assert(isValidActivity({ title: 'Fótboltaskóli', tags: ['football'], description: 'Frábær fótboltaskóli fyrir börn' }), 'allows normal activity with description');
+
 // Fixed fullorðinn matching (fullorðinndeildar variant)
 assert(!isValidActivity({ title: 'Voræfingar fullorðinndeildar RHC 2026', tags: ['other'], age: [18] }), 'rejects fullorðinndeildar');
 
@@ -589,6 +610,12 @@ const TRANSLATIONS = {
     hideHidden: 'Fela aftur',
     aboutTitle: 'Af hverju þessi síða?',
     aboutText: 'Frístund.is inniheldur félagsgjöld, gjafabréf, búnað og annað sem er ekki starfsemi fyrir börn. Þessi síða sýnir eingöngu raunverulega frístund — sumarbúðir, íþróttir, list og námskeið — svo þú finnir það sem skiptir máli, hraðar.',
+    allAges: 'Allir aldrar',
+    searchPlaceholder: 'Leita...',
+    searchLabel: 'Leit',
+    showMore: 'Lesa meira',
+    showLess: 'Minna',
+    footerCTO: 'Tækniráðgjöf og tæknistjórnun',
   },
   en: {
     tagline: 'What should your child do this summer?',
@@ -630,6 +657,12 @@ const TRANSLATIONS = {
     hideHidden: 'Hide again',
     aboutTitle: 'Why this page?',
     aboutText: 'Frístund.is lists membership fees, gift cards, merchandise and other items that aren\'t actual activities for kids. This page shows only real activities — summer camps, sports, arts and courses — so you find what matters, faster.',
+    allAges: 'All ages',
+    searchPlaceholder: 'Search...',
+    searchLabel: 'Search',
+    showMore: 'Read more',
+    showLess: 'Less',
+    footerCTO: 'CTO services & tech leadership',
   },
 };
 
@@ -733,6 +766,7 @@ const htmlI18nKeys = [
   'errorTitle', 'errorText', 'retryBtn', 'loadingText',
   'footerData', 'footerNote',
   'aboutTitle', 'aboutText',
+  'searchLabel', 'footerCTO',
 ];
 
 let allCovered = true;

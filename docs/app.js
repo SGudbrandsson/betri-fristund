@@ -122,6 +122,12 @@
       hideHidden: 'Fela aftur',
       aboutTitle: 'Af hverju þessi síða?',
       aboutText: 'Frístund.is inniheldur félagsgjöld, gjafabréf, búnað og annað sem er ekki starfsemi fyrir börn. Þessi síða sýnir eingöngu raunverulega frístund — sumarbúðir, íþróttir, list og námskeið — svo þú finnir það sem skiptir máli, hraðar.',
+      allAges: 'Allir aldrar',
+      searchPlaceholder: 'Leita...',
+      searchLabel: 'Leit',
+      showMore: 'Lesa meira',
+      showLess: 'Minna',
+      footerCTO: 'Tækniráðgjöf og tæknistjórnun',
     },
     en: {
       tagline: 'What should your child do this summer?',
@@ -163,6 +169,12 @@
       hideHidden: 'Hide again',
       aboutTitle: 'Why this page?',
       aboutText: 'Frístund.is lists membership fees, gift cards, merchandise and other items that aren\'t actual activities for kids. This page shows only real activities — summer camps, sports, arts and courses — so you find what matters, faster.',
+      allAges: 'All ages',
+      searchPlaceholder: 'Search...',
+      searchLabel: 'Search',
+      showMore: 'Read more',
+      showLess: 'Less',
+      footerCTO: 'CTO services & tech leadership',
     },
   };
 
@@ -190,6 +202,7 @@
 
   function isValidActivity(card) {
     const t = card.title;
+    const desc = card.description || '';
     // "Get Together" spam duplicates from hvirfill-indexer
     if (/^Get Together/i.test(t)) return false;
     // Membership fees
@@ -218,6 +231,8 @@
     }
     // Supporters clubs
     if (/stuðningsfélagar/i.test(t)) return false;
+    // Supporter/patron roles
+    if (/stuðningsaðili/i.test(t)) return false;
     // Donations to elite teams (but not frístundastyrkur)
     if (/\bstyrkur\b|\bstyrkir\b/i.test(t) && !/frístundastyrkur/i.test(t)) return false;
     // Foreign-language membership fees
@@ -265,6 +280,12 @@
     if (/^Ultraform$/i.test(club)) return false;
     // The Dance Space: adult fitness classes (keep kids cheerleading)
     if (/^The Dance Space/i.test(club) && /\bpilates\b|\baerobics\b|\baerial\s+yoga\b/i.test(t)) return false;
+    // Description-based checks (for enriched data)
+    if (desc) {
+      if (/\bgjafakort\b/i.test(desc)) return false;
+      if (/stuðningsmannaklúbb/i.test(desc)) return false;
+      if (/marka\s+fótspor/i.test(desc)) return false;
+    }
     return true;
   }
 
@@ -290,6 +311,8 @@
     hiddenCards: [],
     hiddenCount: 0,
     showHidden: false,
+    query: '',
+    tagCounts: null,
     lang: (() => { try { return localStorage.getItem('lang'); } catch (_) { return null; } })() || 'is',
   };
 
@@ -303,6 +326,7 @@
     if (state.tags) params.set('tags', state.tags);
     if (state.postCode) params.set('postCode', state.postCode);
     if (state.sortBy) params.set('sortBy', state.sortBy);
+    if (state.query) params.set('q', state.query);
     if (state.page > 1) params.set('page', String(state.page));
     return params.toString();
   }
@@ -316,6 +340,7 @@
     state.tags = params.get('tags') || '';
     state.postCode = params.get('postCode') || '';
     state.sortBy = params.get('sortBy') || '';
+    state.query = params.get('q') || '';
     state.page = parseInt(params.get('page'), 10) || 1;
   }
 
@@ -326,6 +351,7 @@
     dateTo.value = state.to;
     locationSelect.value = state.postCode;
     sortSelect.value = state.sortBy;
+    if (queryInput) queryInput.value = state.query;
     updateTagChips();
   }
 
@@ -358,6 +384,7 @@
   const errorState = $('#error-state');
   const errorMessage = $('#error-message');
   const retryBtn = $('#retry-btn');
+  const queryInput = $('#query-input');
   const aboutToggle = $('#about-toggle');
   const aboutBody = $('#about-body');
   const langToggle = $('#lang-toggle');
@@ -399,6 +426,8 @@
       isOpt.classList.toggle('lang-option--active', state.lang === 'is');
       enOpt.classList.toggle('lang-option--active', state.lang === 'en');
     }
+    // Update search placeholder
+    if (queryInput) queryInput.placeholder = t('searchPlaceholder');
     // Re-render age options with translated text
     repopulateAgeOptions();
     // Re-render sort option text
@@ -575,13 +604,17 @@
     return new Date(parts[2], parts[1] - 1, parts[0]);
   }
 
-  function filterCachedCards(cards) {
+  function filterCachedCards(cards, options) {
+    const skipTags = options && options.skipTags;
     let filtered = cards;
+
+    // Re-apply isValidActivity to catch stale data
+    filtered = filtered.filter(isValidActivity);
 
     if (state.age) {
       const age = parseInt(state.age, 10);
       filtered = filtered.filter((card) => {
-        if (!Array.isArray(card.age) || card.age.length < 2) return true;
+        if (!Array.isArray(card.age) || card.age.length === 0) return true;
         const minAge = Math.min(...card.age);
         const maxAge = Math.max(...card.age);
         return age >= minAge && age <= maxAge;
@@ -603,15 +636,24 @@
       });
     }
 
-    if (state.tags) {
-      const selectedTags = state.tags.split(',');
+    if (state.query) {
+      const q = state.query.toLowerCase();
       filtered = filtered.filter((card) =>
-        card.tags.some((tag) => selectedTags.includes(tag))
+        card.title.toLowerCase().includes(q) ||
+        (card.clubname || '').toLowerCase().includes(q) ||
+        (card.description || '').toLowerCase().includes(q)
       );
     }
 
     if (state.postCode) {
       filtered = filtered.filter((card) => (card.location || '').trim() === state.postCode);
+    }
+
+    if (!skipTags && state.tags) {
+      const selectedTags = state.tags.split(',');
+      filtered = filtered.filter((card) =>
+        card.tags.some((tag) => selectedTags.includes(tag))
+      );
     }
 
     if (state.sortBy === 'name') {
@@ -637,11 +679,22 @@
     const data = await loadEventsJson();
     if (!data) return null;
 
+    // Compute tag counts (all filters except tags)
+    const baseFiltered = filterCachedCards(data.cards, { skipTags: true });
+    const tagCounts = { '': baseFiltered.length };
+    TAG_CATEGORIES.forEach((cat) => {
+      const catTags = cat.tags;
+      tagCounts[catTags.join(',')] = baseFiltered.filter((card) =>
+        card.tags.some((tag) => catTags.includes(tag))
+      ).length;
+    });
+
     const allFiltered = filterCachedCards(data.cards);
 
     return {
       cards: allFiltered,
       hiddenCards: [],
+      tagCounts,
       pageInfo: {
         page: 1,
         hasNextPage: false,
@@ -725,24 +778,31 @@
 
   function renderTagChips() {
     tagChipsEl.innerHTML = '';
+    const counts = state.tagCounts;
 
     const allChip = document.createElement('button');
     allChip.type = 'button';
     allChip.className = 'tag-chip';
     allChip.setAttribute('aria-pressed', state.tags === '' ? 'true' : 'false');
-    allChip.textContent = t('allTypes');
+    const allLabel = t('allTypes');
+    allChip.textContent = counts ? `${allLabel} (${counts['']})` : allLabel;
     allChip.addEventListener('click', () => { state.tags = ''; updateTagChips(); if (state.hasSearched) search(false); });
     tagChipsEl.appendChild(allChip);
 
     TAG_CATEGORIES.forEach((cat) => {
+      const apiTags = cat.tags.join(',');
+      const count = counts ? (counts[apiTags] || 0) : null;
+
+      // Hide empty categories when counts are available
+      if (counts && count === 0) return;
+
       const chip = document.createElement('button');
       chip.type = 'button';
       chip.className = 'tag-chip';
-      const apiTags = cat.tags.join(',');
       chip.dataset.tags = apiTags;
       chip.setAttribute('aria-pressed', state.tags === apiTags ? 'true' : 'false');
       const label = state.lang === 'en' ? cat.labelEn : cat.label;
-      chip.innerHTML = `<span class="chip-icon">${cat.icon}</span>${label}`;
+      chip.innerHTML = `<span class="chip-icon">${cat.icon}</span>${label}${count !== null ? ` (${count})` : ''}`;
       chip.addEventListener('click', () => { state.tags = apiTags; updateTagChips(); if (state.hasSearched) search(false); });
       tagChipsEl.appendChild(chip);
     });
@@ -762,7 +822,7 @@
     const icon = getCardIcon(card.tags);
     const hasImage = card.imageUrl && card.imageUrl !== 'null' && card.imageUrl !== '';
     const signupUrl = card.signupUrl || '';
-    const detailUrl = signupUrl || `${BASE_URL}/namskeid/${card.id}`;
+    const detailUrl = `${BASE_URL}/namskeid/${card.id}`;
     const locationStr = card.locationName
       ? escapeHtml(card.locationName)
       : card.location ? getLocationShort(card.location) : '';
@@ -778,10 +838,15 @@
           const max = Math.max(...card.age);
           return min === max ? `${min} ${t('ageYear')}` : `${min}–${max} ${t('ageYear')}`;
         })()
-      : '';
-    const descStr = card.description
-      ? escapeHtml(card.description.length > 120 ? card.description.slice(0, 120) + '…' : card.description)
-      : '';
+      : t('allAges');
+    const descStr = card.description ? escapeHtml(card.description) : '';
+    const hasLongDesc = card.description && card.description.length > 120;
+
+    // Google Maps link
+    const mapsQuery = card.locationName
+      ? `${card.locationName}, Iceland`
+      : card.location ? `${getLocationShort(card.location)}, Reykjavik, Iceland` : '';
+    const mapsUrl = mapsQuery ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapsQuery)}` : '';
 
     const el = document.createElement('article');
     el.className = 'card';
@@ -806,6 +871,9 @@
       .slice(0, 3)
       .map((t) => `<span class="card-tag">${escapeHtml(getTagLabel(t))}</span>`)
       .join('');
+    const ageBadge = `<span class="card-tag card-tag--age">${ageStr}</span>`;
+
+    const arrowSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
 
     el.innerHTML = `
       ${imgHtml}
@@ -816,27 +884,41 @@
           ${escapeHtml(clubStr)}
         </div>` : ''}
         ${descStr ? `<p class="card-desc">${descStr}</p>` : ''}
-        <div class="card-tags">${tagBadges}</div>
+        ${hasLongDesc ? `<button type="button" class="card-desc-toggle">${t('showMore')}</button>` : ''}
+        <div class="card-tags">${tagBadges}${ageBadge}</div>
         <div class="card-meta">
           ${dateStr ? `<span class="card-meta-item">
             <svg class="card-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             ${dateStr}
           </span>` : ''}
-          ${locationStr ? `<span class="card-meta-item">
+          ${locationStr ? `<a class="card-meta-item card-meta-link" ${mapsUrl ? `href="${mapsUrl}" target="_blank" rel="noopener"` : ''}>
             <svg class="card-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             ${locationStr}
-          </span>` : ''}
-          ${ageStr ? `<span class="card-meta-item">
-            <svg class="card-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            ${ageStr}
-          </span>` : ''}
+          </a>` : ''}
         </div>
-        <a class="card-link" href="${detailUrl}" target="_blank" rel="noopener">
-          ${signupUrl ? t('signUp') : t('viewDetails')}
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        <div class="card-links">
+          <a class="card-link" href="${detailUrl}" target="_blank" rel="noopener">
+            ${t('viewDetails')} ${arrowSvg}
+          </a>
+          ${signupUrl ? `<a class="card-link card-link--signup" href="${signupUrl}" target="_blank" rel="noopener">
+            ${t('signUp')} ${arrowSvg}
+          </a>` : ''}
+        </div>
       </div>
     `;
+
+    // Bind description toggle
+    if (hasLongDesc) {
+      const toggleBtn = el.querySelector('.card-desc-toggle');
+      const descEl = el.querySelector('.card-desc');
+      if (toggleBtn && descEl) {
+        toggleBtn.addEventListener('click', () => {
+          descEl.classList.toggle('card-desc--expanded');
+          toggleBtn.textContent = descEl.classList.contains('card-desc--expanded')
+            ? t('showLess') : t('showMore');
+        });
+      }
+    }
 
     return el;
   }
@@ -922,6 +1004,7 @@
     state.to = dateTo.value;
     state.postCode = locationSelect.value;
     state.sortBy = sortSelect.value;
+    state.query = queryInput ? queryInput.value.trim() : '';
   }
 
   async function performSearch(append) {
@@ -940,13 +1023,19 @@
     updateLoadMore();
 
     try {
-      const { cards: filtered, hiddenCards, pageInfo } = await fetchFiltered();
+      const { cards: filtered, hiddenCards, pageInfo, tagCounts } = await fetchFiltered();
 
       state.cards = append ? state.cards.concat(filtered) : filtered;
       state.hiddenCards = append ? state.hiddenCards.concat(hiddenCards) : hiddenCards;
       state.hiddenCount = state.hiddenCards.length;
       state.pageInfo = pageInfo;
       state.loading = false;
+
+      if (tagCounts) {
+        state.tagCounts = tagCounts;
+        renderTagChips();
+        updateTagChips();
+      }
 
       if (state.cards.length === 0 && !state.pageInfo?.hasNextPage) {
         showState('empty');
@@ -1003,8 +1092,11 @@
     state.hiddenCards = [];
     state.hiddenCount = 0;
     state.showHidden = false;
+    state.query = '';
+    state.tagCounts = null;
     state.pageInfo = null;
     state.hasSearched = false;
+    if (queryInput) queryInput.value = '';
     updateTagChips();
     resultsGrid.innerHTML = '';
     resultsInfo.hidden = true;
@@ -1053,10 +1145,13 @@
     dateFrom.addEventListener('change', debouncedSearch);
     dateTo.addEventListener('change', debouncedSearch);
 
+    // Text search: debounced
+    if (queryInput) queryInput.addEventListener('input', debouncedSearch);
+
     // Browser back/forward navigation
     window.addEventListener('popstate', () => {
       const params = new URLSearchParams(window.location.search);
-      if (params.has('age') || params.has('tags') || params.has('postCode')) {
+      if (params.has('age') || params.has('tags') || params.has('postCode') || params.has('q')) {
         urlToState();
         syncFormFromState();
         showFiltersView();
@@ -1084,7 +1179,7 @@
 
     // Restore state from URL if query params exist
     const params = new URLSearchParams(window.location.search);
-    if (params.has('age') || params.has('tags') || params.has('postCode')) {
+    if (params.has('age') || params.has('tags') || params.has('postCode') || params.has('q')) {
       urlToState();
       syncFormFromState();
       showFiltersView();
