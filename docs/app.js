@@ -8,6 +8,8 @@
     (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
     (url) => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
   ];
+  const FETCH_TIMEOUT = 10000;
+  let lastWorkingProxy = -1;
 
   // ── Tag categories ────────────────────────────────────────────────
 
@@ -430,6 +432,14 @@
 
   // ── API ────────────────────────────────────────────────────────────
 
+  function fetchWithTimeout(url, timeoutMs) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    return fetch(url, { signal: controller.signal })
+      .then((res) => { clearTimeout(timer); if (!res.ok) throw new Error(`HTTP ${res.status}`); return res; })
+      .catch((err) => { clearTimeout(timer); throw err; });
+  }
+
   function buildUrl() {
     const params = new URLSearchParams();
     if (state.age) params.set('age', state.age);
@@ -468,27 +478,29 @@
   async function fetchPage() {
     const url = buildUrl();
 
-    // Try direct fetch
-    try {
-      const res = await fetch(url);
-      if (res.ok) {
-        return parseNextData(await res.text()).pageProps;
-      }
-    } catch (_) { /* CORS blocked */ }
+    const makeAttempt = (proxyFn, index) =>
+      fetchWithTimeout(proxyFn(url), FETCH_TIMEOUT)
+        .then(async (res) => {
+          const data = parseNextData(await res.text()).pageProps;
+          lastWorkingProxy = index;
+          return data;
+        });
 
-    // Try proxies
-    for (let i = 0; i < CORS_PROXIES.length; i++) {
+    // If a proxy worked before, try it first to avoid unnecessary parallel requests
+    if (lastWorkingProxy >= 0 && lastWorkingProxy < CORS_PROXIES.length) {
       try {
-        const proxyUrl = CORS_PROXIES[i](url);
-        const res = await fetch(proxyUrl);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        return parseNextData(await res.text()).pageProps;
-      } catch (err) {
-        if (i === CORS_PROXIES.length - 1) throw err;
+        return await makeAttempt(CORS_PROXIES[lastWorkingProxy], lastWorkingProxy);
+      } catch (_) {
+        lastWorkingProxy = -1;
       }
     }
 
-    throw new Error('Ekki tókst að ná sambandi við frístund.is');
+    // Race all proxies in parallel — fastest successful response wins
+    try {
+      return await Promise.any(CORS_PROXIES.map((fn, i) => makeAttempt(fn, i)));
+    } catch (_) {
+      throw new Error('Ekki tókst að ná sambandi við frístund.is');
+    }
   }
 
   // ── Smart pagination: auto-fetch until enough valid results ──────
