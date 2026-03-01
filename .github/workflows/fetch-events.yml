@@ -1,0 +1,27 @@
+name: Fetch Frístund Events
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Daily at 06:00 UTC (early morning in Iceland)
+  workflow_dispatch: # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch, filter, and enrich events
+        run: node scripts/fetch-events.js
+
+      - name: Commit if data changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/events.json
+          git diff --cached --quiet || git commit -m "Update frístund events data $(date -u +%Y-%m-%d)"
+          git push

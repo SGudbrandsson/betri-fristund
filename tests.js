@@ -117,6 +117,19 @@ function isValidActivity(card) {
   if (/fylkisrút/i.test(t)) return false;
   if (/\bfylgd\b/i.test(t)) return false;
   if (/^Kort\b|opið kort|stakir mánuðir/i.test(t)) return false;
+  if (/iðkendagjald|árgjald/i.test(t)) return false;
+  if (/félagsaðild|\baðild\b/i.test(t)) return false;
+  if (/\bfullorðn/i.test(t) && !/börn/i.test(t)) return false;
+  if (/\bmasters\b/i.test(t)) return false;
+  if (/\b60\s*\+|60 ára og eldri|\beldri borgar/i.test(t)) return false;
+  const club = card.clubname || '';
+  if (/^World Class\b/i.test(club) && /infrared|pilates|barre|toning|betra form|hot yoga|mömmu/i.test(t)) return false;
+  if (/^Vesenisferðir/i.test(club)) return false;
+  if (/hilton.*spa/i.test(club)) return false;
+  if (Array.isArray(card.age) && card.age.length >= 2) {
+    if (Math.min(...card.age) >= 18) return false;
+  }
+  if (/\b(FIN|CHE|FRA|ITA|DEN|ESP|AUT|HUN|GER|NOR|SWE)\b/.test(t) && /meistaramót|bikarmót/i.test(t)) return false;
   return true;
 }
 
@@ -308,6 +321,73 @@ assert(isValidActivity({ title: 'Box 101 unglinga', tags: ['boxing'] }), 'allows
 assert(isValidActivity({ title: 'Borðtennis 2025-2026', tags: ['table_tennis'] }), 'allows table tennis');
 assert(isValidActivity({ title: 'Glíma 7-9 ára', tags: ['jiu_jitsu'] }), 'allows wrestling for kids');
 
+console.log('\n=== isValidActivity (adult/fee/age filters) ===');
+
+// Additional fee terms
+assert(!isValidActivity({ title: 'Iðkendagjald 2025-2026 (18 ára og eldri)', tags: ['volleyball'] }), 'rejects iðkendagjald');
+assert(!isValidActivity({ title: 'Iðkendagjald 2025-2026 (17 ára og yngri)', tags: ['volleyball'] }), 'rejects iðkendagjald (youth)');
+assert(!isValidActivity({ title: 'Ægir3 árgjald fyrir 25 ára og yngri', tags: ['triathlon'] }), 'rejects árgjald');
+assert(!isValidActivity({ title: 'Árgjald 20 ára og eldri', tags: ['archery'] }), 'rejects archery árgjald');
+
+// Membership/admission terms
+assert(!isValidActivity({ title: 'Félagsaðild 2026 - Silfur', tags: ['frisbee_golf'] }), 'rejects félagsaðild');
+assert(!isValidActivity({ title: 'Bundin og óbundin aðild', tags: ['other'] }), 'rejects aðild');
+assert(!isValidActivity({ title: 'Félagsaðild 25/26', tags: ['social_work'] }), 'rejects félagsaðild 25/26');
+
+// Adult-only markers
+assert(!isValidActivity({ title: 'Fullorðnir', tags: ['jiu_jitsu'] }), 'rejects fullorðnir');
+assert(!isValidActivity({ title: 'Box Framhald fullorðnir', tags: ['boxing'] }), 'rejects boxing fullorðnir');
+assert(!isValidActivity({ title: 'Fullorðnir vorönn 2026', tags: ['taekwondo'] }), 'rejects taekwondo fullorðnir');
+assert(!isValidActivity({ title: 'Einkatímar fyrir fullorðna', tags: ['language_courses'] }), 'rejects fullorðna courses');
+assert(isValidActivity({ title: 'Læti! Tónlistartímar fyrir börn og fullorðna', tags: ['Sviðslist'] }), 'allows börn og fullorðna');
+
+// Masters
+assert(!isValidActivity({ title: 'Frjálsar, ÍR eldri-masters', tags: ['athletics'] }), 'rejects masters');
+
+// Senior/60+ activities
+assert(!isValidActivity({ title: '60+', tags: ['gym'] }), 'rejects 60+');
+assert(!isValidActivity({ title: '60+ grunnnámskeið', tags: ['gym'] }), 'rejects 60+ course');
+assert(!isValidActivity({ title: '60+ Þrek í Þrótti', tags: ['public_sports'] }), 'rejects 60+ Þrek');
+assert(!isValidActivity({ title: 'Eldri borgara leikfimi', tags: ['gym', 'other'] }), 'rejects eldri borgarar');
+assert(!isValidActivity({ title: 'Eldri borgarar - Baðstofan og heilsurækt', tags: ['gym'] }), 'rejects eldri borgarar gym');
+
+// World Class adult fitness
+assert(!isValidActivity({ title: 'Infrared BarreFit með Töru í Laugum', tags: ['gym'], clubname: 'World Class' }), 'rejects WC infrared barre');
+assert(!isValidActivity({ title: 'Infrared Pilates & Barre Mix', tags: ['gym'], clubname: 'World Class' }), 'rejects WC pilates');
+assert(!isValidActivity({ title: 'Hot Yoga Posture Clinic', tags: ['gym'], clubname: 'World Class' }), 'rejects WC hot yoga');
+assert(!isValidActivity({ title: 'MömmuFit með Guðrúnu', tags: ['gym'], clubname: 'World Class' }), 'rejects WC mömmufit');
+assert(!isValidActivity({ title: 'Infrared Betra Form í Egilshöll', tags: ['gym'], clubname: 'World Class' }), 'rejects WC betra form');
+assert(isValidActivity({ title: 'DWC Danskeppni', tags: ['dance'], clubname: 'World Class' }), 'allows WC dance competition');
+assert(isValidActivity({ title: 'Skólakort 2026', tags: ['gym'], clubname: 'World Class' }), 'allows WC school card');
+
+// Vesenisferðir (adult hiking)
+assert(!isValidActivity({ title: 'Langbrölt vor 2026', tags: ['other'], clubname: 'Vesenisferðir ehf.' }), 'rejects Vesenisferðir hiking');
+assert(!isValidActivity({ title: 'Hornstrandir með gistingu', tags: ['travel'], clubname: 'Vesenisferðir ehf.' }), 'rejects Vesenisferðir Hornstrandir');
+
+// Hilton SPA
+assert(!isValidActivity({ title: 'Yoga Soft Flow', tags: ['gym'], clubname: 'Hilton Reykjavík SPA' }), 'rejects Hilton SPA yoga');
+assert(!isValidActivity({ title: '60 plús kl 13:00', tags: ['gym'], clubname: 'Hilton Reykjavík SPA' }), 'rejects Hilton SPA 60+');
+
+// Age-gated 18+ events
+assert(!isValidActivity({ title: 'Jóga kvöld', tags: ['yoga'], age: [99, 18] }), 'rejects age 18-99');
+assert(!isValidActivity({ title: 'Pilates', tags: ['gym'], age: [25, 18] }), 'rejects age 18-25');
+assert(!isValidActivity({ title: 'RS. Snúður', tags: ['scouts'], age: [23, 18] }), 'rejects scouts 18+');
+assert(isValidActivity({ title: 'Fótbolti 8 ára', tags: ['football'], age: [12, 8] }), 'allows age 8-12');
+assert(isValidActivity({ title: 'Sund 14-17', tags: ['swimming'], age: [17, 14] }), 'allows age 14-17');
+assert(isValidActivity({ title: 'Brazilian Jiu Jitsu 101', tags: ['jiu_jitsu'], age: [126, 16] }), 'allows age 16+ (min < 18)');
+assert(isValidActivity({ title: 'Dans', tags: ['dance'] }), 'allows no age field');
+assert(isValidActivity({ title: 'Ungbarnafimi', tags: ['other'], age: [3, 2] }), 'allows toddler activities');
+
+// International competition trips
+assert(!isValidActivity({ title: 'FIN Helsinki Norðurlandameistaramót L 15.-18. okt', tags: ['climbing'] }), 'rejects FIN competition trip');
+assert(!isValidActivity({ title: 'ESP Barcelona Evrópumeistaramót G 16.-20. júlí', tags: ['climbing'] }), 'rejects ESP competition trip');
+assert(!isValidActivity({ title: 'DEN Kaupmannahöfn Bikarmót L 21.-24. ágúst', tags: ['climbing'] }), 'rejects DEN bikarmót');
+assert(isValidActivity({ title: 'Klifurmót KÍ 2026', tags: ['climbing'] }), 'allows local climbing competition');
+
+// Edge cases: "eldri" in kid contexts (not matching "eldri borgar")
+assert(isValidActivity({ title: 'Íþróttaskóli Vals - Eldri hópur Vor 2026', tags: ['public_sports'], age: [6, 4] }), 'allows "Eldri hópur" for young kids');
+assert(isValidActivity({ title: 'Grunnhópar eldri kk', tags: ['gymnastics'], age: [7] }), 'allows "eldri" group for kids (single age)');
+
 console.log('\n=== stateToUrl ===');
 
 assertEqual(
@@ -439,6 +519,7 @@ const TRANSLATIONS = {
     footerNote: 'Óopinber vefur, hannaður af foreldrum fyrir foreldra, til að einfalda leitina að skemmtilegum sumarnámskeiðum.',
     allTypes: 'Allar tegundir',
     viewDetails: 'Skoða nánar',
+    signUp: 'Skrá mig',
     ageYear: 'ára',
     resultsCount: 'niðurstöður sýndar',
     hiddenCount: 'óskylt falið',
@@ -479,6 +560,7 @@ const TRANSLATIONS = {
     footerNote: 'An unofficial site, made by parents for parents, to make finding fun summer activities easier.',
     allTypes: 'All types',
     viewDetails: 'View details',
+    signUp: 'Sign up',
     ageYear: 'years old',
     resultsCount: 'results shown',
     hiddenCount: 'non-activities hidden',

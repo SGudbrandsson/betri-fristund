@@ -4,12 +4,15 @@
   // ── Configuration ──────────────────────────────────────────────────
 
   const BASE_URL = 'https://fristund.is';
+  const EVENTS_JSON = 'events.json';
+  const EVENTS_MAX_AGE_MS = 2 * 24 * 60 * 60 * 1000; // 48 hours
   const CORS_PROXIES = [
     (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
     (url) => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
   ];
   const FETCH_TIMEOUT = 10000;
   let lastWorkingProxy = -1;
+  let cachedEventsJson = null;
 
   // ── Tag categories ────────────────────────────────────────────────
 
@@ -111,6 +114,7 @@
       footerNote: 'Óopinber vefur, hannaður af foreldrum fyrir foreldra, til að einfalda leitina að skemmtilegum sumarnámskeiðum.',
       allTypes: 'Allar tegundir',
       viewDetails: 'Skoða nánar',
+      signUp: 'Skrá mig',
       ageYear: 'ára',
       resultsCount: 'niðurstöður sýndar',
       hiddenCount: 'óskylt falið',
@@ -151,6 +155,7 @@
       footerNote: 'An unofficial site, made by parents for parents, to make finding fun summer activities easier.',
       allTypes: 'All types',
       viewDetails: 'View details',
+      signUp: 'Sign up',
       ageYear: 'years old',
       resultsCount: 'results shown',
       hiddenCount: 'non-activities hidden',
@@ -222,6 +227,27 @@
     if (/\bfylgd\b/i.test(t)) return false;
     // Card/pass purchases, subscription periods
     if (/^Kort\b|opið kort|stakir mánuðir/i.test(t)) return false;
+    // Additional fee terms (practice membership fees, annual fees)
+    if (/iðkendagjald|árgjald/i.test(t)) return false;
+    // Remaining membership/admission terms
+    if (/félagsaðild|\baðild\b/i.test(t)) return false;
+    // Explicit adult-only marker (but keep events for "children and adults")
+    if (/\bfullorðn/i.test(t) && !/börn/i.test(t)) return false;
+    // Masters divisions
+    if (/\bmasters\b/i.test(t)) return false;
+    // Senior activities (60+, eldri borgarar)
+    if (/\b60\s*\+|60 ára og eldri|\beldri borgar/i.test(t)) return false;
+    // Known adult-only providers
+    const club = card.clubname || '';
+    if (/^World Class\b/i.test(club) && /infrared|pilates|barre|toning|betra form|hot yoga|mömmu/i.test(t)) return false;
+    if (/^Vesenisferðir/i.test(club)) return false;
+    if (/hilton.*spa/i.test(club)) return false;
+    // Age-gated: minimum age 18+ means adult-only
+    if (Array.isArray(card.age) && card.age.length >= 2) {
+      if (Math.min(...card.age) >= 18) return false;
+    }
+    // International competition trips (country code + championship)
+    if (/\b(FIN|CHE|FRA|ITA|DEN|ESP|AUT|HUN|GER|NOR|SWE)\b/.test(t) && /meistaramót|bikarmót/i.test(t)) return false;
     return true;
   }
 
@@ -503,9 +529,109 @@
     }
   }
 
+  // ── JSON-first data loading ─────────────────────────────────────
+
+  async function loadEventsJson() {
+    if (cachedEventsJson) return cachedEventsJson;
+    try {
+      const res = await fetchWithTimeout(EVENTS_JSON, 5000);
+      const data = JSON.parse(await res.text());
+      const age = Date.now() - new Date(data.fetchedAt).getTime();
+      if (age > EVENTS_MAX_AGE_MS) return null;
+      cachedEventsJson = data;
+      return data;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function parseApiDate(d) {
+    const parts = d.split('-').map(Number);
+    return new Date(parts[2], parts[1] - 1, parts[0]);
+  }
+
+  function filterCachedCards(cards) {
+    let filtered = cards;
+
+    if (state.age) {
+      const age = parseInt(state.age, 10);
+      filtered = filtered.filter((card) => {
+        if (!Array.isArray(card.age) || card.age.length < 2) return true;
+        const minAge = Math.min(...card.age);
+        const maxAge = Math.max(...card.age);
+        return age >= minAge && age <= maxAge;
+      });
+    }
+
+    if (state.from || state.to) {
+      filtered = filtered.filter((card) => {
+        if (!card.date) return true;
+        const cardStart = card.date.start ? parseApiDate(card.date.start) : null;
+        const cardEnd = card.date.end ? parseApiDate(card.date.end) : null;
+        if (state.from && cardEnd) {
+          if (cardEnd < new Date(state.from)) return false;
+        }
+        if (state.to && cardStart) {
+          if (cardStart > new Date(state.to)) return false;
+        }
+        return true;
+      });
+    }
+
+    if (state.tags) {
+      const selectedTags = state.tags.split(',');
+      filtered = filtered.filter((card) =>
+        card.tags.some((tag) => selectedTags.includes(tag))
+      );
+    }
+
+    if (state.postCode) {
+      filtered = filtered.filter((card) => (card.location || '').trim() === state.postCode);
+    }
+
+    if (state.sortBy === 'name') {
+      filtered.sort((a, b) => a.title.localeCompare(b.title, 'is'));
+    } else if (state.sortBy === 'dateFrom') {
+      filtered.sort((a, b) => {
+        const da = a.date?.start ? parseApiDate(a.date.start) : new Date(0);
+        const db = b.date?.start ? parseApiDate(b.date.start) : new Date(0);
+        return da - db;
+      });
+    } else if (state.sortBy === 'dateTo') {
+      filtered.sort((a, b) => {
+        const da = a.date?.end ? parseApiDate(a.date.end) : new Date(0);
+        const db = b.date?.end ? parseApiDate(b.date.end) : new Date(0);
+        return db - da;
+      });
+    }
+
+    return filtered;
+  }
+
+  async function fetchFromJson() {
+    const data = await loadEventsJson();
+    if (!data) return null;
+
+    const allFiltered = filterCachedCards(data.cards);
+    const pageSize = 9;
+    const startIdx = (state.page - 1) * pageSize;
+    const pageCards = allFiltered.slice(startIdx, startIdx + pageSize);
+    const hasNextPage = startIdx + pageSize < allFiltered.length;
+
+    return {
+      cards: pageCards,
+      hiddenCards: [],
+      pageInfo: {
+        page: state.page,
+        hasNextPage,
+        itemCount: allFiltered.length,
+      },
+    };
+  }
+
   // ── Smart pagination: auto-fetch until enough valid results ──────
 
-  async function fetchFiltered() {
+  async function fetchFilteredLive() {
     let allFiltered = [];
     let allHidden = [];
     let pageInfo = null;
@@ -530,6 +656,12 @@
 
     state.page = apiPage;
     return { cards: allFiltered, hiddenCards: allHidden, pageInfo };
+  }
+
+  async function fetchFiltered() {
+    const jsonResult = await fetchFromJson();
+    if (jsonResult) return jsonResult;
+    return fetchFilteredLive();
   }
 
   // ── UI: Populate dropdowns ────────────────────────────────────────
@@ -608,14 +740,20 @@
   function renderCard(card) {
     const icon = getCardIcon(card.tags);
     const hasImage = card.imageUrl && card.imageUrl !== 'null' && card.imageUrl !== '';
-    const detailUrl = `${BASE_URL}/namskeid/${card.id}`;
-    const locationStr = card.location ? getLocationShort(card.location) : '';
+    const signupUrl = card.signupUrl || '';
+    const detailUrl = signupUrl || `${BASE_URL}/namskeid/${card.id}`;
+    const locationStr = card.locationName
+      ? escapeHtml(card.locationName)
+      : card.location ? getLocationShort(card.location) : '';
     const dateStr = card.date
       ? card.date.start === card.date.end
         ? formatDate(card.date.start)
         : `${formatDate(card.date.start)} – ${formatDate(card.date.end)}`
       : '';
     const clubStr = card.clubname || '';
+    const descStr = card.description
+      ? escapeHtml(card.description.length > 120 ? card.description.slice(0, 120) + '…' : card.description)
+      : '';
 
     const el = document.createElement('article');
     el.className = 'card';
@@ -649,6 +787,7 @@
           <svg class="card-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
           ${escapeHtml(clubStr)}
         </div>` : ''}
+        ${descStr ? `<p class="card-desc">${descStr}</p>` : ''}
         <div class="card-tags">${tagBadges}</div>
         <div class="card-meta">
           ${dateStr ? `<span class="card-meta-item">
@@ -661,7 +800,7 @@
           </span>` : ''}
         </div>
         <a class="card-link" href="${detailUrl}" target="_blank" rel="noopener">
-          ${t('viewDetails')}
+          ${signupUrl ? t('signUp') : t('viewDetails')}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
