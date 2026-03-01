@@ -108,12 +108,16 @@
     if (/keikogi|æfingagalli|fatnaður/i.test(t)) return false;
     // Appeal fees
     if (/^áfrýjunargjald$/i.test(t)) return false;
-    // Subscriptions, annual passes, membership cards
-    if (/áskrift|árskort|staðgreidd kort|námsmannakort|félagsskírteini/i.test(t)) return false;
+    // Subscriptions, annual passes, membership cards, annual fees
+    if (/áskrift|árskort|ársgjald|staðgreidd kort|námsmannakort|félagsskírteini/i.test(t)) return false;
     // Payments and receipts
     if (/^greiðsla\b|^kvittun\b/i.test(t)) return false;
     // Practice fees (any tag)
     if (/æfingagj[aö]/i.test(t)) return false;
+    // Donations, fundraising, sponsorship
+    if (/almannaheill|styrktarlína|styrktaraðilar/i.test(t)) return false;
+    // Competition passes (not activities)
+    if (/keppnispassi/i.test(t)) return false;
     // Generic standalone fee words with single 'other' tag
     if (card.tags.length === 1 && card.tags[0] === 'other') {
       if (/\bgjald\b|\bgjöld\b/i.test(t) && !/æfing|þjálfun|námskeið|leikskóli/i.test(t)) {

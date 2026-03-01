@@ -101,9 +101,11 @@ function isValidActivity(card) {
   if (/gjafabréf|gjafakort|gift\s*card/i.test(t)) return false;
   if (/keikogi|æfingagalli|fatnaður/i.test(t)) return false;
   if (/^áfrýjunargjald$/i.test(t)) return false;
-  if (/áskrift|árskort|staðgreidd kort|námsmannakort|félagsskírteini/i.test(t)) return false;
+  if (/áskrift|árskort|ársgjald|staðgreidd kort|námsmannakort|félagsskírteini/i.test(t)) return false;
   if (/^greiðsla\b|^kvittun\b/i.test(t)) return false;
   if (/æfingagj[aö]/i.test(t)) return false;
+  if (/almannaheill|styrktarlína|styrktaraðilar/i.test(t)) return false;
+  if (/keppnispassi/i.test(t)) return false;
   if (card.tags.length === 1 && card.tags[0] === 'other') {
     if (/\bgjald\b|\bgjöld\b/i.test(t) && !/æfing|þjálfun|námskeið|leikskóli/i.test(t)) {
       return false;
@@ -260,6 +262,18 @@ assert(!isValidActivity({ title: 'Stuðningsfélagar borðtennisdeildar', tags: 
 // Practice fees with non-other tags (now always filtered)
 assert(!isValidActivity({ title: 'Fótbolti 8. flokkur - æfingagjöld', tags: ['football'] }), 'rejects æfingagjöld with football tag');
 assert(!isValidActivity({ title: 'Æfingagjald 8. fl. kk/kvk', tags: ['football'] }), 'rejects æfingagjald with football tag');
+
+// Annual fees (ársgjald)
+assert(!isValidActivity({ title: 'NH Vinir (Ársgjald)', tags: ['running'] }), 'rejects ársgjald');
+
+// Donations/fundraising/sponsorship
+assert(!isValidActivity({ title: 'Mánaðarlegir styrkir / almannaheill', tags: ['climbing'] }), 'rejects almannaheill donations');
+assert(!isValidActivity({ title: 'Eingreiðslu styrkur - almannaheill', tags: ['climbing'] }), 'rejects one-time charity donation');
+assert(!isValidActivity({ title: 'Styrktarlína Elliða', tags: ['football'] }), 'rejects styrktarlína fundraising');
+assert(!isValidActivity({ title: 'Bakland - styrktaraðilar 2025 - 2026', tags: ['scouts'] }), 'rejects styrktaraðilar sponsorship');
+
+// Competition passes
+assert(!isValidActivity({ title: 'Keppnispassi haust 2025 - vor 2026', tags: ['swimming'] }), 'rejects keppnispassi');
 
 // Legitimate activities still pass
 assert(isValidActivity({ title: 'Fótboltaæfingar', tags: ['football'] }), 'allows normal football training');
