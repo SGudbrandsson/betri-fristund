@@ -12,29 +12,29 @@
   // ── Tag categories ────────────────────────────────────────────────
 
   const TAG_CATEGORIES = [
-    { label: 'Sumarbúðir',     icon: '☀️', tags: ['summer_camp'] },
-    { label: 'Fótbolti',       icon: '⚽', tags: ['football'] },
-    { label: 'Sund',           icon: '🏊', tags: ['swimming'] },
-    { label: 'Fimleikar',      icon: '🤸', tags: ['gymnastics'] },
-    { label: 'Handbolti',      icon: '🤾', tags: ['handball'] },
-    { label: 'Körfubolti',     icon: '🏀', tags: ['basketball'] },
-    { label: 'Dans',           icon: '💃', tags: ['Dans', 'dance'] },
-    { label: 'Myndlist',       icon: '🎨', tags: ['Myndlist', 'arts'] },
-    { label: 'Tónlist',        icon: '🎵', tags: ['Tónlist', 'music'] },
-    { label: 'Leiklist',       icon: '🎭', tags: ['Sviðslist', 'drama'] },
-    { label: 'Hestar',         icon: '🐴', tags: ['equestrian'] },
-    { label: 'Tennis',         icon: '🎾', tags: ['tennis'] },
-    { label: 'Bardaíþróttir',  icon: '🥋', tags: ['judo', 'karate', 'taekwondo', 'aikido', 'jiu_jitsu', 'wrestling', 'boxing', 'mma', 'wushu', 'fencing', 'self_defense'] },
-    { label: 'Klifur',         icon: '🧗', tags: ['climbing'] },
-    { label: 'Skátar',         icon: '🏕️', tags: ['scouts'] },
-    { label: 'Frjálsar',       icon: '🏃', tags: ['athletics', 'running'] },
-    { label: 'Skák',           icon: '♟️', tags: ['chess'] },
-    { label: 'Hjól',           icon: '🚴', tags: ['cycling'] },
-    { label: 'Jóga',           icon: '🧘', tags: ['yoga', 'pilates'] },
-    { label: 'Skautar',        icon: '⛸️', tags: ['ice_skating', 'figure_skating', 'ice_hockey'] },
-    { label: 'Boltar',         icon: '🏐', tags: ['volleyball', 'badminton', 'table_tennis'] },
-    { label: 'Sirkus',         icon: '🎪', tags: ['circus'] },
-    { label: 'Námskeið',       icon: '📚', tags: ['education', 'Fræðsla', 'language_courses', 'computer_courses'] },
+    { label: 'Sumarbúðir',     labelEn: 'Summer camps',   icon: '☀️', tags: ['summer_camp'] },
+    { label: 'Fótbolti',       labelEn: 'Football',       icon: '⚽', tags: ['football'] },
+    { label: 'Sund',           labelEn: 'Swimming',       icon: '🏊', tags: ['swimming'] },
+    { label: 'Fimleikar',      labelEn: 'Gymnastics',     icon: '🤸', tags: ['gymnastics'] },
+    { label: 'Handbolti',      labelEn: 'Handball',       icon: '🤾', tags: ['handball'] },
+    { label: 'Körfubolti',     labelEn: 'Basketball',     icon: '🏀', tags: ['basketball'] },
+    { label: 'Dans',           labelEn: 'Dance',          icon: '💃', tags: ['Dans', 'dance'] },
+    { label: 'Myndlist',       labelEn: 'Visual arts',    icon: '🎨', tags: ['Myndlist', 'arts'] },
+    { label: 'Tónlist',        labelEn: 'Music',          icon: '🎵', tags: ['Tónlist', 'music'] },
+    { label: 'Leiklist',       labelEn: 'Drama',          icon: '🎭', tags: ['Sviðslist', 'drama'] },
+    { label: 'Hestar',         labelEn: 'Horse riding',   icon: '🐴', tags: ['equestrian'] },
+    { label: 'Tennis',         labelEn: 'Tennis',         icon: '🎾', tags: ['tennis'] },
+    { label: 'Bardaíþróttir',  labelEn: 'Martial arts',   icon: '🥋', tags: ['judo', 'karate', 'taekwondo', 'aikido', 'jiu_jitsu', 'wrestling', 'boxing', 'mma', 'wushu', 'fencing', 'self_defense'] },
+    { label: 'Klifur',         labelEn: 'Climbing',       icon: '🧗', tags: ['climbing'] },
+    { label: 'Skátar',         labelEn: 'Scouts',         icon: '🏕️', tags: ['scouts'] },
+    { label: 'Frjálsar',       labelEn: 'Athletics',      icon: '🏃', tags: ['athletics', 'running'] },
+    { label: 'Skák',           labelEn: 'Chess',          icon: '♟️', tags: ['chess'] },
+    { label: 'Hjól',           labelEn: 'Cycling',        icon: '🚴', tags: ['cycling'] },
+    { label: 'Jóga',           labelEn: 'Yoga',           icon: '🧘', tags: ['yoga', 'pilates'] },
+    { label: 'Skautar',        labelEn: 'Ice skating',    icon: '⛸️', tags: ['ice_skating', 'figure_skating', 'ice_hockey'] },
+    { label: 'Boltar',         labelEn: 'Ball sports',    icon: '🏐', tags: ['volleyball', 'badminton', 'table_tennis'] },
+    { label: 'Sirkus',         labelEn: 'Circus',         icon: '🎪', tags: ['circus'] },
+    { label: 'Námskeið',       labelEn: 'Courses',        icon: '📚', tags: ['education', 'Fræðsla', 'language_courses', 'computer_courses'] },
   ];
 
   // ── Tag display names ─────────────────────────────────────────────
@@ -72,6 +72,81 @@
     fundraising: 'Fjáröflun', Saga: 'Saga', motorsport: 'Motorsport',
     gliding: 'Svifflug', weightlifting: 'Lyftingar',
     powerlifting: 'Styrktarlyftingar', self_empowerment: 'Sjálfstyrkur',
+  };
+
+  // ── Translations ──────────────────────────────────────────────────
+
+  const TRANSLATIONS = {
+    is: {
+      tagline: 'Hvað á barnið þitt að gera í sumar?',
+      welcomeTitle: 'Byrjaðu hér!',
+      welcomeText: 'Veldu aldur barnsins og við finnum allt sem er í boði á höfuðborgarsvæðinu í sumar.',
+      welcomeAgeLabel: 'Hversu gamalt er barnið?',
+      welcomeAgePlaceholder: 'Veldu aldur...',
+      filterAge: 'Aldur',
+      filterAgeAll: 'Allir aldurshópar',
+      filterFrom: 'Frá',
+      filterTo: 'Til',
+      filterLocation: 'Hvar?',
+      filterLocationAll: 'Alls staðar',
+      filterSort: 'Röðun',
+      sortDefault: 'Sjálfgefið',
+      sortName: 'Nafn A-Ö',
+      sortDateFrom: 'Byrjar fyrst',
+      sortDateTo: 'Endar síðast',
+      filterTagsLabel: 'Hvað langar barnið að gera?',
+      searchBtn: 'Sjá úrval',
+      clearBtn: 'Hreinsa leit',
+      loadMore: 'Sýna meira',
+      loadingMore: 'Hleð...',
+      emptyTitle: 'Við fundum því miður engin námskeið',
+      emptyText: 'Prófaðu að breyta aldrinum, víkka út dagsetningarnar eða fækka leitarskilyrðum til að sjá fleiri spennandi valkosti fyrir sumarið.',
+      errorTitle: 'Úps, eitthvað fór úrskeiðis',
+      errorText: 'Okkur tókst því miður ekki að ná sambandi við frístund.is. Endilega reyndu aftur eftir smá stund.',
+      retryBtn: 'Reyna aftur',
+      loadingText: 'Leita að námskeiði, íþrótt, listum...',
+      footerData: 'Gögn sótt af',
+      footerNote: 'Óopinber vefur, hannaður af foreldrum fyrir foreldra, til að einfalda leitina að skemmtilegum sumarnámskeiðum.',
+      allTypes: 'Allar tegundir',
+      viewDetails: 'Skoða nánar',
+      ageYear: 'ára',
+      resultsCount: 'niðurstöður sýndar',
+    },
+    en: {
+      tagline: 'What should your child do this summer?',
+      welcomeTitle: 'Start here!',
+      welcomeText: 'Pick your child\'s age and we\'ll find all the activities available in the Reykjavík area this summer.',
+      welcomeAgeLabel: 'How old is your child?',
+      welcomeAgePlaceholder: 'Choose age...',
+      filterAge: 'Age',
+      filterAgeAll: 'All ages',
+      filterFrom: 'From',
+      filterTo: 'To',
+      filterLocation: 'Where?',
+      filterLocationAll: 'Everywhere',
+      filterSort: 'Sort by',
+      sortDefault: 'Default',
+      sortName: 'Name A-Z',
+      sortDateFrom: 'Starts first',
+      sortDateTo: 'Ends last',
+      filterTagsLabel: 'What does your child want to do?',
+      searchBtn: 'Show activities',
+      clearBtn: 'Clear search',
+      loadMore: 'Show more',
+      loadingMore: 'Loading...',
+      emptyTitle: 'No activities found',
+      emptyText: 'Try changing the age, widening the dates, or removing some filters to discover more fun options for the summer.',
+      errorTitle: 'Oops, something went wrong',
+      errorText: 'We couldn\'t connect to frístund.is. Please try again in a moment.',
+      retryBtn: 'Try again',
+      loadingText: 'Searching for courses, sports, and arts...',
+      footerData: 'Data from',
+      footerNote: 'An unofficial site, made by parents for parents, to make finding fun summer activities easier.',
+      allTypes: 'All types',
+      viewDetails: 'View details',
+      ageYear: 'years old',
+      resultsCount: 'results shown',
+    },
   };
 
   // ── Postal codes ──────────────────────────────────────────────────
@@ -157,6 +232,7 @@
     loading: false,
     error: null,
     hasSearched: false,
+    lang: localStorage.getItem('lang') || 'is',
   };
 
   // ── URL State ────────────────────────────────────────────────────
@@ -224,6 +300,40 @@
   const errorState = $('#error-state');
   const errorMessage = $('#error-message');
   const retryBtn = $('#retry-btn');
+  const langToggle = $('#lang-toggle');
+
+  // ── i18n helpers ──────────────────────────────────────────────────
+
+  function t(key) {
+    return TRANSLATIONS[state.lang]?.[key] || TRANSLATIONS.is[key] || key;
+  }
+
+  function applyLang() {
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      const key = el.getAttribute('data-i18n');
+      const text = t(key);
+      if (text) el.textContent = text;
+    });
+    document.documentElement.lang = state.lang === 'en' ? 'en' : 'is';
+    langToggle.textContent = state.lang === 'en' ? 'IS' : 'EN';
+    // Re-render age options with translated text
+    repopulateAgeOptions();
+    // Re-render sort option text
+    repopulateSortOptions();
+    // Re-render tag chips with translated labels
+    renderTagChips();
+    // Update dynamic text if results are showing
+    if (state.hasSearched) {
+      updateResultsInfo();
+      updateLoadMore();
+    }
+  }
+
+  function setLang(lang) {
+    state.lang = lang;
+    localStorage.setItem('lang', lang);
+    applyLang();
+  }
 
   // ── Helpers ────────────────────────────────────────────────────────
 
@@ -370,9 +480,25 @@
     for (let i = 1; i <= 17; i++) {
       const opt = document.createElement('option');
       opt.value = String(i);
-      opt.textContent = `${i} ára`;
+      opt.textContent = `${i} ${t('ageYear')}`;
       selectEl.appendChild(opt);
     }
+  }
+
+  function repopulateAgeOptions() {
+    // Update text of existing age options (skip the first placeholder option)
+    [ageWelcome, ageSelect].forEach((sel) => {
+      Array.from(sel.options).forEach((opt) => {
+        if (opt.value) opt.textContent = `${opt.value} ${t('ageYear')}`;
+      });
+    });
+  }
+
+  function repopulateSortOptions() {
+    const keys = ['sortDefault', 'sortName', 'sortDateFrom', 'sortDateTo'];
+    Array.from(sortSelect.options).forEach((opt, i) => {
+      if (keys[i]) opt.textContent = t(keys[i]);
+    });
   }
 
   function populateLocationSelect() {
@@ -393,7 +519,7 @@
     allChip.type = 'button';
     allChip.className = 'tag-chip';
     allChip.setAttribute('aria-pressed', state.tags === '' ? 'true' : 'false');
-    allChip.textContent = 'Allar tegundir';
+    allChip.textContent = t('allTypes');
     allChip.addEventListener('click', () => { state.tags = ''; updateTagChips(); });
     tagChipsEl.appendChild(allChip);
 
@@ -404,7 +530,8 @@
       const apiTags = cat.tags.join(',');
       chip.dataset.tags = apiTags;
       chip.setAttribute('aria-pressed', state.tags === apiTags ? 'true' : 'false');
-      chip.innerHTML = `<span class="chip-icon">${cat.icon}</span>${cat.label}`;
+      const label = state.lang === 'en' ? cat.labelEn : cat.label;
+      chip.innerHTML = `<span class="chip-icon">${cat.icon}</span>${label}`;
       chip.addEventListener('click', () => { state.tags = apiTags; updateTagChips(); });
       tagChipsEl.appendChild(chip);
     });
@@ -476,7 +603,7 @@
           </span>` : ''}
         </div>
         <a class="card-link" href="${detailUrl}" target="_blank" rel="noopener">
-          Skoða nánar
+          ${t('viewDetails')}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
@@ -497,7 +624,7 @@
     }
     resultsInfo.hidden = false;
     const shown = state.cards.length;
-    resultsInfo.innerHTML = `<strong>${shown}</strong> niðurstöður sýndar`;
+    resultsInfo.innerHTML = `<strong>${shown}</strong> ${t('resultsCount')}`;
   }
 
   function updateLoadMore() {
@@ -505,8 +632,8 @@
     loadMoreWrap.hidden = !hasMore;
     loadMoreBtn.disabled = state.loading;
     loadMoreBtn.innerHTML = state.loading
-      ? '<span class="spinner"></span> Hleð...'
-      : 'Sýna meira';
+      ? `<span class="spinner"></span> ${t('loadingMore')}`
+      : t('loadMore');
   }
 
   function showState(which) {
@@ -574,7 +701,7 @@
         showState('results');
         updateLoadMore();
       } else {
-        errorMessage.textContent = err.message || 'Ekki tókst að ná sambandi. Reyndu aftur.';
+        errorMessage.textContent = err.message || t('errorText');
         showState('error');
       }
     }
@@ -660,6 +787,11 @@
       });
     });
 
+    // Language toggle
+    langToggle.addEventListener('click', () => {
+      setLang(state.lang === 'is' ? 'en' : 'is');
+    });
+
     // Browser back/forward navigation
     window.addEventListener('popstate', () => {
       const params = new URLSearchParams(window.location.search);
@@ -687,6 +819,7 @@
 
     renderTagChips();
     bindEvents();
+    applyLang();
 
     // Restore state from URL if query params exist
     const params = new URLSearchParams(window.location.search);
