@@ -9,127 +9,35 @@
     (url) => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
   ];
 
-  // ── Tag categories (grouped for user-friendly display) ─────────────
+  // ── Tag categories ────────────────────────────────────────────────
 
   const TAG_CATEGORIES = [
-    {
-      label: 'Sumarbúðir',
-      icon: '☀️',
-      tags: ['summer_camp'],
-    },
-    {
-      label: 'Fótbolti',
-      icon: '⚽',
-      tags: ['football'],
-    },
-    {
-      label: 'Sund',
-      icon: '🏊',
-      tags: ['swimming'],
-    },
-    {
-      label: 'Fimleikar',
-      icon: '🤸',
-      tags: ['gymnastics'],
-    },
-    {
-      label: 'Handbolti',
-      icon: '🤾',
-      tags: ['handball'],
-    },
-    {
-      label: 'Körfubolti',
-      icon: '🏀',
-      tags: ['basketball'],
-    },
-    {
-      label: 'Dans',
-      icon: '💃',
-      tags: ['Dans', 'dance'],
-    },
-    {
-      label: 'Myndlist',
-      icon: '🎨',
-      tags: ['Myndlist', 'arts'],
-    },
-    {
-      label: 'Tónlist',
-      icon: '🎵',
-      tags: ['Tónlist', 'music'],
-    },
-    {
-      label: 'Leiklistir',
-      icon: '🎭',
-      tags: ['Sviðslist', 'drama'],
-    },
-    {
-      label: 'Hestaíþróttir',
-      icon: '🐴',
-      tags: ['equestrian'],
-    },
-    {
-      label: 'Tennis',
-      icon: '🎾',
-      tags: ['tennis'],
-    },
-    {
-      label: 'Bardaíþróttir',
-      icon: '🥋',
-      tags: ['judo', 'karate', 'taekwondo', 'aikido', 'jiu_jitsu', 'wrestling', 'boxing', 'mma', 'wushu', 'fencing', 'self_defense'],
-    },
-    {
-      label: 'Klifur',
-      icon: '🧗',
-      tags: ['climbing'],
-    },
-    {
-      label: 'Skátar',
-      icon: '🏕️',
-      tags: ['scouts'],
-    },
-    {
-      label: 'Frjálsíþróttir',
-      icon: '🏃',
-      tags: ['athletics', 'running'],
-    },
-    {
-      label: 'Skák',
-      icon: '♟️',
-      tags: ['chess'],
-    },
-    {
-      label: 'Hjólreiðar',
-      icon: '🚴',
-      tags: ['cycling'],
-    },
-    {
-      label: 'Jóga',
-      icon: '🧘',
-      tags: ['yoga', 'pilates'],
-    },
-    {
-      label: 'Skautaíþróttir',
-      icon: '⛸️',
-      tags: ['ice_skating', 'figure_skating', 'ice_hockey'],
-    },
-    {
-      label: 'Blak',
-      icon: '🏐',
-      tags: ['volleyball', 'badminton', 'table_tennis'],
-    },
-    {
-      label: 'Sirkus',
-      icon: '🎪',
-      tags: ['circus'],
-    },
-    {
-      label: 'Námskeið',
-      icon: '📚',
-      tags: ['education', 'Fræðsla', 'language_courses', 'computer_courses'],
-    },
+    { label: 'Sumarbúðir',     icon: '☀️', tags: ['summer_camp'] },
+    { label: 'Fótbolti',       icon: '⚽', tags: ['football'] },
+    { label: 'Sund',           icon: '🏊', tags: ['swimming'] },
+    { label: 'Fimleikar',      icon: '🤸', tags: ['gymnastics'] },
+    { label: 'Handbolti',      icon: '🤾', tags: ['handball'] },
+    { label: 'Körfubolti',     icon: '🏀', tags: ['basketball'] },
+    { label: 'Dans',           icon: '💃', tags: ['Dans', 'dance'] },
+    { label: 'Myndlist',       icon: '🎨', tags: ['Myndlist', 'arts'] },
+    { label: 'Tónlist',        icon: '🎵', tags: ['Tónlist', 'music'] },
+    { label: 'Leiklist',       icon: '🎭', tags: ['Sviðslist', 'drama'] },
+    { label: 'Hestar',         icon: '🐴', tags: ['equestrian'] },
+    { label: 'Tennis',         icon: '🎾', tags: ['tennis'] },
+    { label: 'Bardaíþróttir',  icon: '🥋', tags: ['judo', 'karate', 'taekwondo', 'aikido', 'jiu_jitsu', 'wrestling', 'boxing', 'mma', 'wushu', 'fencing', 'self_defense'] },
+    { label: 'Klifur',         icon: '🧗', tags: ['climbing'] },
+    { label: 'Skátar',         icon: '🏕️', tags: ['scouts'] },
+    { label: 'Frjálsar',       icon: '🏃', tags: ['athletics', 'running'] },
+    { label: 'Skák',           icon: '♟️', tags: ['chess'] },
+    { label: 'Hjól',           icon: '🚴', tags: ['cycling'] },
+    { label: 'Jóga',           icon: '🧘', tags: ['yoga', 'pilates'] },
+    { label: 'Skautar',        icon: '⛸️', tags: ['ice_skating', 'figure_skating', 'ice_hockey'] },
+    { label: 'Boltar',         icon: '🏐', tags: ['volleyball', 'badminton', 'table_tennis'] },
+    { label: 'Sirkus',         icon: '🎪', tags: ['circus'] },
+    { label: 'Námskeið',       icon: '📚', tags: ['education', 'Fræðsla', 'language_courses', 'computer_courses'] },
   ];
 
-  // ── Tag display names (Icelandic) ─────────────────────────────────
+  // ── Tag display names ─────────────────────────────────────────────
 
   const TAG_LABELS = {
     football: 'Fótbolti', basketball: 'Körfubolti', handball: 'Handbolti',
@@ -166,70 +74,50 @@
     powerlifting: 'Styrktarlyftingar', self_empowerment: 'Sjálfstyrkur',
   };
 
-  // ── Postal code → neighborhood names ──────────────────────────────
+  // ── Postal codes ──────────────────────────────────────────────────
 
   const POSTAL_NAMES = {
-    '101': 'Miðborg', '102': 'Hlíðar', '103': 'Hlíðar',
-    '104': 'Laugardalur', '105': 'Hlíðar', '107': 'Vesturbær',
+    '101': 'Miðborg', '104': 'Laugardalur', '107': 'Vesturbær',
     '108': 'Háaleiti', '109': 'Breiðholt', '110': 'Árbær',
     '111': 'Breiðholt', '112': 'Grafarvogur', '113': 'Grafarholt',
     '116': 'Kjalarnes', '121': 'Mosfellsbær', '125': 'Álftanes',
     '128': 'Seltjarnarnes', '130': 'Garðabær',
-    '200': 'Kópavogur', '201': 'Kópavogur', '203': 'Kópavogur',
-    '210': 'Garðabær', '220': 'Hafnarfjörður',
+    '201': 'Kópavogur', '220': 'Hafnarfjörður',
   };
 
-  // Deduplicated postal codes for the location dropdown
-  const POSTAL_CODES = [
-    '101', '104', '107', '108', '109', '110', '111', '112', '113',
-    '116', '121', '125', '128', '130', '201', '220',
-  ];
+  const POSTAL_CODES = Object.keys(POSTAL_NAMES);
 
-  // Category icon for cards (maps first tag to an emoji)
+  // ── Tag → icon lookup ─────────────────────────────────────────────
+
   const TAG_ICONS = {};
   TAG_CATEGORIES.forEach((cat) => {
     cat.tags.forEach((t) => { TAG_ICONS[t] = cat.icon; });
   });
 
   // ── Smart exclusion rules ─────────────────────────────────────────
-  // These patterns identify items that are NOT actual activities
-  // (equipment sales, admin fees, gift cards, etc.)
 
   function isValidActivity(card) {
     const t = card.title;
-
-    // Equipment / clothing
     if (/keikogi|æfingagalli/i.test(t)) return false;
-
-    // Gift cards
     if (/gjafakort|gift\s*card/i.test(t)) return false;
-
-    // Standalone admin fees (not tied to a specific activity)
     if (/^áfrýjunargjald$/i.test(t)) return false;
-
-    // Generic fee/charge items with tag=other and no real activity context
     if (card.tags.length === 1 && card.tags[0] === 'other') {
       if (/\bgjald\b|\bgjöld\b/i.test(t) && !/æfing|þjálfun|námskeið|leikskóli/i.test(t)) {
         return false;
       }
     }
-
-    // World Class gift card / membership products
     if (/world\s*class/i.test(t) && /gjafakort|gift/i.test(t)) return false;
-
-    // Generic "greiðsla" (payment) or "kvittun" (receipt) items
     if (/^greiðsla\b|^kvittun\b/i.test(t)) return false;
-
     return true;
   }
 
-  // ── Application State ─────────────────────────────────────────────
+  // ── State ─────────────────────────────────────────────────────────
 
   const state = {
     age: '',
     from: '',
     to: '',
-    tags: '',         // comma-separated tags for API query
+    tags: '',
     postCode: '',
     sortBy: '',
     page: 1,
@@ -237,12 +125,15 @@
     pageInfo: null,
     loading: false,
     error: null,
-    proxyIndex: 0,    // current CORS proxy
+    hasSearched: false,
   };
 
-  // ── DOM References ────────────────────────────────────────────────
+  // ── DOM refs ──────────────────────────────────────────────────────
 
   const $ = (sel) => document.querySelector(sel);
+  const welcomeEl = $('#welcome');
+  const filtersEl = $('#filters');
+  const ageWelcome = $('#age-welcome');
   const ageSelect = $('#age-select');
   const dateFrom = $('#date-from');
   const dateTo = $('#date-to');
@@ -263,29 +154,32 @@
 
   // ── Helpers ────────────────────────────────────────────────────────
 
-  // Convert yyyy-mm-dd → d-m-yyyy (API format)
   function toApiDate(isoDate) {
     if (!isoDate) return '';
     const [y, m, d] = isoDate.split('-');
     return `${parseInt(d, 10)}-${parseInt(m, 10)}-${y}`;
   }
 
-  // Format d-m-yyyy → readable Icelandic date
   function formatDate(apiDate) {
     if (!apiDate) return '';
     const parts = apiDate.split('-');
     if (parts.length !== 3) return apiDate;
     const [d, m, y] = parts;
-    const months = ['jan', 'feb', 'mar', 'apr', 'maí', 'jún',
-                     'júl', 'ágú', 'sep', 'okt', 'nóv', 'des'];
+    const months = ['jan.', 'feb.', 'mars', 'apríl', 'maí', 'júní',
+                     'júlí', 'ágúst', 'sept.', 'okt.', 'nóv.', 'des.'];
     return `${parseInt(d, 10)}. ${months[parseInt(m, 10) - 1]} ${y}`;
   }
 
   function getLocationName(code) {
     const trimmed = code.trim();
     return POSTAL_NAMES[trimmed]
-      ? `${trimmed} ${POSTAL_NAMES[trimmed]}`
+      ? `${POSTAL_NAMES[trimmed]} (${trimmed})`
       : trimmed;
+  }
+
+  function getLocationShort(code) {
+    const trimmed = code.trim();
+    return POSTAL_NAMES[trimmed] || trimmed;
   }
 
   function getTagLabel(tag) {
@@ -299,20 +193,20 @@
     return '🌟';
   }
 
-  // ── Default dates (upcoming summer) ────────────────────────────────
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
 
   function getDefaultDates() {
     const now = new Date();
     let year = now.getFullYear();
-    // If past August, default to next year's summer
     if (now.getMonth() > 7) year++;
-    return {
-      from: `${year}-06-01`,
-      to: `${year}-08-31`,
-    };
+    return { from: `${year}-06-01`, to: `${year}-08-31` };
   }
 
-  // ── API Layer ──────────────────────────────────────────────────────
+  // ── API ────────────────────────────────────────────────────────────
 
   function buildUrl() {
     const params = new URLSearchParams();
@@ -328,74 +222,57 @@
 
   function parseNextData(html) {
     const marker = '<script id="__NEXT_DATA__" type="application/json">';
-    const start = html.indexOf(marker);
-    if (start === -1) {
-      // Try alternative format
-      const alt = '__NEXT_DATA__';
-      const altIdx = html.indexOf(alt);
-      if (altIdx === -1) throw new Error('Gat ekki lesið gögn af frístund.is');
-      // Try to extract JSON from script tag
-      const scriptStart = html.lastIndexOf('<script', altIdx);
-      const scriptEnd = html.indexOf('</script>', altIdx);
-      if (scriptStart === -1 || scriptEnd === -1) throw new Error('Gat ekki lesið gögn');
-      const tagEnd = html.indexOf('>', scriptStart) + 1;
-      const json = html.substring(tagEnd, scriptEnd);
-      return JSON.parse(json);
+    let start = html.indexOf(marker);
+    if (start !== -1) {
+      const jsonStart = start + marker.length;
+      const jsonEnd = html.indexOf('</script>', jsonStart);
+      return JSON.parse(html.substring(jsonStart, jsonEnd));
     }
-    const jsonStart = start + marker.length;
-    const jsonEnd = html.indexOf('</script>', jsonStart);
-    const json = html.substring(jsonStart, jsonEnd);
-    return JSON.parse(json);
-  }
-
-  async function fetchWithProxy(url, proxyIndex) {
-    const proxyFn = CORS_PROXIES[proxyIndex];
-    if (!proxyFn) throw new Error('Allir proxy-þjónar mistókust');
-    const proxyUrl = proxyFn(url);
-    const res = await fetch(proxyUrl);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return res.text();
+    // Fallback: look for any script with __NEXT_DATA__
+    const alt = '__NEXT_DATA__';
+    const altIdx = html.indexOf(alt);
+    if (altIdx === -1) throw new Error('Gat ekki lesið gögn');
+    const scriptStart = html.lastIndexOf('<script', altIdx);
+    const scriptEnd = html.indexOf('</script>', altIdx);
+    if (scriptStart === -1 || scriptEnd === -1) throw new Error('Gat ekki lesið gögn');
+    const tagEnd = html.indexOf('>', scriptStart) + 1;
+    return JSON.parse(html.substring(tagEnd, scriptEnd));
   }
 
   async function fetchPage() {
     const url = buildUrl();
 
-    // Try direct fetch first (in case CORS is allowed)
+    // Try direct fetch
     try {
       const res = await fetch(url);
       if (res.ok) {
-        const html = await res.text();
-        const data = parseNextData(html);
-        state.proxyIndex = -1; // direct works
-        return data.pageProps;
+        return parseNextData(await res.text()).pageProps;
       }
-    } catch (_) {
-      // CORS blocked, expected
-    }
+    } catch (_) { /* CORS blocked */ }
 
     // Try proxies
     for (let i = 0; i < CORS_PROXIES.length; i++) {
       try {
-        const html = await fetchWithProxy(url, i);
-        const data = parseNextData(html);
-        state.proxyIndex = i; // remember working proxy
-        return data.pageProps;
+        const proxyUrl = CORS_PROXIES[i](url);
+        const res = await fetch(proxyUrl);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return parseNextData(await res.text()).pageProps;
       } catch (err) {
         if (i === CORS_PROXIES.length - 1) throw err;
       }
     }
 
-    throw new Error('Ekki tókst að sækja gögn');
+    throw new Error('Ekki tókst að ná sambandi við frístund.is');
   }
 
-  // ── UI Rendering ──────────────────────────────────────────────────
+  // ── UI: Populate dropdowns ────────────────────────────────────────
 
-  function populateAgeSelect() {
-    for (let i = 0; i <= 18; i++) {
+  function populateAgeOptions(selectEl) {
+    for (let i = 1; i <= 17; i++) {
       const opt = document.createElement('option');
       opt.value = String(i);
-      opt.textContent = i === 0 ? 'Yngri en 1 árs' : `${i} ára`;
-      ageSelect.appendChild(opt);
+      opt.textContent = `${i} ára`;
+      selectEl.appendChild(opt);
     }
   }
 
@@ -408,28 +285,28 @@
     });
   }
 
+  // ── UI: Tag chips ─────────────────────────────────────────────────
+
   function renderTagChips() {
     tagChipsEl.innerHTML = '';
 
-    // "All" chip
     const allChip = document.createElement('button');
     allChip.type = 'button';
     allChip.className = 'tag-chip';
     allChip.setAttribute('aria-pressed', state.tags === '' ? 'true' : 'false');
-    allChip.textContent = 'Allt';
-    allChip.addEventListener('click', () => selectTag(''));
+    allChip.textContent = 'Allar tegundir';
+    allChip.addEventListener('click', () => { state.tags = ''; updateTagChips(); });
     tagChipsEl.appendChild(allChip);
 
     TAG_CATEGORIES.forEach((cat) => {
       const chip = document.createElement('button');
       chip.type = 'button';
       chip.className = 'tag-chip';
-      // Send all tags in the category as comma-separated values
       const apiTags = cat.tags.join(',');
       chip.dataset.tags = apiTags;
       chip.setAttribute('aria-pressed', state.tags === apiTags ? 'true' : 'false');
       chip.innerHTML = `<span class="chip-icon">${cat.icon}</span>${cat.label}`;
-      chip.addEventListener('click', () => selectTag(apiTags));
+      chip.addEventListener('click', () => { state.tags = apiTags; updateTagChips(); });
       tagChipsEl.appendChild(chip);
     });
   }
@@ -437,18 +314,18 @@
   function updateTagChips() {
     tagChipsEl.querySelectorAll('.tag-chip').forEach((chip) => {
       const tags = chip.dataset.tags;
-      const isActive = tags === undefined
-        ? state.tags === ''                // "Allt" chip
-        : state.tags === tags;
+      const isActive = tags === undefined ? state.tags === '' : state.tags === tags;
       chip.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
   }
 
+  // ── UI: Activity cards ────────────────────────────────────────────
+
   function renderCard(card) {
     const icon = getCardIcon(card.tags);
-    const hasImage = card.imageUrl && card.imageUrl !== 'null';
+    const hasImage = card.imageUrl && card.imageUrl !== 'null' && card.imageUrl !== '';
     const detailUrl = `${BASE_URL}/namskeid/${card.id}`;
-    const locationStr = card.location ? getLocationName(card.location) : '';
+    const locationStr = card.location ? getLocationShort(card.location) : '';
     const dateStr = card.date
       ? card.date.start === card.date.end
         ? formatDate(card.date.start)
@@ -459,8 +336,7 @@
     const el = document.createElement('article');
     el.className = 'card';
 
-    // Resolve image URL — hvirfill-indexer images come from hvirfill.reykjavik.is
-    let imgHtml = '';
+    let imgHtml;
     if (hasImage) {
       let imgSrc;
       if (card.imageUrl.startsWith('http')) {
@@ -478,7 +354,7 @@
 
     const tagBadges = card.tags
       .slice(0, 3)
-      .map((t) => `<span class="card-tag">${getTagLabel(t)}</span>`)
+      .map((t) => `<span class="card-tag">${escapeHtml(getTagLabel(t))}</span>`)
       .join('');
 
     el.innerHTML = `
@@ -501,7 +377,7 @@
           </span>` : ''}
         </div>
         <a class="card-link" href="${detailUrl}" target="_blank" rel="noopener">
-          Skoða á frístund.is
+          Skoða nánar
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
@@ -510,19 +386,9 @@
     return el;
   }
 
-  function escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
-
   function renderResults(cards, append) {
-    if (!append) {
-      resultsGrid.innerHTML = '';
-    }
-    cards.forEach((card) => {
-      resultsGrid.appendChild(renderCard(card));
-    });
+    if (!append) resultsGrid.innerHTML = '';
+    cards.forEach((card) => resultsGrid.appendChild(renderCard(card)));
   }
 
   function updateResultsInfo() {
@@ -533,7 +399,7 @@
     resultsInfo.hidden = false;
     const total = state.pageInfo.itemCount;
     const shown = state.cards.length;
-    resultsInfo.innerHTML = `Sýni <strong>${shown}</strong> af <strong>${total}</strong> niðurstöðum`;
+    resultsInfo.innerHTML = `<strong>${shown}</strong> af <strong>${total}</strong> niðurstöðum`;
   }
 
   function updateLoadMore() {
@@ -542,7 +408,7 @@
     loadMoreBtn.disabled = state.loading;
     loadMoreBtn.innerHTML = state.loading
       ? '<span class="spinner"></span> Hleð...'
-      : 'Hlaða fleiri';
+      : 'Sýna meira';
   }
 
   function showState(which) {
@@ -558,12 +424,15 @@
     }
   }
 
-  // ── Actions ────────────────────────────────────────────────────────
+  // ── Transition: welcome → filters ─────────────────────────────────
 
-  function selectTag(tags) {
-    state.tags = tags;
-    updateTagChips();
+  function showFiltersView() {
+    welcomeEl.hidden = true;
+    filtersEl.hidden = false;
+    state.hasSearched = true;
   }
+
+  // ── Actions ────────────────────────────────────────────────────────
 
   function readFilters() {
     state.age = ageSelect.value;
@@ -571,7 +440,6 @@
     state.to = dateTo.value;
     state.postCode = locationSelect.value;
     state.sortBy = sortSelect.value;
-    // tags is already set via chip selection
   }
 
   async function search(append) {
@@ -585,24 +453,14 @@
     state.loading = true;
     state.error = null;
 
-    if (!append) {
-      showState('loading');
-    }
+    if (!append) showState('loading');
     updateLoadMore();
 
     try {
       const data = await fetchPage();
-      const rawCards = data.cards || [];
+      const filtered = (data.cards || []).filter(isValidActivity);
 
-      // Apply smart exclusion filter
-      const filtered = rawCards.filter(isValidActivity);
-
-      if (append) {
-        state.cards = state.cards.concat(filtered);
-      } else {
-        state.cards = filtered;
-      }
-
+      state.cards = append ? state.cards.concat(filtered) : filtered;
       state.pageInfo = data.pageInfo || null;
       state.loading = false;
 
@@ -617,13 +475,11 @@
     } catch (err) {
       state.loading = false;
       state.error = err.message;
-
       if (state.cards.length > 0) {
-        // Show error inline but keep existing results
         showState('results');
         updateLoadMore();
       } else {
-        errorMessage.textContent = err.message || 'Ekki tókst að sækja gögn. Reyndu aftur.';
+        errorMessage.textContent = err.message || 'Ekki tókst að ná sambandi. Reyndu aftur.';
         showState('error');
       }
     }
@@ -637,16 +493,17 @@
 
   function clearFilters() {
     const defaults = getDefaultDates();
-    ageSelect.value = '';
     dateFrom.value = defaults.from;
     dateTo.value = defaults.to;
     locationSelect.value = '';
     sortSelect.value = '';
+    ageSelect.value = '';
     state.tags = '';
     state.sortBy = '';
     state.page = 1;
     state.cards = [];
     state.pageInfo = null;
+    state.hasSearched = false;
     updateTagChips();
     resultsGrid.innerHTML = '';
     resultsInfo.hidden = true;
@@ -655,42 +512,54 @@
     errorState.hidden = true;
     loadingState.hidden = true;
     resultsGrid.hidden = false;
+    // Go back to welcome
+    filtersEl.hidden = true;
+    welcomeEl.hidden = false;
+    ageWelcome.value = '';
   }
 
-  // ── Event Binding ─────────────────────────────────────────────────
+  // ── Event binding ─────────────────────────────────────────────────
 
   function bindEvents() {
+    // Welcome screen: auto-search when age is selected
+    ageWelcome.addEventListener('change', () => {
+      const age = ageWelcome.value;
+      if (!age) return;
+      state.age = age;
+      ageSelect.value = age;
+      showFiltersView();
+      search(false);
+    });
+
+    // Filters: manual search
     searchBtn.addEventListener('click', () => search(false));
     clearBtn.addEventListener('click', clearFilters);
     loadMoreBtn.addEventListener('click', loadMore);
     retryBtn.addEventListener('click', () => search(false));
 
-    // Allow Enter key to trigger search from inputs
-    [ageSelect, dateFrom, dateTo, locationSelect, sortSelect].forEach((el) => {
+    // Age change in filters also triggers search
+    ageSelect.addEventListener('change', () => search(false));
+
+    // Enter key on inputs triggers search
+    [dateFrom, dateTo, locationSelect, sortSelect].forEach((el) => {
       el.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') search(false);
       });
     });
   }
 
-  // ── Initialization ────────────────────────────────────────────────
+  // ── Init ──────────────────────────────────────────────────────────
 
   function init() {
-    // Populate age options
-    populateAgeSelect();
+    populateAgeOptions(ageWelcome);
+    populateAgeOptions(ageSelect);
+    populateLocationSelect();
 
-    // Set default dates
     const defaults = getDefaultDates();
     dateFrom.value = defaults.from;
     dateTo.value = defaults.to;
 
-    // Populate location
-    populateLocationSelect();
-
-    // Render tag chips
     renderTagChips();
-
-    // Bind events
     bindEvents();
   }
 

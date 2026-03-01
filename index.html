@@ -4,31 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Betri Frístund – Sumarstarfsemi fyrir börn</title>
-  <meta name="description" content="Finndu skemmtilega sumarstarfsemi fyrir börnin þín á Reykjavíkursvæðinu. Betri upplifun á gögnum frá frístund.is.">
-  <meta name="theme-color" content="#4F46E5">
+  <meta name="description" content="Finndu skemmtilega sumarstarfsemi fyrir börnin þín á höfuðborgarsvæðinu. Einfalt og fljótlegt.">
+  <meta name="theme-color" content="#EA580C">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
 </head>
 <body>
+
   <header class="header">
     <div class="container">
       <div class="header-content">
+        <div class="header-icons" aria-hidden="true">☀️ 🏊 ⚽ 🎨 🎵 🏕️</div>
         <h1 class="logo">Betri Frístund</h1>
-        <p class="tagline">Finndu skemmtilega sumarstarfsemi fyrir börnin þín</p>
+        <p class="tagline">Hvað á barnið þitt að gera í sumar?</p>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <section class="filters" aria-label="Síur">
-      <div class="filters-row">
-        <div class="filter-group">
-          <label class="filter-label" for="age-select">Aldur barns</label>
-          <select id="age-select" class="select-input">
+
+    <!-- Welcome state — shown before first search -->
+    <section class="welcome" id="welcome">
+      <div class="welcome-inner">
+        <div class="welcome-emoji" aria-hidden="true">🌞</div>
+        <h2 class="welcome-title">Byrjaðu hér!</h2>
+        <p class="welcome-text">Veldu aldur barnsins og við finnum allt sem er í boði á höfuðborgarsvæðinu í sumar.</p>
+        <div class="welcome-age">
+          <label class="filter-label" for="age-welcome">Hversu gamalt er barnið?</label>
+          <select id="age-welcome" class="select-input select-input--lg">
             <option value="">Veldu aldur...</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters — shown after first search -->
+    <section class="filters" id="filters" aria-label="Leitarsíur" hidden>
+
+      <div class="filters-top">
+        <div class="filter-group">
+          <label class="filter-label" for="age-select">Aldur</label>
+          <select id="age-select" class="select-input">
+            <option value="">Allir aldrar</option>
           </select>
         </div>
 
@@ -43,76 +63,78 @@
         </div>
 
         <div class="filter-group">
-          <label class="filter-label" for="location-select">Svæði</label>
+          <label class="filter-label" for="location-select">Hvar?</label>
           <select id="location-select" class="select-input">
-            <option value="">Öll svæði</option>
+            <option value="">Alls staðar</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label class="filter-label" for="sort-select">Röðun</label>
+          <select id="sort-select" class="select-input">
+            <option value="">Sjálfgefið</option>
+            <option value="name">Nafn A-Ö</option>
+            <option value="dateFrom">Byrjar fyrst</option>
+            <option value="dateTo">Endar síðast</option>
           </select>
         </div>
       </div>
 
       <div class="filter-group filter-group--tags">
-        <label class="filter-label">Tegund</label>
-        <div id="tag-chips" class="tag-chips" role="group" aria-label="Tegund starfsemi">
-        </div>
+        <label class="filter-label">Hvað langar barnið að gera?</label>
+        <div id="tag-chips" class="tag-chips" role="group" aria-label="Tegund starfsemi"></div>
       </div>
 
       <div class="filter-actions">
         <button id="search-btn" class="btn btn--primary" type="button">
           <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          Leita
+          Uppfæra leit
         </button>
-        <button id="clear-btn" class="btn btn--ghost" type="button">Hreinsa síur</button>
-        <div class="filter-sort">
-          <label class="filter-label" for="sort-select">Raða eftir</label>
-          <select id="sort-select" class="select-input select-input--sm">
-            <option value="">Sjálfgefið</option>
-            <option value="name">Nafni</option>
-            <option value="dateFrom">Upphafsdegi</option>
-            <option value="dateTo">Lokadegi</option>
-          </select>
-        </div>
+        <button id="clear-btn" class="btn btn--ghost" type="button">Byrja upp á nýtt</button>
       </div>
     </section>
 
-    <section class="results-info" id="results-info" aria-live="polite" hidden>
-    </section>
+    <section class="results-info" id="results-info" aria-live="polite" hidden></section>
 
-    <section class="results" id="results-grid" aria-label="Niðurstöður">
-    </section>
+    <section class="results" id="results-grid" aria-label="Niðurstöður"></section>
 
     <div class="load-more-wrap" id="load-more-wrap" hidden>
-      <button id="load-more-btn" class="btn btn--secondary" type="button">Hlaða fleiri</button>
+      <button id="load-more-btn" class="btn btn--secondary" type="button">Sýna meira</button>
     </div>
 
     <div class="empty-state" id="empty-state" hidden>
-      <div class="empty-icon">🔍</div>
-      <h2>Engar niðurstöður</h2>
-      <p>Reyndu að breyta síunum eða velja annan aldur.</p>
+      <div class="state-emoji">🤔</div>
+      <h2>Ekkert fannst</h2>
+      <p>Prófaðu annan aldur, aðra dagsetningu eða breyttu síunum.</p>
     </div>
 
     <div class="error-state" id="error-state" hidden>
-      <div class="empty-icon">⚠️</div>
-      <h2>Villa kom upp</h2>
-      <p id="error-message">Ekki tókst að sækja gögn. Reyndu aftur.</p>
+      <div class="state-emoji">😕</div>
+      <h2>Úps, eitthvað fór úrskeiðis</h2>
+      <p id="error-message">Við náðum ekki sambandi við frístund.is. Prófaðu aftur eftir augnablik.</p>
       <button id="retry-btn" class="btn btn--primary" type="button">Reyna aftur</button>
     </div>
 
     <div class="loading-state" id="loading-state" hidden>
+      <div class="loading-header">
+        <span class="spinner"></span>
+        <span>Leita að starfsemi...</span>
+      </div>
       <div class="skeleton-grid">
-        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-text"></div><div class="skeleton-text skeleton-text--short"></div></div>
-        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-text"></div><div class="skeleton-text skeleton-text--short"></div></div>
-        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-text"></div><div class="skeleton-text skeleton-text--short"></div></div>
-        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-text"></div><div class="skeleton-text skeleton-text--short"></div></div>
-        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-text"></div><div class="skeleton-text skeleton-text--short"></div></div>
-        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-text"></div><div class="skeleton-text skeleton-text--short"></div></div>
+        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-text"></div><div class="skeleton-text skeleton-text--short"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-text"></div><div class="skeleton-text skeleton-text--short"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-text"></div><div class="skeleton-text skeleton-text--short"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-text"></div><div class="skeleton-text skeleton-text--short"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-text"></div><div class="skeleton-text skeleton-text--short"></div></div></div>
+        <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-text"></div><div class="skeleton-text skeleton-text--short"></div></div></div>
       </div>
     </div>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>Gögn frá <a href="https://fristund.is" target="_blank" rel="noopener">frístund.is</a> – Reykjavíkurborg</p>
-      <p class="footer-note">Þessi síða er óopinber og er eingöngu hugsuð til að auðvelda foreldrum leit.</p>
+      <p>Gögn sótt af <a href="https://fristund.is" target="_blank" rel="noopener">frístund.is</a></p>
+      <p class="footer-note">Óopinber síða – gerð til að auðvelda foreldrum að finna sumarstarfsemi.</p>
     </div>
   </footer>
 
