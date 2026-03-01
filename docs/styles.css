@@ -504,6 +504,28 @@ a:hover {
   font-weight: 700;
 }
 
+.hidden-toggle {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.hidden-toggle:hover {
+  color: var(--color-primary-hover);
+}
+
+.card--hidden {
+  opacity: 0.45;
+  border-style: dashed;
+}
+
 .results {
   display: grid;
   grid-template-columns: 1fr;
@@ -792,6 +814,35 @@ a:hover {
 .footer-note {
   margin-top: 4px;
   font-size: 0.75rem;
+}
+
+.about-toggle {
+  display: inline;
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 8px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.about-toggle:hover {
+  color: var(--color-primary-hover);
+}
+
+.about-body {
+  margin-top: 8px;
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.55;
 }
 
 /* ============================================
