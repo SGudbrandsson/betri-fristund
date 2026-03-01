@@ -232,7 +232,7 @@
     loading: false,
     error: null,
     hasSearched: false,
-    lang: localStorage.getItem('lang') || 'is',
+    lang: (() => { try { return localStorage.getItem('lang'); } catch (_) { return null; } })() || 'is',
   };
 
   // ── URL State ────────────────────────────────────────────────────
@@ -302,6 +302,14 @@
   const retryBtn = $('#retry-btn');
   const langToggle = $('#lang-toggle');
 
+  // Bind lang toggle immediately — not inside init()/bindEvents()
+  // so it works even if other init steps fail
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      setLang(state.lang === 'is' ? 'en' : 'is');
+    });
+  }
+
   // ── i18n helpers ──────────────────────────────────────────────────
 
   function t(key) {
@@ -338,7 +346,7 @@
 
   function setLang(lang) {
     state.lang = lang;
-    localStorage.setItem('lang', lang);
+    try { localStorage.setItem('lang', lang); } catch (_) { /* private browsing */ }
     applyLang();
   }
 
@@ -798,11 +806,6 @@
       el.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') search(false);
       });
-    });
-
-    // Language toggle
-    langToggle.addEventListener('click', () => {
-      setLang(state.lang === 'is' ? 'en' : 'is');
     });
 
     // Browser back/forward navigation
