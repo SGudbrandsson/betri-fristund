@@ -48,7 +48,7 @@
         <div class="filter-group">
           <label class="filter-label" for="age-select">Aldur</label>
           <select id="age-select" class="select-input">
-            <option value="">Allir aldrar</option>
+            <option value="">Allir aldurshópar</option>
           </select>
         </div>
 
@@ -88,9 +88,9 @@
       <div class="filter-actions">
         <button id="search-btn" class="btn btn--primary" type="button">
           <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          Uppfæra leit
+          Sjá úrval
         </button>
-        <button id="clear-btn" class="btn btn--ghost" type="button">Byrja upp á nýtt</button>
+        <button id="clear-btn" class="btn btn--ghost" type="button">Hreinsa leit</button>
       </div>
     </section>
 
@@ -104,21 +104,21 @@
 
     <div class="empty-state" id="empty-state" hidden>
       <div class="state-emoji">🤔</div>
-      <h2>Ekkert fannst</h2>
-      <p>Prófaðu annan aldur, aðra dagsetningu eða breyttu síunum.</p>
+      <h2>Við fundum því miður engin námskeið</h2>
+      <p>Prófaðu að breyta aldrinum, víkka út dagsetningarnar eða fækka leitarskilyrðum til að sjá fleiri spennandi valkosti fyrir sumarið.</p>
     </div>
 
     <div class="error-state" id="error-state" hidden>
       <div class="state-emoji">😕</div>
       <h2>Úps, eitthvað fór úrskeiðis</h2>
-      <p id="error-message">Við náðum ekki sambandi við frístund.is. Prófaðu aftur eftir augnablik.</p>
+      <p id="error-message">Okkur tókst því miður ekki að ná sambandi við frístund.is. Endilega reyndu aftur eftir smá stund.</p>
       <button id="retry-btn" class="btn btn--primary" type="button">Reyna aftur</button>
     </div>
 
     <div class="loading-state" id="loading-state" hidden>
       <div class="loading-header">
         <span class="spinner"></span>
-        <span>Leita að starfsemi...</span>
+        <span>Leita að námskeiði, íþrótt, listum...</span>
       </div>
       <div class="skeleton-grid">
         <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-text"></div><div class="skeleton-text skeleton-text--short"></div></div></div>
@@ -134,7 +134,7 @@
   <footer class="footer">
     <div class="container">
       <p>Gögn sótt af <a href="https://fristund.is" target="_blank" rel="noopener">frístund.is</a></p>
-      <p class="footer-note">Óopinber síða – gerð til að auðvelda foreldrum að finna sumarstarfsemi.</p>
+      <p class="footer-note">Óopinber vefur, hannaður af foreldrum fyrir foreldra, til að einfalda leitina að skemmtilegum sumarnámskeiðum.</p>
     </div>
   </footer>
 

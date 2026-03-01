@@ -126,6 +126,15 @@
     }
     // Supporters clubs
     if (/stuðningsfélagar/i.test(t)) return false;
+    // Donations to elite teams (but not frístundastyrkur)
+    if (/\bstyrkur\b|\bstyrkir\b/i.test(t) && !/frístundastyrkur/i.test(t)) return false;
+    // Foreign-language membership fees
+    if (/mokestis/i.test(t)) return false;
+    // Bus passes, school escorts
+    if (/fylkisrút/i.test(t)) return false;
+    if (/\bfylgd\b/i.test(t)) return false;
+    // Card/pass purchases, subscription periods
+    if (/^Kort\b|opið kort|stakir mánuðir/i.test(t)) return false;
     return true;
   }
 

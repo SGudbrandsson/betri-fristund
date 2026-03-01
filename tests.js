@@ -112,6 +112,11 @@ function isValidActivity(card) {
     }
   }
   if (/stuðningsfélagar/i.test(t)) return false;
+  if (/\bstyrkur\b|\bstyrkir\b/i.test(t) && !/frístundastyrkur/i.test(t)) return false;
+  if (/mokestis/i.test(t)) return false;
+  if (/fylkisrút/i.test(t)) return false;
+  if (/\bfylgd\b/i.test(t)) return false;
+  if (/^Kort\b|opið kort|stakir mánuðir/i.test(t)) return false;
   return true;
 }
 
@@ -274,6 +279,27 @@ assert(!isValidActivity({ title: 'Bakland - styrktaraðilar 2025 - 2026', tags: 
 
 // Competition passes
 assert(!isValidActivity({ title: 'Keppnispassi haust 2025 - vor 2026', tags: ['swimming'] }), 'rejects keppnispassi');
+
+// Donations to elite teams (styrkur/styrkir but not frístundastyrkur)
+assert(!isValidActivity({ title: 'Eingreiðslu styrkur til AFREKSHÓPS', tags: ['climbing'] }), 'rejects styrkur to elite team');
+assert(!isValidActivity({ title: 'Mánaðarlegur styrkur til AFREKSHÓPS', tags: ['climbing'] }), 'rejects monthly styrkur');
+assert(isValidActivity({ title: 'Sumarbúðir 10-12 ára - Frístundastyrkur 2026', tags: ['other'] }), 'allows frístundastyrkur');
+assert(isValidActivity({ title: '10-12 ára námskeið - frístundastyrkur 2026', tags: ['education'] }), 'allows námskeið with frístundastyrkur');
+
+// Foreign-language fees
+assert(!isValidActivity({ title: 'Bendruomenės nario mokestis 2026 m.-', tags: ['social_work'] }), 'rejects Lithuanian membership fee');
+
+// Bus passes
+assert(!isValidActivity({ title: 'Fylkisrútan 2025-2026', tags: ['other'] }), 'rejects bus pass');
+
+// School escorts
+assert(!isValidActivity({ title: 'Grandaskóli - fylgd', tags: ['youth_activity'] }), 'rejects school escort');
+assert(!isValidActivity({ title: 'Melaskóli - fylgd', tags: ['youth_activity'] }), 'rejects school escort');
+
+// Card/pass purchases and subscription periods
+assert(!isValidActivity({ title: 'Kort / Cards', tags: ['boxing'] }), 'rejects card purchase');
+assert(!isValidActivity({ title: 'Opið kort - Almennt', tags: ['yoga'] }), 'rejects open card');
+assert(!isValidActivity({ title: 'Stakir mánuðir', tags: ['other'] }), 'rejects single months subscription');
 
 // Legitimate activities still pass
 assert(isValidActivity({ title: 'Fótboltaæfingar', tags: ['football'] }), 'allows normal football training');
