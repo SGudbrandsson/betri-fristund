@@ -229,8 +229,9 @@
     age: '',
     from: '',
     to: '',
-    tag: '',          // selected API tag (single value for API query)
+    tags: '',         // comma-separated tags for API query
     postCode: '',
+    sortBy: '',
     page: 1,
     cards: [],
     pageInfo: null,
@@ -246,6 +247,7 @@
   const dateFrom = $('#date-from');
   const dateTo = $('#date-to');
   const locationSelect = $('#location-select');
+  const sortSelect = $('#sort-select');
   const tagChipsEl = $('#tag-chips');
   const searchBtn = $('#search-btn');
   const clearBtn = $('#clear-btn');
@@ -317,8 +319,9 @@
     if (state.age) params.set('age', state.age);
     if (state.from) params.set('from', toApiDate(state.from));
     if (state.to) params.set('to', toApiDate(state.to));
-    if (state.tag) params.set('tags', state.tag);
+    if (state.tags) params.set('tags', state.tags);
     if (state.postCode) params.set('postCodes', state.postCode);
+    if (state.sortBy) params.set('sortBy', state.sortBy);
     if (state.page > 1) params.set('page', String(state.page));
     return `${BASE_URL}/?${params.toString()}`;
   }
@@ -412,8 +415,7 @@
     const allChip = document.createElement('button');
     allChip.type = 'button';
     allChip.className = 'tag-chip';
-    allChip.setAttribute('aria-pressed', state.tag === '' ? 'true' : 'false');
-    allChip.dataset.tag = '';
+    allChip.setAttribute('aria-pressed', state.tags === '' ? 'true' : 'false');
     allChip.textContent = 'Allt';
     allChip.addEventListener('click', () => selectTag(''));
     tagChipsEl.appendChild(allChip);
@@ -422,22 +424,22 @@
       const chip = document.createElement('button');
       chip.type = 'button';
       chip.className = 'tag-chip';
-      // For categories with multiple tags, use the first tag for the API query
-      const apiTag = cat.tags[0];
-      chip.dataset.tag = apiTag;
-      chip.dataset.allTags = JSON.stringify(cat.tags);
-      chip.setAttribute('aria-pressed', cat.tags.includes(state.tag) ? 'true' : 'false');
+      // Send all tags in the category as comma-separated values
+      const apiTags = cat.tags.join(',');
+      chip.dataset.tags = apiTags;
+      chip.setAttribute('aria-pressed', state.tags === apiTags ? 'true' : 'false');
       chip.innerHTML = `<span class="chip-icon">${cat.icon}</span>${cat.label}`;
-      chip.addEventListener('click', () => selectTag(apiTag));
+      chip.addEventListener('click', () => selectTag(apiTags));
       tagChipsEl.appendChild(chip);
     });
   }
 
   function updateTagChips() {
     tagChipsEl.querySelectorAll('.tag-chip').forEach((chip) => {
-      const tag = chip.dataset.tag;
-      const allTags = chip.dataset.allTags ? JSON.parse(chip.dataset.allTags) : [tag];
-      const isActive = tag === '' ? state.tag === '' : allTags.includes(state.tag);
+      const tags = chip.dataset.tags;
+      const isActive = tags === undefined
+        ? state.tags === ''                // "Allt" chip
+        : state.tags === tags;
       chip.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
   }
@@ -457,12 +459,17 @@
     const el = document.createElement('article');
     el.className = 'card';
 
-    // Resolve image URL — try fristund.is as base
+    // Resolve image URL — hvirfill-indexer images come from hvirfill.reykjavik.is
     let imgHtml = '';
     if (hasImage) {
-      const imgSrc = card.imageUrl.startsWith('http')
-        ? card.imageUrl
-        : `${BASE_URL}${card.imageUrl}`;
+      let imgSrc;
+      if (card.imageUrl.startsWith('http')) {
+        imgSrc = card.imageUrl;
+      } else if (card.channelId === 'hvirfill-indexer') {
+        imgSrc = `https://hvirfill.reykjavik.is${card.imageUrl}`;
+      } else {
+        imgSrc = `${BASE_URL}${card.imageUrl}`;
+      }
       imgHtml = `<img class="card-img" src="${imgSrc}" alt="" loading="lazy"
                    onerror="this.outerHTML='<div class=\\'card-placeholder\\'>${icon}</div>'">`;
     } else {
@@ -553,8 +560,8 @@
 
   // ── Actions ────────────────────────────────────────────────────────
 
-  function selectTag(tag) {
-    state.tag = tag;
+  function selectTag(tags) {
+    state.tags = tags;
     updateTagChips();
   }
 
@@ -563,7 +570,8 @@
     state.from = dateFrom.value;
     state.to = dateTo.value;
     state.postCode = locationSelect.value;
-    // tag is already set via chip selection
+    state.sortBy = sortSelect.value;
+    // tags is already set via chip selection
   }
 
   async function search(append) {
@@ -633,7 +641,9 @@
     dateFrom.value = defaults.from;
     dateTo.value = defaults.to;
     locationSelect.value = '';
-    state.tag = '';
+    sortSelect.value = '';
+    state.tags = '';
+    state.sortBy = '';
     state.page = 1;
     state.cards = [];
     state.pageInfo = null;
@@ -656,7 +666,7 @@
     retryBtn.addEventListener('click', () => search(false));
 
     // Allow Enter key to trigger search from inputs
-    [ageSelect, dateFrom, dateTo, locationSelect].forEach((el) => {
+    [ageSelect, dateFrom, dateTo, locationSelect, sortSelect].forEach((el) => {
       el.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') search(false);
       });

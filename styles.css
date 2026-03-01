@@ -283,11 +283,26 @@ a:hover {
   height: 0;
 }
 
+/* --- Sort inline --- */
+.filter-sort {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.select-input--sm {
+  padding: 8px 32px 8px 10px;
+  font-size: 0.82rem;
+  min-width: 130px;
+}
+
 /* --- Buttons --- */
 .filter-actions {
   display: flex;
   gap: 10px;
-  align-items: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
 }
 
 .btn {
