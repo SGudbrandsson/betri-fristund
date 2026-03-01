@@ -404,6 +404,200 @@ if (now.getMonth() > 7) {
   assertEqual(year, now.getFullYear(), 'before September, defaults to current year');
 }
 
+// ── i18n / Translation tests ────────────────────────────────────────
+
+const TRANSLATIONS = {
+  is: {
+    tagline: 'Hvað á barnið þitt að gera í sumar?',
+    welcomeTitle: 'Byrjaðu hér!',
+    welcomeText: 'Veldu aldur barnsins og við finnum allt sem er í boði á höfuðborgarsvæðinu í sumar.',
+    welcomeAgeLabel: 'Hversu gamalt er barnið?',
+    welcomeAgePlaceholder: 'Veldu aldur...',
+    filterAge: 'Aldur',
+    filterAgeAll: 'Allir aldurshópar',
+    filterFrom: 'Frá',
+    filterTo: 'Til',
+    filterLocation: 'Hvar?',
+    filterLocationAll: 'Alls staðar',
+    filterSort: 'Röðun',
+    sortDefault: 'Sjálfgefið',
+    sortName: 'Nafn A-Ö',
+    sortDateFrom: 'Byrjar fyrst',
+    sortDateTo: 'Endar síðast',
+    filterTagsLabel: 'Hvað langar barnið að gera?',
+    searchBtn: 'Sjá úrval',
+    clearBtn: 'Hreinsa leit',
+    loadMore: 'Sýna meira',
+    loadingMore: 'Hleð...',
+    emptyTitle: 'Við fundum því miður engin námskeið',
+    emptyText: 'Prófaðu að breyta aldrinum, víkka út dagsetningarnar eða fækka leitarskilyrðum til að sjá fleiri spennandi valkosti fyrir sumarið.',
+    errorTitle: 'Úps, eitthvað fór úrskeiðis',
+    errorText: 'Okkur tókst því miður ekki að ná sambandi við frístund.is. Endilega reyndu aftur eftir smá stund.',
+    retryBtn: 'Reyna aftur',
+    loadingText: 'Leita að námskeiði, íþrótt, listum...',
+    footerData: 'Gögn sótt af',
+    footerNote: 'Óopinber vefur, hannaður af foreldrum fyrir foreldra, til að einfalda leitina að skemmtilegum sumarnámskeiðum.',
+    allTypes: 'Allar tegundir',
+    viewDetails: 'Skoða nánar',
+    ageYear: 'ára',
+    resultsCount: 'niðurstöður sýndar',
+  },
+  en: {
+    tagline: 'What should your child do this summer?',
+    welcomeTitle: 'Start here!',
+    welcomeText: 'Pick your child\'s age and we\'ll find all the activities available in the Reykjavík area this summer.',
+    welcomeAgeLabel: 'How old is your child?',
+    welcomeAgePlaceholder: 'Choose age...',
+    filterAge: 'Age',
+    filterAgeAll: 'All ages',
+    filterFrom: 'From',
+    filterTo: 'To',
+    filterLocation: 'Where?',
+    filterLocationAll: 'Everywhere',
+    filterSort: 'Sort by',
+    sortDefault: 'Default',
+    sortName: 'Name A-Z',
+    sortDateFrom: 'Starts first',
+    sortDateTo: 'Ends last',
+    filterTagsLabel: 'What does your child want to do?',
+    searchBtn: 'Show activities',
+    clearBtn: 'Clear search',
+    loadMore: 'Show more',
+    loadingMore: 'Loading...',
+    emptyTitle: 'No activities found',
+    emptyText: 'Try changing the age, widening the dates, or removing some filters to discover more fun options for the summer.',
+    errorTitle: 'Oops, something went wrong',
+    errorText: 'We couldn\'t connect to frístund.is. Please try again in a moment.',
+    retryBtn: 'Try again',
+    loadingText: 'Searching for courses, sports, and arts...',
+    footerData: 'Data from',
+    footerNote: 'An unofficial site, made by parents for parents, to make finding fun summer activities easier.',
+    allTypes: 'All types',
+    viewDetails: 'View details',
+    ageYear: 'years old',
+    resultsCount: 'results shown',
+  },
+};
+
+function t(lang, key) {
+  return TRANSLATIONS[lang]?.[key] || TRANSLATIONS.is[key] || key;
+}
+
+console.log('\n=== i18n: Translation keys ===');
+
+// Verify both languages have the same keys
+const isKeys = Object.keys(TRANSLATIONS.is).sort();
+const enKeys = Object.keys(TRANSLATIONS.en).sort();
+assertEqual(isKeys.length, enKeys.length, `IS and EN have same number of keys (${isKeys.length})`);
+assertEqual(JSON.stringify(isKeys), JSON.stringify(enKeys), 'IS and EN have identical key sets');
+
+// Verify no empty values
+let hasEmptyValue = false;
+for (const lang of ['is', 'en']) {
+  for (const [key, val] of Object.entries(TRANSLATIONS[lang])) {
+    if (!val || val.trim() === '') {
+      hasEmptyValue = true;
+      console.error(`  ✗ Empty value for ${lang}.${key}`);
+      failed++;
+    }
+  }
+}
+if (!hasEmptyValue) {
+  passed++;
+  console.log('  ✓ No empty translation values');
+}
+
+console.log('\n=== i18n: t() helper ===');
+
+assertEqual(t('is', 'tagline'), 'Hvað á barnið þitt að gera í sumar?', 't() returns Icelandic tagline');
+assertEqual(t('en', 'tagline'), 'What should your child do this summer?', 't() returns English tagline');
+assertEqual(t('is', 'welcomeTitle'), 'Byrjaðu hér!', 't() returns IS welcomeTitle');
+assertEqual(t('en', 'welcomeTitle'), 'Start here!', 't() returns EN welcomeTitle');
+assertEqual(t('is', 'ageYear'), 'ára', 't() returns IS age unit');
+assertEqual(t('en', 'ageYear'), 'years old', 't() returns EN age unit');
+assertEqual(t('is', 'viewDetails'), 'Skoða nánar', 't() returns IS viewDetails');
+assertEqual(t('en', 'viewDetails'), 'View details', 't() returns EN viewDetails');
+assertEqual(t('is', 'nonExistentKey'), 'nonExistentKey', 't() falls back to key name for unknown key');
+assertEqual(t('en', 'nonExistentKey'), 'nonExistentKey', 't() falls back to key name for unknown EN key');
+assertEqual(t('fr', 'tagline'), 'Hvað á barnið þitt að gera í sumar?', 't() falls back to IS for unknown language');
+
+console.log('\n=== i18n: TAG_CATEGORIES labels ===');
+
+const TAG_CATEGORIES_FULL = [
+  { label: 'Sumarbúðir',     labelEn: 'Summer camps' },
+  { label: 'Fótbolti',       labelEn: 'Football' },
+  { label: 'Sund',           labelEn: 'Swimming' },
+  { label: 'Fimleikar',      labelEn: 'Gymnastics' },
+  { label: 'Handbolti',      labelEn: 'Handball' },
+  { label: 'Körfubolti',     labelEn: 'Basketball' },
+  { label: 'Dans',           labelEn: 'Dance' },
+  { label: 'Myndlist',       labelEn: 'Visual arts' },
+  { label: 'Tónlist',        labelEn: 'Music' },
+  { label: 'Leiklist',       labelEn: 'Drama' },
+  { label: 'Hestar',         labelEn: 'Horse riding' },
+  { label: 'Tennis',         labelEn: 'Tennis' },
+  { label: 'Bardaíþróttir',  labelEn: 'Martial arts' },
+  { label: 'Klifur',         labelEn: 'Climbing' },
+  { label: 'Skátar',         labelEn: 'Scouts' },
+  { label: 'Frjálsar',       labelEn: 'Athletics' },
+  { label: 'Skák',           labelEn: 'Chess' },
+  { label: 'Hjól',           labelEn: 'Cycling' },
+  { label: 'Jóga',           labelEn: 'Yoga' },
+  { label: 'Skautar',        labelEn: 'Ice skating' },
+  { label: 'Boltar',         labelEn: 'Ball sports' },
+  { label: 'Sirkus',         labelEn: 'Circus' },
+  { label: 'Námskeið',       labelEn: 'Courses' },
+];
+
+let allHaveLabels = true;
+TAG_CATEGORIES_FULL.forEach((cat) => {
+  if (!cat.label || !cat.labelEn) {
+    allHaveLabels = false;
+    console.error(`  ✗ Missing label for category: ${JSON.stringify(cat)}`);
+    failed++;
+  }
+});
+if (allHaveLabels) {
+  passed++;
+  console.log(`  ✓ All ${TAG_CATEGORIES_FULL.length} categories have IS and EN labels`);
+}
+
+assertEqual(TAG_CATEGORIES_FULL[0].label, 'Sumarbúðir', 'first category IS label');
+assertEqual(TAG_CATEGORIES_FULL[0].labelEn, 'Summer camps', 'first category EN label');
+assertEqual(TAG_CATEGORIES_FULL.length, 23, 'correct number of categories');
+
+console.log('\n=== i18n: Key coverage ===');
+
+// All data-i18n keys from index.html should have translations
+const htmlI18nKeys = [
+  'tagline', 'welcomeTitle', 'welcomeText', 'welcomeAgeLabel', 'welcomeAgePlaceholder',
+  'filterAge', 'filterAgeAll', 'filterFrom', 'filterTo',
+  'filterLocation', 'filterLocationAll', 'filterSort',
+  'sortDefault', 'sortName', 'sortDateFrom', 'sortDateTo',
+  'filterTagsLabel', 'searchBtn', 'clearBtn',
+  'loadMore', 'emptyTitle', 'emptyText',
+  'errorTitle', 'errorText', 'retryBtn', 'loadingText',
+  'footerData', 'footerNote',
+];
+
+let allCovered = true;
+htmlI18nKeys.forEach((key) => {
+  if (!TRANSLATIONS.is[key]) {
+    allCovered = false;
+    console.error(`  ✗ Missing IS translation for HTML key: ${key}`);
+    failed++;
+  }
+  if (!TRANSLATIONS.en[key]) {
+    allCovered = false;
+    console.error(`  ✗ Missing EN translation for HTML key: ${key}`);
+    failed++;
+  }
+});
+if (allCovered) {
+  passed++;
+  console.log(`  ✓ All ${htmlI18nKeys.length} HTML i18n keys have IS and EN translations`);
+}
+
 // ── Integration: live API test ──────────────────────────────────────
 
 console.log('\n=== Live API integration ===');

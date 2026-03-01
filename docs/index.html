@@ -17,9 +17,10 @@
   <header class="header">
     <div class="container">
       <div class="header-content">
+        <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">EN</button>
         <div class="header-icons" aria-hidden="true">☀️ 🏊 ⚽ 🎨 🎵 🏕️</div>
         <h1 class="logo">Betri Frístund</h1>
-        <p class="tagline">Hvað á barnið þitt að gera í sumar?</p>
+        <p class="tagline" data-i18n="tagline">Hvað á barnið þitt að gera í sumar?</p>
       </div>
     </div>
   </header>
@@ -30,12 +31,12 @@
     <section class="welcome" id="welcome">
       <div class="welcome-inner">
         <div class="welcome-emoji" aria-hidden="true">🌞</div>
-        <h2 class="welcome-title">Byrjaðu hér!</h2>
-        <p class="welcome-text">Veldu aldur barnsins og við finnum allt sem er í boði á höfuðborgarsvæðinu í sumar.</p>
+        <h2 class="welcome-title" data-i18n="welcomeTitle">Byrjaðu hér!</h2>
+        <p class="welcome-text" data-i18n="welcomeText">Veldu aldur barnsins og við finnum allt sem er í boði á höfuðborgarsvæðinu í sumar.</p>
         <div class="welcome-age">
-          <label class="filter-label" for="age-welcome">Hversu gamalt er barnið?</label>
+          <label class="filter-label" for="age-welcome" data-i18n="welcomeAgeLabel">Hversu gamalt er barnið?</label>
           <select id="age-welcome" class="select-input select-input--lg">
-            <option value="">Veldu aldur...</option>
+            <option value="" data-i18n="welcomeAgePlaceholder">Veldu aldur...</option>
           </select>
         </div>
       </div>
@@ -46,51 +47,51 @@
 
       <div class="filters-top">
         <div class="filter-group">
-          <label class="filter-label" for="age-select">Aldur</label>
+          <label class="filter-label" for="age-select" data-i18n="filterAge">Aldur</label>
           <select id="age-select" class="select-input">
-            <option value="">Allir aldurshópar</option>
+            <option value="" data-i18n="filterAgeAll">Allir aldurshópar</option>
           </select>
         </div>
 
         <div class="filter-group">
-          <label class="filter-label" for="date-from">Frá</label>
+          <label class="filter-label" for="date-from" data-i18n="filterFrom">Frá</label>
           <input type="date" id="date-from" class="date-input">
         </div>
 
         <div class="filter-group">
-          <label class="filter-label" for="date-to">Til</label>
+          <label class="filter-label" for="date-to" data-i18n="filterTo">Til</label>
           <input type="date" id="date-to" class="date-input">
         </div>
 
         <div class="filter-group">
-          <label class="filter-label" for="location-select">Hvar?</label>
+          <label class="filter-label" for="location-select" data-i18n="filterLocation">Hvar?</label>
           <select id="location-select" class="select-input">
-            <option value="">Alls staðar</option>
+            <option value="" data-i18n="filterLocationAll">Alls staðar</option>
           </select>
         </div>
 
         <div class="filter-group">
-          <label class="filter-label" for="sort-select">Röðun</label>
+          <label class="filter-label" for="sort-select" data-i18n="filterSort">Röðun</label>
           <select id="sort-select" class="select-input">
-            <option value="">Sjálfgefið</option>
-            <option value="name">Nafn A-Ö</option>
-            <option value="dateFrom">Byrjar fyrst</option>
-            <option value="dateTo">Endar síðast</option>
+            <option value="" data-i18n="sortDefault">Sjálfgefið</option>
+            <option value="name" data-i18n="sortName">Nafn A-Ö</option>
+            <option value="dateFrom" data-i18n="sortDateFrom">Byrjar fyrst</option>
+            <option value="dateTo" data-i18n="sortDateTo">Endar síðast</option>
           </select>
         </div>
       </div>
 
       <div class="filter-group filter-group--tags">
-        <label class="filter-label">Hvað langar barnið að gera?</label>
+        <label class="filter-label" data-i18n="filterTagsLabel">Hvað langar barnið að gera?</label>
         <div id="tag-chips" class="tag-chips" role="group" aria-label="Tegund starfsemi"></div>
       </div>
 
       <div class="filter-actions">
         <button id="search-btn" class="btn btn--primary" type="button">
           <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          Sjá úrval
+          <span data-i18n="searchBtn">Sjá úrval</span>
         </button>
-        <button id="clear-btn" class="btn btn--ghost" type="button">Hreinsa leit</button>
+        <button id="clear-btn" class="btn btn--ghost" type="button" data-i18n="clearBtn">Hreinsa leit</button>
       </div>
     </section>
 
@@ -99,26 +100,26 @@
     <section class="results" id="results-grid" aria-label="Niðurstöður"></section>
 
     <div class="load-more-wrap" id="load-more-wrap" hidden>
-      <button id="load-more-btn" class="btn btn--secondary" type="button">Sýna meira</button>
+      <button id="load-more-btn" class="btn btn--secondary" type="button" data-i18n="loadMore">Sýna meira</button>
     </div>
 
     <div class="empty-state" id="empty-state" hidden>
       <div class="state-emoji">🤔</div>
-      <h2>Við fundum því miður engin námskeið</h2>
-      <p>Prófaðu að breyta aldrinum, víkka út dagsetningarnar eða fækka leitarskilyrðum til að sjá fleiri spennandi valkosti fyrir sumarið.</p>
+      <h2 data-i18n="emptyTitle">Við fundum því miður engin námskeið</h2>
+      <p data-i18n="emptyText">Prófaðu að breyta aldrinum, víkka út dagsetningarnar eða fækka leitarskilyrðum til að sjá fleiri spennandi valkosti fyrir sumarið.</p>
     </div>
 
     <div class="error-state" id="error-state" hidden>
       <div class="state-emoji">😕</div>
-      <h2>Úps, eitthvað fór úrskeiðis</h2>
-      <p id="error-message">Okkur tókst því miður ekki að ná sambandi við frístund.is. Endilega reyndu aftur eftir smá stund.</p>
-      <button id="retry-btn" class="btn btn--primary" type="button">Reyna aftur</button>
+      <h2 data-i18n="errorTitle">Úps, eitthvað fór úrskeiðis</h2>
+      <p id="error-message" data-i18n="errorText">Okkur tókst því miður ekki að ná sambandi við frístund.is. Endilega reyndu aftur eftir smá stund.</p>
+      <button id="retry-btn" class="btn btn--primary" type="button" data-i18n="retryBtn">Reyna aftur</button>
     </div>
 
     <div class="loading-state" id="loading-state" hidden>
       <div class="loading-header">
         <span class="spinner"></span>
-        <span>Leita að námskeiði, íþrótt, listum...</span>
+        <span data-i18n="loadingText">Leita að námskeiði, íþrótt, listum...</span>
       </div>
       <div class="skeleton-grid">
         <div class="skeleton-card"><div class="skeleton-img"></div><div class="skeleton-body"><div class="skeleton-text"></div><div class="skeleton-text skeleton-text--short"></div></div></div>
@@ -133,8 +134,8 @@
 
   <footer class="footer">
     <div class="container">
-      <p>Gögn sótt af <a href="https://fristund.is" target="_blank" rel="noopener">frístund.is</a></p>
-      <p class="footer-note">Óopinber vefur, hannaður af foreldrum fyrir foreldra, til að einfalda leitina að skemmtilegum sumarnámskeiðum.</p>
+      <p><span data-i18n="footerData">Gögn sótt af</span> <a href="https://fristund.is" target="_blank" rel="noopener">frístund.is</a></p>
+      <p class="footer-note" data-i18n="footerNote">Óopinber vefur, hannaður af foreldrum fyrir foreldra, til að einfalda leitina að skemmtilegum sumarnámskeiðum.</p>
     </div>
   </footer>
 
