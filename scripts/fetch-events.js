@@ -43,17 +43,34 @@ function isValidActivity(card) {
   if (/^Kort\b|opið kort|stakir mánuðir/i.test(t)) return false;
   if (/iðkendagjald|árgjald/i.test(t)) return false;
   if (/félagsaðild|\baðild\b/i.test(t)) return false;
-  if (/\bfullorðn/i.test(t) && !/börn/i.test(t)) return false;
+  if (/\bfullorðin|\bfullorðn/i.test(t) && !/börn/i.test(t)) return false;
   if (/\bmasters\b/i.test(t)) return false;
   if (/\b60\s*\+|60 ára og eldri|\beldri borgar/i.test(t)) return false;
   const club = card.clubname || '';
   if (/^World Class\b/i.test(club) && /infrared|pilates|barre|toning|betra form|hot yoga|mömmu/i.test(t)) return false;
   if (/^Vesenisferðir/i.test(club)) return false;
   if (/hilton.*spa/i.test(club)) return false;
-  if (Array.isArray(card.age) && card.age.length >= 2) {
+  if (Array.isArray(card.age) && card.age.length >= 1) {
     if (Math.min(...card.age) >= 18) return false;
   }
   if (/\b(FIN|CHE|FRA|ITA|DEN|ESP|AUT|HUN|GER|NOR|SWE)\b/.test(t) && /meistaramót|bikarmót/i.test(t)) return false;
+  // Remote/online/distance courses (not physical kid activities)
+  if (/fjarnámskeið|\bonline\b|fjarþjálfun/i.test(t)) return false;
+  // Mom/pregnancy fitness (adult-only)
+  if (/\bmömmu|\bmömmur|meðgöngu/i.test(t)) return false;
+  // Clip cards / punch cards (not activities)
+  if (/klippikort|clip\s*card/i.test(t)) return false;
+  // Gym/health membership cards
+  if (/heilsuræktarkort/i.test(t)) return false;
+  // Known adult-only clubs (zero kid events)
+  if (/^Kramhúsið$/i.test(club)) return false;
+  if (/^Pilates Port/i.test(club)) return false;
+  if (/^Heilsuklasinn$/i.test(club)) return false;
+  if (/^Stígandi/i.test(club)) return false;
+  if (/^Orka Studio/i.test(club)) return false;
+  if (/^Ultraform$/i.test(club)) return false;
+  // The Dance Space: adult fitness classes (keep kids cheerleading)
+  if (/^The Dance Space/i.test(club) && /\bpilates\b|\baerobics\b|\baerial\s+yoga\b/i.test(t)) return false;
   return true;
 }
 

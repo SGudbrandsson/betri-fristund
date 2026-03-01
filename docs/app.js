@@ -232,7 +232,7 @@
     // Remaining membership/admission terms
     if (/félagsaðild|\baðild\b/i.test(t)) return false;
     // Explicit adult-only marker (but keep events for "children and adults")
-    if (/\bfullorðn/i.test(t) && !/börn/i.test(t)) return false;
+    if (/\bfullorðin|\bfullorðn/i.test(t) && !/börn/i.test(t)) return false;
     // Masters divisions
     if (/\bmasters\b/i.test(t)) return false;
     // Senior activities (60+, eldri borgarar)
@@ -243,11 +243,28 @@
     if (/^Vesenisferðir/i.test(club)) return false;
     if (/hilton.*spa/i.test(club)) return false;
     // Age-gated: minimum age 18+ means adult-only
-    if (Array.isArray(card.age) && card.age.length >= 2) {
+    if (Array.isArray(card.age) && card.age.length >= 1) {
       if (Math.min(...card.age) >= 18) return false;
     }
     // International competition trips (country code + championship)
     if (/\b(FIN|CHE|FRA|ITA|DEN|ESP|AUT|HUN|GER|NOR|SWE)\b/.test(t) && /meistaramót|bikarmót/i.test(t)) return false;
+    // Remote/online/distance courses (not physical kid activities)
+    if (/fjarnámskeið|\bonline\b|fjarþjálfun/i.test(t)) return false;
+    // Mom/pregnancy fitness (adult-only)
+    if (/\bmömmu|\bmömmur|meðgöngu/i.test(t)) return false;
+    // Clip cards / punch cards (not activities)
+    if (/klippikort|clip\s*card/i.test(t)) return false;
+    // Gym/health membership cards
+    if (/heilsuræktarkort/i.test(t)) return false;
+    // Known adult-only clubs (zero kid events)
+    if (/^Kramhúsið$/i.test(club)) return false;
+    if (/^Pilates Port/i.test(club)) return false;
+    if (/^Heilsuklasinn$/i.test(club)) return false;
+    if (/^Stígandi/i.test(club)) return false;
+    if (/^Orka Studio/i.test(club)) return false;
+    if (/^Ultraform$/i.test(club)) return false;
+    // The Dance Space: adult fitness classes (keep kids cheerleading)
+    if (/^The Dance Space/i.test(club) && /\bpilates\b|\baerobics\b|\baerial\s+yoga\b/i.test(t)) return false;
     return true;
   }
 
@@ -449,6 +466,14 @@
     return div.innerHTML;
   }
 
+  function debounce(fn, ms) {
+    let timer;
+    return function (...args) {
+      clearTimeout(timer);
+      timer = setTimeout(() => fn.apply(this, args), ms);
+    };
+  }
+
   function getDefaultDates() {
     const now = new Date();
     let year = now.getFullYear();
@@ -613,17 +638,13 @@
     if (!data) return null;
 
     const allFiltered = filterCachedCards(data.cards);
-    const pageSize = 9;
-    const startIdx = (state.page - 1) * pageSize;
-    const pageCards = allFiltered.slice(startIdx, startIdx + pageSize);
-    const hasNextPage = startIdx + pageSize < allFiltered.length;
 
     return {
-      cards: pageCards,
+      cards: allFiltered,
       hiddenCards: [],
       pageInfo: {
-        page: state.page,
-        hasNextPage,
+        page: 1,
+        hasNextPage: false,
         itemCount: allFiltered.length,
       },
     };
@@ -710,7 +731,7 @@
     allChip.className = 'tag-chip';
     allChip.setAttribute('aria-pressed', state.tags === '' ? 'true' : 'false');
     allChip.textContent = t('allTypes');
-    allChip.addEventListener('click', () => { state.tags = ''; updateTagChips(); });
+    allChip.addEventListener('click', () => { state.tags = ''; updateTagChips(); if (state.hasSearched) search(false); });
     tagChipsEl.appendChild(allChip);
 
     TAG_CATEGORIES.forEach((cat) => {
@@ -722,7 +743,7 @@
       chip.setAttribute('aria-pressed', state.tags === apiTags ? 'true' : 'false');
       const label = state.lang === 'en' ? cat.labelEn : cat.label;
       chip.innerHTML = `<span class="chip-icon">${cat.icon}</span>${label}`;
-      chip.addEventListener('click', () => { state.tags = apiTags; updateTagChips(); });
+      chip.addEventListener('click', () => { state.tags = apiTags; updateTagChips(); if (state.hasSearched) search(false); });
       tagChipsEl.appendChild(chip);
     });
   }
@@ -993,6 +1014,8 @@
 
   // ── Event binding ─────────────────────────────────────────────────
 
+  const debouncedSearch = debounce(() => { if (state.hasSearched) search(false); }, 300);
+
   function bindEvents() {
     // Welcome screen: auto-search when age is selected
     ageWelcome.addEventListener('change', () => {
@@ -1004,21 +1027,20 @@
       search(false);
     });
 
-    // Filters: manual search
+    // Filters: manual search button (kept as fallback)
     searchBtn.addEventListener('click', () => search(false));
     clearBtn.addEventListener('click', clearFilters);
     loadMoreBtn.addEventListener('click', loadMore);
     retryBtn.addEventListener('click', () => search(false));
 
-    // Age change in filters also triggers search
+    // Auto-apply: age, location, sort trigger search immediately
     ageSelect.addEventListener('change', () => search(false));
+    locationSelect.addEventListener('change', () => { if (state.hasSearched) search(false); });
+    sortSelect.addEventListener('change', () => { if (state.hasSearched) search(false); });
 
-    // Enter key on inputs triggers search
-    [dateFrom, dateTo, locationSelect, sortSelect].forEach((el) => {
-      el.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') search(false);
-      });
-    });
+    // Auto-apply: date inputs debounced (date pickers may fire multiple events)
+    dateFrom.addEventListener('change', debouncedSearch);
+    dateTo.addEventListener('change', debouncedSearch);
 
     // Browser back/forward navigation
     window.addEventListener('popstate', () => {
