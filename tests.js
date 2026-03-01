@@ -119,17 +119,34 @@ function isValidActivity(card) {
   if (/^Kort\b|opið kort|stakir mánuðir/i.test(t)) return false;
   if (/iðkendagjald|árgjald/i.test(t)) return false;
   if (/félagsaðild|\baðild\b/i.test(t)) return false;
-  if (/\bfullorðn/i.test(t) && !/börn/i.test(t)) return false;
+  if (/\bfullorðin|\bfullorðn/i.test(t) && !/börn/i.test(t)) return false;
   if (/\bmasters\b/i.test(t)) return false;
   if (/\b60\s*\+|60 ára og eldri|\beldri borgar/i.test(t)) return false;
   const club = card.clubname || '';
   if (/^World Class\b/i.test(club) && /infrared|pilates|barre|toning|betra form|hot yoga|mömmu/i.test(t)) return false;
   if (/^Vesenisferðir/i.test(club)) return false;
   if (/hilton.*spa/i.test(club)) return false;
-  if (Array.isArray(card.age) && card.age.length >= 2) {
+  if (Array.isArray(card.age) && card.age.length >= 1) {
     if (Math.min(...card.age) >= 18) return false;
   }
   if (/\b(FIN|CHE|FRA|ITA|DEN|ESP|AUT|HUN|GER|NOR|SWE)\b/.test(t) && /meistaramót|bikarmót/i.test(t)) return false;
+  // Remote/online/distance courses (not physical kid activities)
+  if (/fjarnámskeið|\bonline\b|fjarþjálfun/i.test(t)) return false;
+  // Mom/pregnancy fitness (adult-only)
+  if (/\bmömmu|\bmömmur|meðgöngu/i.test(t)) return false;
+  // Clip cards / punch cards (not activities)
+  if (/klippikort|clip\s*card/i.test(t)) return false;
+  // Gym/health membership cards
+  if (/heilsuræktarkort/i.test(t)) return false;
+  // Known adult-only clubs (zero kid events)
+  if (/^Kramhúsið$/i.test(club)) return false;
+  if (/^Pilates Port/i.test(club)) return false;
+  if (/^Heilsuklasinn$/i.test(club)) return false;
+  if (/^Stígandi/i.test(club)) return false;
+  if (/^Orka Studio/i.test(club)) return false;
+  if (/^Ultraform$/i.test(club)) return false;
+  // The Dance Space: adult fitness classes (keep kids cheerleading)
+  if (/^The Dance Space/i.test(club) && /\bpilates\b|\baerobics\b|\baerial\s+yoga\b/i.test(t)) return false;
   return true;
 }
 
@@ -387,6 +404,51 @@ assert(isValidActivity({ title: 'Klifurmót KÍ 2026', tags: ['climbing'] }), 'a
 // Edge cases: "eldri" in kid contexts (not matching "eldri borgar")
 assert(isValidActivity({ title: 'Íþróttaskóli Vals - Eldri hópur Vor 2026', tags: ['public_sports'], age: [6, 4] }), 'allows "Eldri hópur" for young kids');
 assert(isValidActivity({ title: 'Grunnhópar eldri kk', tags: ['gymnastics'], age: [7] }), 'allows "eldri" group for kids (single age)');
+
+// Remote/online/distance courses
+assert(!isValidActivity({ title: 'ONLINE Courses', tags: ['gym'] }), 'rejects ONLINE Courses');
+assert(!isValidActivity({ title: 'Stærðfræðifærni 9. bekkur - fjarnámskeið', tags: ['education'], age: [15] }), 'rejects fjarnámskeið');
+assert(!isValidActivity({ title: 'Stærðfræðifærni 8. - 10. - Allur pakkinn, fjarnámskeið', tags: ['education'] }), 'rejects allur pakkinn fjarnámskeið');
+assert(!isValidActivity({ title: 'Fjarþjálfun grunnnámskeið', tags: ['health'] }), 'rejects fjarþjálfun');
+assert(isValidActivity({ title: 'Stærðfræði grunnfærni 7 - 10', tags: ['education'] }), 'allows in-person math course');
+
+// Mom/pregnancy fitness
+assert(!isValidActivity({ title: 'Mömmuþjálfun framhald', tags: ['health'] }), 'rejects mömmuþjálfun');
+assert(!isValidActivity({ title: 'Mömmuþjálfun Stíganda apríl', tags: ['public_sports', 'health'] }), 'rejects mömmuþjálfun stíganda');
+assert(!isValidActivity({ title: 'ULTRA mömmur - Grafarvogi', tags: ['gym'] }), 'rejects ULTRA mömmur');
+assert(!isValidActivity({ title: 'Mömmujóga', tags: ['yoga'] }), 'rejects mömmujóga');
+assert(!isValidActivity({ title: 'Meðgönguþjálfun', tags: ['health'] }), 'rejects meðgönguþjálfun');
+assert(!isValidActivity({ title: 'Meðgöngusund Stíganda kl. 16:45', tags: ['health', 'other'] }), 'rejects meðgöngusund');
+
+// Clip cards
+assert(!isValidActivity({ title: 'Klippikort í opna tíma vor 2026', tags: ['health'] }), 'rejects klippikort');
+assert(!isValidActivity({ title: 'Studio Clip Card (Klippikort)', tags: ['gym', 'pilates', 'dance'] }), 'rejects studio clip card');
+
+// Gym membership cards
+assert(!isValidActivity({ title: 'Heilsuræktarkort', tags: ['gym'], age: [126, 13] }), 'rejects heilsuræktarkort');
+
+// Known adult-only clubs
+assert(!isValidActivity({ title: 'Jazz', tags: ['dance'], clubname: 'Kramhúsið' }), 'rejects Kramhúsið');
+assert(!isValidActivity({ title: 'Barre', tags: ['dance'], clubname: 'Kramhúsið' }), 'rejects Kramhúsið barre');
+assert(!isValidActivity({ title: 'Reformer grunnnámskeið', tags: ['health'], clubname: 'Pilates Port Iceland ' }), 'rejects Pilates Port');
+assert(!isValidActivity({ title: 'Þjálfun í vatni', tags: ['gym'], clubname: 'Heilsuklasinn' }), 'rejects Heilsuklasinn');
+assert(!isValidActivity({ title: 'Vatnsþjálfun 3 kl. 13:45', tags: ['gym'], clubname: 'Stígandi Sjúkraþjálfun' }), 'rejects Stígandi');
+assert(!isValidActivity({ title: 'KvenOrka', tags: ['health'], clubname: 'Orka Studio' }), 'rejects Orka Studio');
+assert(!isValidActivity({ title: 'Hóptímar Ultraform', tags: ['gym'], clubname: 'Ultraform' }), 'rejects Ultraform');
+
+// The Dance Space: adult classes rejected, kid classes kept
+assert(!isValidActivity({ title: 'Mat Pilates | March', tags: ['gym', 'dance'], clubname: 'The Dance Space Reykjavík' }), 'rejects Dance Space pilates');
+assert(!isValidActivity({ title: 'Step aerobics | March', tags: ['gym', 'dance'], clubname: 'The Dance Space Reykjavík' }), 'rejects Dance Space aerobics');
+assert(!isValidActivity({ title: 'Aerial Yoga | March', tags: ['gym', 'yoga', 'dance'], clubname: 'The Dance Space Reykjavík' }), 'rejects Dance Space aerial yoga');
+assert(isValidActivity({ title: 'Cheerleading for 5-8 y.o.', tags: ['gym', 'dance'], clubname: 'The Dance Space Reykjavík' }), 'allows Dance Space cheerleading');
+
+// Fixed fullorðinn matching (fullorðinndeildar variant)
+assert(!isValidActivity({ title: 'Voræfingar fullorðinndeildar RHC 2026', tags: ['other'], age: [18] }), 'rejects fullorðinndeildar');
+
+// Fixed single-element age array
+assert(!isValidActivity({ title: 'Hjólatímar', tags: ['gym'], age: [18], clubname: 'Ultraform' }), 'rejects single age [18]');
+assert(!isValidActivity({ title: 'Kvennaþrek', tags: ['public_sports'], age: [19] }), 'rejects single age [19]');
+assert(isValidActivity({ title: 'Box101 17 ára og eldri', tags: ['boxing'], age: [17] }), 'allows single age [17]');
 
 console.log('\n=== stateToUrl ===');
 
