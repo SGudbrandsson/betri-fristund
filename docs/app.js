@@ -315,17 +315,24 @@
       if (text) el.textContent = text;
     });
     document.documentElement.lang = state.lang === 'en' ? 'en' : 'is';
-    langToggle.textContent = state.lang === 'en' ? 'IS' : 'EN';
+    // Update segmented control highlight
+    const isOpt = langToggle.querySelector('.lang-option--is');
+    const enOpt = langToggle.querySelector('.lang-option--en');
+    if (isOpt && enOpt) {
+      isOpt.classList.toggle('lang-option--active', state.lang === 'is');
+      enOpt.classList.toggle('lang-option--active', state.lang === 'en');
+    }
     // Re-render age options with translated text
     repopulateAgeOptions();
     // Re-render sort option text
     repopulateSortOptions();
     // Re-render tag chips with translated labels
     renderTagChips();
-    // Update dynamic text if results are showing
+    // Update dynamic text and re-render cards if results are showing
     if (state.hasSearched) {
       updateResultsInfo();
       updateLoadMore();
+      reRenderCards();
     }
   }
 
@@ -615,6 +622,12 @@
   function renderResults(cards, append) {
     if (!append) resultsGrid.innerHTML = '';
     cards.forEach((card) => resultsGrid.appendChild(renderCard(card)));
+  }
+
+  function reRenderCards() {
+    if (state.cards.length === 0) return;
+    resultsGrid.innerHTML = '';
+    state.cards.forEach((card) => resultsGrid.appendChild(renderCard(card)));
   }
 
   function updateResultsInfo() {
