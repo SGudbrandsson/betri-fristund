@@ -315,6 +315,34 @@ a:hover {
   margin-bottom: 16px;
 }
 
+.filter-group--search {
+  margin-bottom: 16px;
+}
+
+.text-input {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-surface);
+  transition: border-color var(--transition), box-shadow var(--transition);
+  width: 100%;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.text-input::placeholder {
+  color: var(--color-text-muted);
+}
+
 .filter-label {
   font-size: 0.78rem;
   font-weight: 600;
@@ -611,9 +639,30 @@ a:hover {
   line-height: 1.4;
   margin: 4px 0 0;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.card-desc--expanded {
+  -webkit-line-clamp: unset;
+  display: block;
+}
+
+.card-desc-toggle {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 2px 0 0;
+  text-decoration: none;
+}
+
+.card-desc-toggle:hover {
+  text-decoration: underline;
 }
 
 .card-meta {
@@ -638,6 +687,21 @@ a:hover {
   opacity: 0.55;
 }
 
+.card-meta-link {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.card-meta-link:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.card-meta-link:hover .card-meta-icon {
+  opacity: 0.85;
+}
+
 .card-tags {
   display: flex;
   flex-wrap: wrap;
@@ -654,6 +718,18 @@ a:hover {
   font-weight: 600;
 }
 
+.card-tag--age {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+}
+
+.card-links {
+  display: flex;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 6px;
+}
+
 .card-link {
   display: inline-flex;
   align-items: center;
@@ -661,8 +737,6 @@ a:hover {
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--color-primary);
-  margin-top: auto;
-  padding-top: 6px;
   text-decoration: none;
 }
 
@@ -854,6 +928,20 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.55;
+}
+
+.footer-credit {
+  margin-top: 12px;
+  font-size: 0.72rem;
+}
+
+.footer-credit a {
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.footer-credit a:hover {
+  color: var(--color-primary);
 }
 
 /* ============================================

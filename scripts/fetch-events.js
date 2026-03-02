@@ -20,6 +20,7 @@ const BASE_URL = 'https://fristund.is';
 
 function isValidActivity(card) {
   const t = card.title;
+  const desc = card.description || '';
   if (/^Get Together/i.test(t)) return false;
   if (/félagsgjald/i.test(t)) return false;
   if (/gjafabréf|gjafakort|gift\s*card/i.test(t)) return false;
@@ -36,6 +37,7 @@ function isValidActivity(card) {
     }
   }
   if (/stuðningsfélagar/i.test(t)) return false;
+  if (/stuðningsaðili/i.test(t)) return false;
   if (/\bstyrkur\b|\bstyrkir\b/i.test(t) && !/frístundastyrkur/i.test(t)) return false;
   if (/mokestis/i.test(t)) return false;
   if (/fylkisrút/i.test(t)) return false;
@@ -71,6 +73,12 @@ function isValidActivity(card) {
   if (/^Ultraform$/i.test(club)) return false;
   // The Dance Space: adult fitness classes (keep kids cheerleading)
   if (/^The Dance Space/i.test(club) && /\bpilates\b|\baerobics\b|\baerial\s+yoga\b/i.test(t)) return false;
+  // Description-based checks (for enriched data)
+  if (desc) {
+    if (/\bgjafakort\b/i.test(desc)) return false;
+    if (/stuðningsmannaklúbb/i.test(desc)) return false;
+    if (/marka\s+fótspor/i.test(desc)) return false;
+  }
   return true;
 }
 
