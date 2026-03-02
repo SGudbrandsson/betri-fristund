@@ -131,7 +131,7 @@
       showMore: 'Lesa meira',
       showLess: 'Minna',
       footerCTO: 'Tækniráðgjöf og tæknistjórnun',
-      reportEvent: 'Tilkynna',
+      reportEvent: 'Ekki fyrir börn?',
     },
     en: {
       tagline: 'What should your child do this summer?',
@@ -179,7 +179,7 @@
       showMore: 'Read more',
       showLess: 'Less',
       footerCTO: 'CTO services & tech leadership',
-      reportEvent: 'Report',
+      reportEvent: 'Not for kids?',
     },
   };
 
