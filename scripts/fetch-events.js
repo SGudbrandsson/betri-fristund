@@ -116,9 +116,9 @@ function httpGet(url) {
         res.resume();
         return reject(new Error(`HTTP ${res.statusCode} for ${url}`));
       }
-      let data = '';
-      res.on('data', (chunk) => { data += chunk; });
-      res.on('end', () => resolve(data));
+      const chunks = [];
+      res.on('data', (chunk) => { chunks.push(chunk); });
+      res.on('end', () => resolve(Buffer.concat(chunks).toString('utf-8')));
     }).on('error', reject);
   });
 }
@@ -140,6 +140,11 @@ function stripHtml(html) {
     .replace(/\xa0/g, ' ')
     .replace(/\n{3,}/g, '\n\n')
     .trim();
+}
+
+function fixBrokenText(str) {
+  if (!str) return str;
+  return str.replace(/\uFFFD+/g, '');
 }
 
 // ── Date helpers ─────────────────────────────────────────────────────
@@ -216,7 +221,9 @@ async function enrichEvent(card) {
 
     return {
       ...card,
-      description: stripHtml(content.description || ''),
+      title: fixBrokenText(card.title) || card.title,
+      clubname: fixBrokenText(card.clubname) || card.clubname,
+      description: fixBrokenText(stripHtml(content.description || '')),
       locationName: content.location || '',
       signupUrl: content.signupUrl || '',
     };

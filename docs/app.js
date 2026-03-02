@@ -11,6 +11,9 @@
     (url) => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
   ];
   const FETCH_TIMEOUT = 10000;
+  const REPORT_FORM_URL = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform';
+  const REPORT_FORM_ENTRY_TITLE = 'entry.TITLE_FIELD_ID';
+  const REPORT_FORM_ENTRY_URL = 'entry.URL_FIELD_ID';
   let lastWorkingProxy = -1;
   let cachedEventsJson = null;
 
@@ -128,6 +131,7 @@
       showMore: 'Lesa meira',
       showLess: 'Minna',
       footerCTO: 'Tækniráðgjöf og tæknistjórnun',
+      reportEvent: 'Tilkynna',
     },
     en: {
       tagline: 'What should your child do this summer?',
@@ -175,6 +179,7 @@
       showMore: 'Read more',
       showLess: 'Less',
       footerCTO: 'CTO services & tech leadership',
+      reportEvent: 'Report',
     },
   };
 
@@ -493,6 +498,11 @@
     const div = document.createElement('div');
     div.textContent = str;
     return div.innerHTML;
+  }
+
+  function cleanText(str) {
+    if (!str) return str;
+    return str.replace(/\uFFFD+/g, '');
   }
 
   function debounce(fn, ms) {
@@ -831,7 +841,8 @@
         ? formatDate(card.date.start)
         : `${formatDate(card.date.start)} – ${formatDate(card.date.end)}`
       : '';
-    const clubStr = card.clubname || '';
+    const titleStr = cleanText(card.title) || card.title;
+    const clubStr = cleanText(card.clubname) || card.clubname || '';
     const ageStr = Array.isArray(card.age) && card.age.length > 0
       ? (() => {
           const min = Math.min(...card.age);
@@ -839,7 +850,7 @@
           return min === max ? `${min} ${t('ageYear')}` : `${min}–${max} ${t('ageYear')}`;
         })()
       : t('allAges');
-    const descStr = card.description ? escapeHtml(card.description) : '';
+    const descStr = card.description ? escapeHtml(cleanText(card.description) || card.description) : '';
     const hasLongDesc = card.description && card.description.length > 120;
 
     // Google Maps link
@@ -878,7 +889,7 @@
     el.innerHTML = `
       ${imgHtml}
       <div class="card-body">
-        <h3 class="card-title">${escapeHtml(card.title)}</h3>
+        <h3 class="card-title">${escapeHtml(titleStr)}</h3>
         ${clubStr ? `<div class="card-club">
           <svg class="card-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
           ${escapeHtml(clubStr)}
@@ -903,6 +914,9 @@
           ${signupUrl ? `<a class="card-link card-link--signup" href="${signupUrl}" target="_blank" rel="noopener">
             ${t('signUp')} ${arrowSvg}
           </a>` : ''}
+          <a class="card-link card-link--report" href="${REPORT_FORM_URL}?${REPORT_FORM_ENTRY_TITLE}=${encodeURIComponent(titleStr)}&${REPORT_FORM_ENTRY_URL}=${encodeURIComponent(detailUrl)}" target="_blank" rel="noopener">
+            ${t('reportEvent')}
+          </a>
         </div>
       </div>
     `;

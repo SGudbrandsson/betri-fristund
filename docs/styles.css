@@ -754,6 +754,17 @@ a:hover {
   transform: translateX(3px);
 }
 
+.card-link--report {
+  font-weight: 500;
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin-left: auto;
+}
+
+.card-link--report:hover {
+  color: var(--color-text);
+}
+
 /* ============================================
    LOAD MORE
    ============================================ */
