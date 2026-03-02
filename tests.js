@@ -567,6 +567,20 @@ if (now.getMonth() > 7) {
   assertEqual(year, now.getFullYear(), 'before September, defaults to current year');
 }
 
+function cleanText(str) {
+  if (!str) return str;
+  return str.replace(/\uFFFD+/g, '');
+}
+
+console.log('\n=== cleanText ===');
+assertEqual(cleanText('Sumarnámskeið fyrir b\uFFFD\uFFFDrn'), 'Sumarnámskeið fyrir brn', 'strips replacement characters');
+assertEqual(cleanText('börn \uFFFD\uFFFD 8.-10.bekk'), 'börn  8.-10.bekk', 'strips mid-text replacement chars');
+assertEqual(cleanText('Normal text'), 'Normal text', 'passes clean text through unchanged');
+assertEqual(cleanText(''), '', 'handles empty string');
+assertEqual(cleanText(null), null, 'handles null');
+assertEqual(cleanText(undefined), undefined, 'handles undefined');
+assertEqual(cleanText('a\uFFFDb\uFFFD\uFFFDc'), 'abc', 'strips single and consecutive replacement chars');
+
 // ── i18n / Translation tests ────────────────────────────────────────
 
 const TRANSLATIONS = {
@@ -616,6 +630,7 @@ const TRANSLATIONS = {
     showMore: 'Lesa meira',
     showLess: 'Minna',
     footerCTO: 'Tækniráðgjöf og tæknistjórnun',
+    reportEvent: 'Tilkynna',
   },
   en: {
     tagline: 'What should your child do this summer?',
@@ -663,6 +678,7 @@ const TRANSLATIONS = {
     showMore: 'Read more',
     showLess: 'Less',
     footerCTO: 'CTO services & tech leadership',
+    reportEvent: 'Report',
   },
 };
 
