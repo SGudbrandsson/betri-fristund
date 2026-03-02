@@ -11,9 +11,9 @@
     (url) => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
   ];
   const FETCH_TIMEOUT = 10000;
-  const REPORT_FORM_URL = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform';
-  const REPORT_FORM_ENTRY_TITLE = 'entry.TITLE_FIELD_ID';
-  const REPORT_FORM_ENTRY_URL = 'entry.URL_FIELD_ID';
+  const REPORT_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeshJQHZiYrxGiukL5lUg3zPLiEsN3L7I0Uk80ZerLpckSQCQ/viewform';
+  const REPORT_FORM_ENTRY_TITLE = 'entry.127149974';
+  const REPORT_FORM_ENTRY_URL = 'entry.1244639786';
   let lastWorkingProxy = -1;
   let cachedEventsJson = null;
 
