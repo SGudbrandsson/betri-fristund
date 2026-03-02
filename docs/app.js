@@ -12,8 +12,8 @@
   ];
   const FETCH_TIMEOUT = 10000;
   const REPORT_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeshJQHZiYrxGiukL5lUg3zPLiEsN3L7I0Uk80ZerLpckSQCQ/viewform';
-  const REPORT_FORM_ENTRY_TITLE = 'entry.127149974';
-  const REPORT_FORM_ENTRY_URL = 'entry.1244639786';
+  const REPORT_FORM_ENTRY_TITLE = 'entry.1768411491';
+  const REPORT_FORM_ENTRY_URL = 'entry.329999277';
   let lastWorkingProxy = -1;
   let cachedEventsJson = null;
 
