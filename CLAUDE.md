@@ -93,6 +93,12 @@ node scripts/fetch-events.js      # local (~5-7 min)
 gh workflow run fetch-events.yml   # trigger GitHub Action
 ```
 
+## Analytics
+
+Umami (self-hosted, privacy-friendly, no cookies — no consent banner needed).
+Script tag in `docs/index.html` `<head>`, loaded from `umami.snjall.is`.
+Website ID: `86aca15b-0009-4992-af72-285570135580`. Dashboard at `umami.snjall.is`.
+
 ## Development
 
 1. Edit files in `docs/` (app.js, index.html, styles.css)
