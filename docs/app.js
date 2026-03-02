@@ -105,6 +105,8 @@
       filterTagsLabel: 'Hvað langar barnið að gera?',
       searchBtn: 'Sjá úrval',
       clearBtn: 'Hreinsa leit',
+      shareBtn: 'Deila',
+      shareCopied: 'Afritað!',
       loadMore: 'Sýna meira',
       loadingMore: 'Hleð...',
       emptyTitle: 'Við fundum því miður engin námskeið',
@@ -153,6 +155,8 @@
       filterTagsLabel: 'What does your child want to do?',
       searchBtn: 'Show activities',
       clearBtn: 'Clear search',
+      shareBtn: 'Share',
+      shareCopied: 'Copied!',
       loadMore: 'Show more',
       loadingMore: 'Loading...',
       emptyTitle: 'No activities found',
@@ -380,6 +384,7 @@
   const tagChipsEl = $('#tag-chips');
   const searchBtn = $('#search-btn');
   const clearBtn = $('#clear-btn');
+  const shareBtn = $('#share-btn');
   const resultsGrid = $('#results-grid');
   const resultsInfo = $('#results-info');
   const loadMoreWrap = $('#load-more-wrap');
@@ -1147,6 +1152,19 @@
     // Filters: manual search button (kept as fallback)
     searchBtn.addEventListener('click', () => search(false));
     clearBtn.addEventListener('click', clearFilters);
+    shareBtn.addEventListener('click', async () => {
+      const url = window.location.href;
+      const label = shareBtn.querySelector('span');
+      if (navigator.share) {
+        try { await navigator.share({ title: 'Betri Frístund', url }); } catch (_) {}
+      } else {
+        try {
+          await navigator.clipboard.writeText(url);
+          label.textContent = t('shareCopied');
+          setTimeout(() => { label.textContent = t('shareBtn'); }, 2000);
+        } catch (_) {}
+      }
+    });
     loadMoreBtn.addEventListener('click', loadMore);
     retryBtn.addEventListener('click', () => search(false));
 
