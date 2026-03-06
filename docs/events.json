@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-03-05T06:40:36.594Z",
+  "fetchedAt": "2026-03-06T06:38:07.882Z",
   "summer": 2026,
   "totalFetched": 395,
   "validCount": 154,
@@ -30,31 +30,23 @@
       "signupUrl": ""
     },
     {
-      "id": "4b7f0a15-bf94-4a50-be8b-3d382d4882c0",
+      "id": "34aaa35d-ffa8-4a10-b65c-333b7cc65bfd",
       "tags": [
-        "summer_camp"
+        "music"
       ],
-      "title": "Askja 8.-10.bekkur - Vika 5",
-      "age": [
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16
-      ],
-      "channelId": "vala-indexer",
-      "location": "",
+      "title": "Nýi tónlistarskólinn-vorönn 2026",
+      "age": [],
+      "channelId": "abler-indexer",
+      "location": "108",
       "date": {
-        "start": "6-7-2026",
-        "end": "10-7-2026"
+        "start": "1-1-2026",
+        "end": "31-7-2026"
       },
-      "clubname": "Kringlumýri",
+      "clubname": "Frístundakort Reykjavíkur",
       "imageUrl": null,
-      "description": "Sumarnámskeið fyrir börn í 8.-10.bekk í Klettaskóla.",
-      "locationName": "Safamýri 5",
-      "signupUrl": ""
+      "description": "Þessi þjónusta er einungis fyrir þá sem voru búnir að semja um að nýta frístundastyrk vorannar uppí skólagjöldin. Hér er hægt að ráðstafa frístundastyrkur á vorönn 2026 vegna skólagjalda við Nýja Tónlistarskólanns. Opið er fyrir ráðstöfun til 30.janúar.  Vinsamlega hakið við að þið ætlið að nýta frístundastyrkinn þegar þið farið í gegnum greiðslukerfið.   Það er gert með því að samþykkja ráðstöfun áhttps://www.abler.io/shop/frirvkog velja þar Nýji tónlistarskólinn í Reykjavík, haustönn 2025\n\nKær kveðja,\nVinsamlega sendið tölvupóst ápostur@nyitonlistarskolinn.isef það eru spurningar.\n\nThis service is only for the ones who had allready made a contract with the office to use the leisure grant for spring 2026 towards the fees. Here you can allocate the leisure grant for the autumn semester of 2025 for tuition fees at the music school. You have until30.thof january to allocate this grant.  Please check that you intend to use the leisure grant when you go through the payment system. In order to do this you can go to this link:https://www.abler.io/shop/frirvk\n\nBest regards,\nPlease send an email topostur@nyitonlistarskolinn.isif you have any questions.",
+      "locationName": "Grensásvegur",
+      "signupUrl": "https://abler.io/shop/frirvk/nyi/product/Q2x1YlNlcnZpY2U6NTIzNzk="
     },
     {
       "id": "833a1ab1-c6ad-4408-91a4-c81b3bf91f1b",
@@ -84,13 +76,62 @@
       "signupUrl": ""
     },
     {
+      "id": "4b7f0a15-bf94-4a50-be8b-3d382d4882c0",
+      "tags": [
+        "summer_camp"
+      ],
+      "title": "Askja 8.-10.bekkur - Vika 5",
+      "age": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "channelId": "vala-indexer",
+      "location": "",
+      "date": {
+        "start": "6-7-2026",
+        "end": "10-7-2026"
+      },
+      "clubname": "Kringlumýri",
+      "imageUrl": null,
+      "description": "Sumarnámskeið fyrir börn í 8.-10.bekk í Klettaskóla.",
+      "locationName": "Safamýri 5",
+      "signupUrl": ""
+    },
+    {
+      "id": "b66254f1-b4f1-44ec-b4c2-f26eab417966",
+      "tags": [
+        "jiu_jitsu"
+      ],
+      "title": "Glíma 10-13 ára",
+      "age": [
+        13,
+        9
+      ],
+      "channelId": "abler-indexer",
+      "location": "102",
+      "date": {
+        "start": "8-8-2024",
+        "end": "31-12-2026"
+      },
+      "clubname": "Mjolnir",
+      "imageUrl": null,
+      "description": "Börn 10-13 ára eru tímar sem eru að mestu byggðir upp sem leikir þar sem börnin læra meðvitað og ómeðvitað að glíma og verja sig. Í þessum tímum læra þau öruggar yfirburðastöður til að stýra andstæðingnum og halda honum niðri án þess að meiða hann. Þau læra skemmtilega og heilbrigða íþrótt sem eykur sjálfstraust, líkamsstyrk, liðleika, snerpu og líkamsvitund.\n\nNámskeiðinu er skipt upp í annir (haust, vor, sumar). Í byrjun annar er farið yfir grunninn þannig að byrjendur eru fyrstu vikurnar einungis að læra að beita sér rétt. Þannig eru börnin vel undirbúin til þess að takast á þegar að því kemur. Þannig er hægt að mæta og taka þátt hvenær sem er yfir árið. Mjög ítarlegt beltakerfi er hjá börnunum þar sem þau fá strípur og ný belti með því að taka þátt, sýna góða hegðun og tæknilegar framfarir.\nMikilvægt er að allir iðkendur fari eftir og virði reglur félagsins sem eru aðgengilegar hér á vefnum.\nTímarnir eru kenndir á:\nþriðjudögum, fimmtudögum kl. 16:30 - 17:15\nföstudögum kl. 17:15 - 18:00\nBúnaður: Sá staðalbúnaður sem iðkendur þurfa að hafa með sér í tíma og seldir eru stakir og/eða í sérstökum byrjendapökkum í Óðinsbúð er eftirfarandi:\nGI (BJJ galli og belti)No-Gi (Stuttbuxur og Bol)Á Facebook er sérstök foreldragrúppa fyrir þá sem eiga börn sem æfa í Mjölni.",
+      "locationName": "Mjölnir",
+      "signupUrl": "https://abler.io/shop/mjolnir/bornogunglingar/product/Q2x1YlNlcnZpY2U6MzExOTI="
+    },
+    {
       "id": "7a7d19f9-08f2-466d-a467-2944a977e8fe",
       "tags": [
         "Ungmenni",
         "Börn",
         "Fræðsla",
-        "Opnun",
         "Annað",
+        "Opnun",
         "Leiðsögn"
       ],
       "title": "Sumarnámskeið 2026 Sund-hjól-hlaup(Þríþraut)",
@@ -106,28 +147,6 @@
       "description": "SUND-HJÓL-HLAUP SUMARNÁMSKEIÐ(Þríþraut)\nViltu gera eitthvað skemmtilegt og fjölbreytt í sumarfríinu þínu?\n\nÞá hefur þú möguleika á því að taka þátt í þessu skemmtilega og fjölbreytta sumarnámskeiði sem inniheldur þrjár íþróttagreinar á einu námskeiði með öðrum unglingum og vinum.\n\nÞegar þessar þrjár greinar eru settar saman kallast það þríþraut.\n\nÞríþrautardeild Breiðabliks og Þríþrautarsamband Íslands ætla að setja saman fjölbreytt og skemmtilegt viku námskeið fyrir þig. Þannig að þú getir kynnist Þríþraut betur í heild sinni.\nMarkmiðið með þessu námskeiði er að gefa þér góða upplifun og reynslu af þríþraut með æfingum í sundi, hjólreiðum og hlaupi sem hentar hverjum og einum óháð getu og fyrri reynslu. Ásamt skiptingum milli þessara þriggja greina.\n \nTilgangur námskeiðsins er að efla til hvatningar, að bæta tækni og þol í öllum þremur greinum með áherslu á tengslamyndun milli þín og hinna þátttakendanna.\nÞjálfunin verður skipt niður í hópa eftir aldri, reynslu og getu hvers og eins í hverri grein fyrir sig.\nÁherslan á æfingarskipulaginu er að undirbúa þig til þess að geta útfært þríþraut í heild sinni á síðasta námskeiðsdegi. Vegalengd þríþrautarinnar verður að eigin vali.\n\nRagnar Guðmundsson, verkefnastjóri unglinga hjá Þríþrautarsamband Íslands mun skipuleggja vikuna með fjölbreyttum og skemmtilegum æfingum. Ásamt unglingaþjálfurum frá þríþrautarfélögum innanlands sem hafa brennandi áhuga á að gefa unglingunum tækifæri á að taka þátt á þessu frábæra námskeiði.\n \nUpplýsingar.\nAldurshópur: 10-13 ára (2013-2016) og 14-16 ára (2010-2012)\nDagsetning: 15.-17. juni 2026\nTímasetning: 9:00-12:00 á hverjum degi.\nStaðsetning: Félagssvæði Breiðabliks og Sundlaug Kópavogs. Nánari mætingarstaðir verða tilkynnt eftir skráningu.\nHeildar dagskrá og nánari upplýsingar verða send til þín með góðum fyrirvara.\n\nAðrar upplýsingar.\nÞað eru aðalega tvö skilyrði til þess að taka þátt:\n- Að geta synt 25 metra í einu án þess að stoppa.\n- Að koma með hjól og hjálm. Allar tegundir hjóla er mögulegt að nota.\n\nÞátttökugjald:                           8400kr.\nSkráningarfrestur:                   10.06.2026\nSkráningar hlekkur: https://forms.office.com/e/248ttEcCZb\n\nGreiðsluupplýsingar verða sendar eftir skráningarfrestinn.\n\nFylgstu með á Instagram @triathloniceland, Facebook síðu Þríþrautarsambands Íslands: https://www.facebook.com/triathlon.is og heimasíðu www.triathlon.is\n\nEf þú hefur frekari spurningar varðandi námskeiðið er þér velkomið að hafa samband við Ragnar Guðmundsson, verkefnastjóra unglinga hjá Þríþrautarsambandinu ragnar@triathlon.is eða í whatsapp/ síma +45 2226 5204.",
       "locationName": "Dalsmári 1, 201 Kópavogur",
       "signupUrl": ""
-    },
-    {
-      "id": "5461c9c0-4d82-496c-b1fd-92f2e0a73203",
-      "tags": [
-        "gym"
-      ],
-      "title": "Frístundakort Hreyfingar 2026 - 5 mánuðir",
-      "age": [
-        18,
-        15
-      ],
-      "channelId": "abler-indexer",
-      "location": "104",
-      "date": {
-        "start": "1-1-2026",
-        "end": "31-12-2026"
-      },
-      "clubname": "Hreyfing",
-      "imageUrl": null,
-      "description": "5 mánaða kort í Hreyfingu.\n\nTekur gildi við kaup og gildir í fimm mánuði.",
-      "locationName": "Hreyfing,",
-      "signupUrl": "https://abler.io/shop/hreyfing/1/product/Q2x1YlNlcnZpY2U6NTE2NTQ="
     },
     {
       "id": "da7b5401-b8f6-422c-891c-42d3ee30cb0f",
@@ -150,6 +169,73 @@
       "description": "6.flokkur kvenna eru stelpur fæddar 2016 og 2017. \nÆfingatímar: \nÞriðjudagar 14:15 - 15:15 á Meistaravöllum\nFöstudagar 14:15 - 15:15 á gervigrasvelli KR\nLaugardagar 09:00 - 10:00 á gervigrasvelli KR\nÞjálfari flokksins er Óliver Dagur Thorlacius.\n​Skráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
       "locationName": "KR,",
       "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU1NTI="
+    },
+    {
+      "id": "31b4457b-959b-46b8-a811-6b0911029d3d",
+      "tags": [
+        "leisure_",
+        "scouts",
+        "summer_camp"
+      ],
+      "title": "Sumarbúðir vika 6",
+      "age": [
+        11,
+        9
+      ],
+      "channelId": "abler-indexer",
+      "location": "110",
+      "date": {
+        "start": "1-3-2026",
+        "end": "28-7-2026"
+      },
+      "clubname": "Skátarnir",
+      "imageUrl": null,
+      "description": "Sumarbúðir dagana 4.-7. ágúst (4 dagar / 9-11 ára).​\n\n​Innifalið í verði er rúta, gisting, \nmatur og öll dagskrá.\nBókunarskilmálar fyrir sumarbúðir og útivistarnámskeið",
+      "locationName": "Iceland,",
+      "signupUrl": "https://abler.io/shop/skatarnir/utilifsmidst/product/Q2x1YlNlcnZpY2U6Mzg0NTA="
+    },
+    {
+      "id": "d509b152-edb0-4412-b704-90bba005b095",
+      "tags": [
+        "education"
+      ],
+      "title": "Sumarbúðir 10-12 ára - Frístundastyrkur 2026",
+      "age": [],
+      "channelId": "abler-indexer",
+      "location": "108",
+      "date": {
+        "start": "2-1-2026",
+        "end": "31-12-2026"
+      },
+      "clubname": "Kópavogsbær - Frístundagátt",
+      "imageUrl": null,
+      "description": "Sumarbúðir 10-12 ára",
+      "locationName": "Ármúli",
+      "signupUrl": "https://abler.io/shop/kopfri/dalecarnegie/product/Q2x1YlNlcnZpY2U6NTE2MDk="
+    },
+    {
+      "id": "348f964a-4149-43c1-a9c6-19b14eafb917",
+      "tags": [
+        "summer_camp"
+      ],
+      "title": "Gulahlíð 1.-4.bekkur - Vika 2",
+      "age": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "channelId": "vala-indexer",
+      "location": "105",
+      "date": {
+        "start": "15-6-2026",
+        "end": "19-6-2026"
+      },
+      "clubname": "Kringlumýri",
+      "imageUrl": null,
+      "description": "Sumarnámskeið fyrir börn í 1.-4.bekk í Klettaskóla.",
+      "locationName": "Vesturhlíð 3",
+      "signupUrl": ""
     },
     {
       "id": "5c831dc6-6fd9-42dd-92d4-4f0d8542f587",
@@ -279,6 +365,77 @@
       "signupUrl": ""
     },
     {
+      "id": "631a2824-329d-4c68-ac26-2ea8d2c90e13",
+      "tags": [
+        "education"
+      ],
+      "title": "Einkaferming 2026",
+      "age": [
+        16,
+        14
+      ],
+      "channelId": "abler-indexer",
+      "location": "105",
+      "date": {
+        "start": "2-10-2024",
+        "end": "31-12-2026"
+      },
+      "clubname": "Siðmennt",
+      "imageUrl": null,
+      "description": "Boðið er upp á einkafermingu í heimahúsi eða þar sem hentar fjölskyldunni hverju sinni.\nStaðsetning og tími er ákveðinn af fjölskyldu í samráði við athafnastjóra.\n\nEftir að bókun og greiðsla hefur farið fram vinsamlegast sendið eftirfarandi upplýsingar á athafnir@sidmennt.is\n- Nafn og kennitölu fermingarbarns\n- Nafn og kennitölu tengiliðs\n- Ósk um dagsetningu, tíma og stað\n- Ef sérstök ósk er um athafnastjóra",
+      "locationName": "Iceland",
+      "signupUrl": "https://abler.io/shop/sidmennt/athofn/product/Q2x1YlNlcnZpY2U6NDc1NTE="
+    },
+    {
+      "id": "cff9b000-e519-4d52-be73-a4386fffba0b",
+      "tags": [
+        "summer_camp"
+      ],
+      "title": "Askja 8.-10.bekkur - Vika 6",
+      "age": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "channelId": "vala-indexer",
+      "location": "",
+      "date": {
+        "start": "13-7-2026",
+        "end": "17-7-2026"
+      },
+      "clubname": "Kringlumýri",
+      "imageUrl": null,
+      "description": "Sumarnámskeið fyrir börn í 8.-10.bekk í Klettaskóla.",
+      "locationName": "Safamýri 5",
+      "signupUrl": ""
+    },
+    {
+      "id": "ef0d3eaf-8455-4053-ad0f-fbf09cf24f41",
+      "tags": [
+        "boxing"
+      ],
+      "title": "Unglingabox Framhald",
+      "age": [
+        16,
+        12
+      ],
+      "channelId": "abler-indexer",
+      "location": "105",
+      "date": {
+        "start": "3-3-2026",
+        "end": "31-12-2026"
+      },
+      "clubname": "World Class",
+      "imageUrl": null,
+      "description": "Námskeið sem endurnýjast mánaðarlega fyrir unglinga 12-16 ára sem hafa lokið grunnnámskeiði í hnefaleikum eða sambærilegri grein, tímarnir eru á mánudögum og miðvikudögum klukkan 15:15 og 16:15 og á föstudögum klukkan 16:15.\n\nIðkandi þarf að eiga: Hanska, vafninga, munnstykki (góm)\n-\nCourse that renews monthly for youth boxers 12-16 year old that have finished base course in boxing or similar sport. Classes are on mondays and wednesdays at 15:15 and 16:15 and also on fridays at 16:15.\nParticipants need to bring: Gloves, handwraps and mouthpiece.",
+      "locationName": "Austurberg",
+      "signupUrl": "https://abler.io/shop/worldclass/box/product/Q2x1YlNlcnZpY2U6NTQ0MzQ="
+    },
+    {
       "id": "7e60d103-d4dc-45af-a5e5-50792f37fcdd",
       "tags": [
         "summer_camp"
@@ -376,6 +533,50 @@
       "signupUrl": "https://abler.io/shop/frirvk/dalecarnegie/product/Q2x1YlNlcnZpY2U6NTE2MDc="
     },
     {
+      "id": "0f3e7ef4-e66f-43e6-bfcc-f4acc5675ca1",
+      "tags": [
+        "public_sports"
+      ],
+      "title": "Rafíþróttir",
+      "age": [
+        16,
+        8
+      ],
+      "channelId": "abler-indexer",
+      "location": "108",
+      "date": {
+        "start": "17-12-2025",
+        "end": "5-6-2026"
+      },
+      "clubname": "Fram",
+      "imageUrl": null,
+      "description": "Nýtt hjá Fram – Rafíþróttir í samstarfi við Next Level Gaming – skráning hefst 1. jan. 2026.\nRafíþróttir hefja göngu sína í samstarfi við Next Level Gaming.\nFram kynnir með stolti nýtt og spennandi skref - rafíþróttir eru nú að hefjast hjá félaginu fyrir iðkendur á aldrinum 7–16 ára. \nÆfingarnar fara fram í samstarfi við Next Level Gaming í Egilshöll og er þar boðið upp á öruggt og faglegt umhverfi þar sem áhersla er lögð á samvinnu, samskipti og góða félagsfærni í gegnum leik. \nRafíþróttir henta bæði byrjendum og þeim sem hafa reynslu og vilja þróa leikni, sjálfstraust og liðsheild. Skráning hefst strax eftir áramót. \nFram hlakkar til að opna nýjan og metnaðarfullan kafla í starfinu og bjóða iðkendum velkomna í rafíþróttir.\nBoðið verður upp á æfingar í 3 hópum eftir aldri og áhugasviði. Hægt verður að æfa 1x eða 2x í viku.Æfingar fara fram í Egilshöll. Sjá æfingatöflu. \n\n​",
+      "locationName": "Egilshöll,",
+      "signupUrl": "https://abler.io/shop/fram/almennings/product/Q2x1YlNlcnZpY2U6NTA5Njg="
+    },
+    {
+      "id": "10bbb0f3-f996-4851-a0ad-4ea168e20305",
+      "tags": [
+        "table_tennis"
+      ],
+      "title": "Úrval",
+      "age": [
+        56,
+        14
+      ],
+      "channelId": "abler-indexer",
+      "location": "107",
+      "date": {
+        "start": "2-1-2026",
+        "end": "1-6-2026"
+      },
+      "clubname": "KR",
+      "imageUrl": null,
+      "description": "​Afrekshópur borðtennisdeildar KR. Hentar fólki sem vill bæta sig og ná árangri í borðtenniskeppnum. ​",
+      "locationName": "Neshagi",
+      "signupUrl": "https://abler.io/shop/bordtennis/product/Q2x1YlNlcnZpY2U6NDQzOTI="
+    },
+    {
       "id": "cac84c5a-45bd-428f-a4c1-35a9351fec1a",
       "tags": [
         "summer_camp"
@@ -398,6 +599,53 @@
       "description": "Sumarnámskeið fyrir börn í 1.-4.bekk í Klettaskóla.",
       "locationName": "Vesturhlíð 3",
       "signupUrl": ""
+    },
+    {
+      "id": "28dacf0d-1177-400e-8b5e-b68d3f5d9c80",
+      "tags": [
+        "language_courses"
+      ],
+      "title": "Bakstur á frönsku",
+      "age": [
+        15
+      ],
+      "channelId": "abler-indexer",
+      "location": "101",
+      "date": {
+        "start": "13-2-2026",
+        "end": "10-6-2026"
+      },
+      "clubname": "Alliance Française",
+      "imageUrl": null,
+      "description": "Bakstur á frönsku með Clara\nMarkmiðið með námskeiðinu er að hjálpa þér að bæta frönsku þína á meðan þú lærir að búa til klassíska franska eftirrétti, suma þekkta og aðra síður þekkta! Sítrónubaka, île flottante, smákökur eða jafnvel tiramisu, þessar uppskriftir verða engin ráðgáta fyrir þig lengur! Nemendur munu læra ýmsar aðferðir (hvernig á að gera bökudeig, crème anglaise...) og, eftir því hvaða námskeið er um að ræða, geta smakkað afraksturinn á staðnum eða tekið hann með sér heim. Sumar uppskriftir þurfa nefnilega biðtíma áður en hægt er að njóta þeirra.",
+      "locationName": "Tryggvagata",
+      "signupUrl": "https://abler.io/shop/alliancefrancai/alliance/product/Q2x1YlNlcnZpY2U6Mzg5NzQ="
+    },
+    {
+      "id": "a0a39762-0eda-4fc9-bf63-651a0a3798e9",
+      "tags": [
+        "leisure_",
+        "self_defense",
+        "youth_activity",
+        "dance",
+        "other"
+      ],
+      "title": "Börn 7-13 ára",
+      "age": [
+        16,
+        6
+      ],
+      "channelId": "abler-indexer",
+      "location": "108",
+      "date": {
+        "start": "14-1-2026",
+        "end": "14-6-2026"
+      },
+      "clubname": "Capoeira Félag Íslands",
+      "imageUrl": null,
+      "description": "Capoeira i Vorönn 2026 / Spring Semester 2026ÍS: Brasilísk bardagadans sem er allt í senn sjálsvarnaríþrótt, ﻿loftfimleika og tónlist. Iðkendur æfa snúningsspörk, bein spörk, beygingar og aðferðir til að koma andstæðingum úr jafnvægi. Við æfum jafnvægishreyfingar á fótum og höndum, eins og handstöð, brúar og erfiðari útgafar. Iðkendur læra að spila saman, tengja hreyfingar saman, nota strategíu til að stjórna leiknum, og nota tónlist og söng til að skapa jákvæða og skemmtilega stemmningu.\n\nEN: Brazilian martial dance that is a self-defense sport, acrobatics and music at once. Practitioners practice spinning kicks, straight kicks, defensive movements and techniques to destabilize opponents. We practice movements with hands and feet, such as handstands, bridges and other more advanced movements permutations. Practitioners learn to play together, create movement combinations, use strategy to control the game, and use music and song to create a positive and fun atmosphere.\n\n25% Systkina afsláttur í boði  / 25% Sibling discount available.\n\n​Athugið: börn 14 ára eða eldri æfa með fullorðunum.\n​Note: children 14 years or older train with adults​",
+      "locationName": "Heiðargerði",
+      "signupUrl": "https://abler.io/shop/capoeiraiceland/1/product/Q2x1YlNlcnZpY2U6MTExNzI="
     },
     {
       "id": "15bb12c4-fd35-4790-abe4-cb96fa9115fb",
@@ -427,50 +675,6 @@
       "signupUrl": ""
     },
     {
-      "id": "631a2824-329d-4c68-ac26-2ea8d2c90e13",
-      "tags": [
-        "education"
-      ],
-      "title": "Einkaferming 2026",
-      "age": [
-        16,
-        14
-      ],
-      "channelId": "abler-indexer",
-      "location": "105",
-      "date": {
-        "start": "2-10-2024",
-        "end": "31-12-2026"
-      },
-      "clubname": "Siðmennt",
-      "imageUrl": null,
-      "description": "Boðið er upp á einkafermingu í heimahúsi eða þar sem hentar fjölskyldunni hverju sinni.\nStaðsetning og tími er ákveðinn af fjölskyldu í samráði við athafnastjóra.\n\nEftir að bókun og greiðsla hefur farið fram vinsamlegast sendið eftirfarandi upplýsingar á athafnir@sidmennt.is\n- Nafn og kennitölu fermingarbarns\n- Nafn og kennitölu tengiliðs\n- Ósk um dagsetningu, tíma og stað\n- Ef sérstök ósk er um athafnastjóra",
-      "locationName": "Iceland",
-      "signupUrl": "https://abler.io/shop/sidmennt/athofn/product/Q2x1YlNlcnZpY2U6NDc1NTE="
-    },
-    {
-      "id": "ef0d3eaf-8455-4053-ad0f-fbf09cf24f41",
-      "tags": [
-        "boxing"
-      ],
-      "title": "Unglingabox Framhald",
-      "age": [
-        16,
-        12
-      ],
-      "channelId": "abler-indexer",
-      "location": "105",
-      "date": {
-        "start": "3-3-2026",
-        "end": "31-12-2026"
-      },
-      "clubname": "World Class",
-      "imageUrl": null,
-      "description": "Námskeið sem endurnýjast mánaðarlega fyrir unglinga 12-16 ára sem hafa lokið grunnnámskeiði í hnefaleikum eða sambærilegri grein, tímarnir eru á mánudögum og miðvikudögum klukkan 15:15 og 16:15 og á föstudögum klukkan 16:15.\n\nIðkandi þarf að eiga: Hanska, vafninga, munnstykki (góm)\n-\nCourse that renews monthly for youth boxers 12-16 year old that have finished base course in boxing or similar sport. Classes are on mondays and wednesdays at 15:15 and 16:15 and also on fridays at 16:15.\nParticipants need to bring: Gloves, handwraps and mouthpiece.",
-      "locationName": "Austurberg",
-      "signupUrl": "https://abler.io/shop/worldclass/box/product/Q2x1YlNlcnZpY2U6NTQ0MzQ="
-    },
-    {
       "id": "46a1b49e-9117-4b39-bf71-fb295a9ef1f7",
       "tags": [
         "other"
@@ -488,6 +692,50 @@
       "description": "Sumarbúðir 10-12 ára",
       "locationName": "Ármúli",
       "signupUrl": "https://abler.io/shop/olfus/dale/product/Q2x1YlNlcnZpY2U6NTE2MTM="
+    },
+    {
+      "id": "5a04a3d4-3001-47ca-91a1-387e50f5eed5",
+      "tags": [
+        "athletics"
+      ],
+      "title": "ÍR frjalsar meistaraflokkur 2025-2026",
+      "age": [
+        76,
+        17
+      ],
+      "channelId": "abler-indexer",
+      "location": "109",
+      "date": {
+        "start": "25-8-2025",
+        "end": "24-8-2026"
+      },
+      "clubname": "ÍR",
+      "imageUrl": null,
+      "description": "Æfingargjöld/árgjald fyrir meistaraflokk ÍR frjalsar.",
+      "locationName": "Laugardalsholl",
+      "signupUrl": "https://abler.io/shop/ir/frjalsar/product/Q2x1YlNlcnZpY2U6NDQ5MTc="
+    },
+    {
+      "id": "3b5a22fe-d2e5-4860-aef6-482b80331908",
+      "tags": [
+        "football"
+      ],
+      "title": "8.flokkur / Leikskólafótbolti",
+      "age": [
+        6,
+        4
+      ],
+      "channelId": "abler-indexer",
+      "location": "110",
+      "date": {
+        "start": "20-8-2025",
+        "end": "31-8-2026"
+      },
+      "clubname": "Fylkir",
+      "imageUrl": null,
+      "description": "Leikskólafótbolti: Ein fótboltaæfing í viku á leikskólatíma í íþróttahúsum nálægt leikskólum og hin æfingin laugardagsmorgnum þar sem flokkurinn æfir saman á hefðbundni æfingu. \nLeiðbeinendur/leikskólakennarar/foreldrar (fer eftir tímasetningu æfinga) koma með krakkana í næsta íþróttahús á fótboltaæfingu og þar tekur þjálfari á vegum Fylkis á móti þeim. Strákar og stelpur æfa saman á leikskóla tíma, kynjaskipt á laugardögum. \nÆfing 1\nRauðaborg --> æfing í Selásskóla 14:30 fimmtudögumHeiðarborg --> æfing í Fylkishöll 08:15 miðvikudögumÁrtúnsskóli leikskóladeild --> æfing í Ártúnsskóla 08:15 á þriðjudögumRauðhóll --> æfing í Fylkisseli 09:00 (2020) og 09:40 (2021) fimmtudagar.Aðrir leikskólar --> Æfing á miðvikudögum í Árbæjarskóla 16:20-17:00 (eldri) 17:00-17:40 (yngri og stelpur)ATH: Æfingar á leikskólatíma er einungis fyrir krakka fædda 2020 og 2021. Yngri krakkar verða að sækja æfingar á miðvikudögum í árbæjarskóla.\n\nÆfing 2\nLaugardagur - Fylkishöll\n09:00-09:40 strákar (2020)\n09:40-10:20 strákar (2021 og yngri)\n10:20-11:00 stelpur \n\nÆfingagjöld 8.flokkur karla fyrir tímabilið 2025-2026. \n​Ef æfingagjöldum er dreift á greiðslukort þá bætist við 2% kostnaður.\n\nForráðamenn viðurkenna með greiðslu æfingagjalda að Fylki sé veittur réttur til nýtingar á myndböndum eða myndum af iðkanda/barni sem gætu verið persónugreinanlegar. Sem dæmi, en ekki tæmandi talið, í yfirlitsmyndum eða myndböndum yfir knattspyrnuvöll, efni sem tekið er upp á æfingatímum á meðan æfingum eða leikjum stendur, beinar útsendingar á vegum félagsins eða annarra félaga.  \nForráðamenn gera sér grein fyrir því að yfirlitsmyndir og myndbönd úr leikjum geta verið notuð í auglýsingaskyni og birst á miðlum Fylkis eða annars félags. Fylkir mun þó ávallt leita samþykkis iðkanda eða forráðamanna ef um er að ræða nærmyndir eða annað persónulegra/-greinanlegra auglýsingaefni.\nÆfingapeysa\nInnifalin í FULLUM æfingagjöldum er ný keppnistreyja sem verður afhent í apr/maí 2026.",
+      "locationName": "Fylkisvöllur,",
+      "signupUrl": "https://abler.io/shop/fylkir/fotbolti/product/Q2x1YlNlcnZpY2U6NDQzNDc="
     },
     {
       "id": "ac0c6beb-bc2a-494f-8a2e-0a2516729019",
@@ -514,25 +762,6 @@
       "signupUrl": ""
     },
     {
-      "id": "6987ba07-53ec-4a13-8598-d1dfa97c52c0",
-      "tags": [
-        "education"
-      ],
-      "title": "16-19 ára námskeið - frístundastyrkur 2026",
-      "age": [],
-      "channelId": "abler-indexer",
-      "location": "108",
-      "date": {
-        "start": "2-1-2026",
-        "end": "31-12-2026"
-      },
-      "clubname": "Kópavogsbær - Frístundagátt",
-      "imageUrl": null,
-      "description": "16-19 ára næamskeið",
-      "locationName": "Ármúli",
-      "signupUrl": "https://abler.io/shop/kopfri/dalecarnegie/product/Q2x1YlNlcnZpY2U6NTE2MTI="
-    },
-    {
       "id": "2f0f79d6-bf11-4cc0-8381-87bf9828a94f",
       "tags": [
         "summer_camp"
@@ -557,26 +786,23 @@
       "signupUrl": ""
     },
     {
-      "id": "3b5a22fe-d2e5-4860-aef6-482b80331908",
+      "id": "6987ba07-53ec-4a13-8598-d1dfa97c52c0",
       "tags": [
-        "football"
+        "education"
       ],
-      "title": "8.flokkur / Leikskólafótbolti",
-      "age": [
-        6,
-        4
-      ],
+      "title": "16-19 ára námskeið - frístundastyrkur 2026",
+      "age": [],
       "channelId": "abler-indexer",
-      "location": "110",
+      "location": "108",
       "date": {
-        "start": "20-8-2025",
-        "end": "31-8-2026"
+        "start": "2-1-2026",
+        "end": "31-12-2026"
       },
-      "clubname": "Fylkir",
+      "clubname": "Kópavogsbær - Frístundagátt",
       "imageUrl": null,
-      "description": "Leikskólafótbolti: Ein fótboltaæfing í viku á leikskólatíma í íþróttahúsum nálægt leikskólum og hin æfingin laugardagsmorgnum þar sem flokkurinn æfir saman á hefðbundni æfingu. \nLeiðbeinendur/leikskólakennarar/foreldrar (fer eftir tímasetningu æfinga) koma með krakkana í næsta íþróttahús á fótboltaæfingu og þar tekur þjálfari á vegum Fylkis á móti þeim. Strákar og stelpur æfa saman á leikskóla tíma, kynjaskipt á laugardögum. \nÆfing 1\nRauðaborg --> æfing í Selásskóla 14:30 fimmtudögumHeiðarborg --> æfing í Fylkishöll 08:15 miðvikudögumÁrtúnsskóli leikskóladeild --> æfing í Ártúnsskóla 08:15 á þriðjudögumRauðhóll --> æfing í Fylkisseli 09:00 (2020) og 09:40 (2021) fimmtudagar.Aðrir leikskólar --> Æfing á miðvikudögum í Árbæjarskóla 16:20-17:00 (eldri) 17:00-17:40 (yngri og stelpur)ATH: Æfingar á leikskólatíma er einungis fyrir krakka fædda 2020 og 2021. Yngri krakkar verða að sækja æfingar á miðvikudögum í árbæjarskóla.\n\nÆfing 2\nLaugardagur - Fylkishöll\n09:00-09:40 strákar (2020)\n09:40-10:20 strákar (2021 og yngri)\n10:20-11:00 stelpur \n\nÆfingagjöld 8.flokkur karla fyrir tímabilið 2025-2026. \n​Ef æfingagjöldum er dreift á greiðslukort þá bætist við 2% kostnaður.\n\nForráðamenn viðurkenna með greiðslu æfingagjalda að Fylki sé veittur réttur til nýtingar á myndböndum eða myndum af iðkanda/barni sem gætu verið persónugreinanlegar. Sem dæmi, en ekki tæmandi talið, í yfirlitsmyndum eða myndböndum yfir knattspyrnuvöll, efni sem tekið er upp á æfingatímum á meðan æfingum eða leikjum stendur, beinar útsendingar á vegum félagsins eða annarra félaga.  \nForráðamenn gera sér grein fyrir því að yfirlitsmyndir og myndbönd úr leikjum geta verið notuð í auglýsingaskyni og birst á miðlum Fylkis eða annars félags. Fylkir mun þó ávallt leita samþykkis iðkanda eða forráðamanna ef um er að ræða nærmyndir eða annað persónulegra/-greinanlegra auglýsingaefni.\nÆfingapeysa\nInnifalin í FULLUM æfingagjöldum er ný keppnistreyja sem verður afhent í apr/maí 2026.",
-      "locationName": "Fylkisvöllur,",
-      "signupUrl": "https://abler.io/shop/fylkir/fotbolti/product/Q2x1YlNlcnZpY2U6NDQzNDc="
+      "description": "16-19 ára næamskeið",
+      "locationName": "Ármúli",
+      "signupUrl": "https://abler.io/shop/kopfri/dalecarnegie/product/Q2x1YlNlcnZpY2U6NTE2MTI="
     },
     {
       "id": "5a14e999-656c-41f2-a729-798cd5edd992",
@@ -633,6 +859,52 @@
       "signupUrl": ""
     },
     {
+      "id": "76958b03-00d8-4f79-af74-a4abaace6501",
+      "tags": [
+        "summer_camp"
+      ],
+      "title": "Askja 8.-10.bekkur - Vika 4",
+      "age": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "channelId": "vala-indexer",
+      "location": "",
+      "date": {
+        "start": "29-6-2026",
+        "end": "3-7-2026"
+      },
+      "clubname": "Kringlumýri",
+      "imageUrl": null,
+      "description": "Sumarnámskeið fyrir börn í 8.-10.bekk í Klettaskóla.",
+      "locationName": "Safamýri 5",
+      "signupUrl": ""
+    },
+    {
+      "id": "c0ca9efb-bb06-4d96-8216-11db882cd5f1",
+      "tags": [
+        "education"
+      ],
+      "title": "10-12 ára námskeið - frístundastyrkur 2026",
+      "age": [],
+      "channelId": "abler-indexer",
+      "location": "108",
+      "date": {
+        "start": "2-1-2026",
+        "end": "31-12-2026"
+      },
+      "clubname": "Kópavogsbær - Frístundagátt",
+      "imageUrl": null,
+      "description": "10-12 ára námskeið",
+      "locationName": "Ármúli",
+      "signupUrl": "https://abler.io/shop/kopfri/dalecarnegie/product/Q2x1YlNlcnZpY2U6NTE2MTA="
+    },
+    {
       "id": "b21cabd2-e3d1-4383-8d3c-d574680a7498",
       "tags": [
         "summer_camp"
@@ -660,30 +932,11 @@
       "signupUrl": ""
     },
     {
-      "id": "c0ca9efb-bb06-4d96-8216-11db882cd5f1",
-      "tags": [
-        "education"
-      ],
-      "title": "10-12 ára námskeið - frístundastyrkur 2026",
-      "age": [],
-      "channelId": "abler-indexer",
-      "location": "108",
-      "date": {
-        "start": "2-1-2026",
-        "end": "31-12-2026"
-      },
-      "clubname": "Kópavogsbær - Frístundagátt",
-      "imageUrl": null,
-      "description": "10-12 ára námskeið",
-      "locationName": "Ármúli",
-      "signupUrl": "https://abler.io/shop/kopfri/dalecarnegie/product/Q2x1YlNlcnZpY2U6NTE2MTA="
-    },
-    {
-      "id": "cff9b000-e519-4d52-be73-a4386fffba0b",
+      "id": "cfe28f8e-abea-4a91-b17e-1bd8fbd5ff1d",
       "tags": [
         "summer_camp"
       ],
-      "title": "Askja 8.-10.bekkur - Vika 6",
+      "title": "Askja 8.-10.bekkur - Vika 1",
       "age": [
         10,
         11,
@@ -696,8 +949,8 @@
       "channelId": "vala-indexer",
       "location": "",
       "date": {
-        "start": "13-7-2026",
-        "end": "17-7-2026"
+        "start": "11-6-2026",
+        "end": "12-6-2026"
       },
       "clubname": "Kringlumýri",
       "imageUrl": null,
@@ -733,71 +986,28 @@
       "signupUrl": ""
     },
     {
-      "id": "cfe28f8e-abea-4a91-b17e-1bd8fbd5ff1d",
+      "id": "20dac62b-48a7-4831-8aaa-2f5291f61c82",
       "tags": [
         "summer_camp"
       ],
-      "title": "Askja 8.-10.bekkur - Vika 1",
+      "title": "Gulahlíð 1.-4.bekkur - Vika 9",
       "age": [
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16
+        6,
+        7,
+        8,
+        9
       ],
       "channelId": "vala-indexer",
-      "location": "",
+      "location": "105",
       "date": {
-        "start": "11-6-2026",
-        "end": "12-6-2026"
+        "start": "17-8-2026",
+        "end": "19-8-2026"
       },
       "clubname": "Kringlumýri",
       "imageUrl": null,
-      "description": "Sumarnámskeið fyrir börn í 8.-10.bekk í Klettaskóla.",
-      "locationName": "Safamýri 5",
+      "description": "Sumarnámskeið fyrir börn í 1.-4.bekk í Klettaskóla.",
+      "locationName": "Vesturhlíð 3",
       "signupUrl": ""
-    },
-    {
-      "id": "28dacf0d-1177-400e-8b5e-b68d3f5d9c80",
-      "tags": [
-        "language_courses"
-      ],
-      "title": "Bakstur á frönsku",
-      "age": [
-        15
-      ],
-      "channelId": "abler-indexer",
-      "location": "101",
-      "date": {
-        "start": "13-2-2026",
-        "end": "10-6-2026"
-      },
-      "clubname": "Alliance Française",
-      "imageUrl": null,
-      "description": "Bakstur á frönsku með Clara\nMarkmiðið með námskeiðinu er að hjálpa þér að bæta frönsku þína á meðan þú lærir að búa til klassíska franska eftirrétti, suma þekkta og aðra síður þekkta! Sítrónubaka, île flottante, smákökur eða jafnvel tiramisu, þessar uppskriftir verða engin ráðgáta fyrir þig lengur! Nemendur munu læra ýmsar aðferðir (hvernig á að gera bökudeig, crème anglaise...) og, eftir því hvaða námskeið er um að ræða, geta smakkað afraksturinn á staðnum eða tekið hann með sér heim. Sumar uppskriftir þurfa nefnilega biðtíma áður en hægt er að njóta þeirra.",
-      "locationName": "Tryggvagata",
-      "signupUrl": "https://abler.io/shop/alliancefrancai/alliance/product/Q2x1YlNlcnZpY2U6Mzg5NzQ="
-    },
-    {
-      "id": "aed463c1-6a9c-4a3c-98b2-59610bf2d98b",
-      "tags": [
-        "table_tennis"
-      ],
-      "title": "Borðtennis 2025-2026",
-      "age": [],
-      "channelId": "abler-indexer",
-      "location": "111",
-      "date": {
-        "start": "26-9-2025",
-        "end": "7-6-2026"
-      },
-      "clubname": "Leiknir Reykjavík",
-      "imageUrl": null,
-      "description": "Borðtennisæfingar í Íþróttahúsi Fellaskóla tvisvar sinnum í viku hjá Íþróttafélaginu Leikni. Allir eru velkomnir. Hægt er að ráðstafa frístundastyrk til að greiða æfingagjöldin.",
-      "locationName": "Fellaskóli,",
-      "signupUrl": "https://abler.io/shop/leiknibordtennis/product/Q2x1YlNlcnZpY2U6NDc0MDg="
     },
     {
       "id": "eb782841-7acb-42e5-8f4f-de6bdd7ae73a",
@@ -822,23 +1032,72 @@
       "signupUrl": "https://abler.io/shop/vikingur/fotbolti/product/Q2x1YlNlcnZpY2U6NTE1NTU="
     },
     {
-      "id": "14c9e7d2-d6f0-4a41-904b-a9fe3c987f8b",
+      "id": "079d7957-0443-4aeb-a27e-9fe4f00b45e6",
       "tags": [
         "education"
       ],
-      "title": "13-15 ára námskeið - frístundastyrkur 2026",
+      "title": "Harpa 2027: 3. apríl",
+      "age": [
+        14,
+        12
+      ],
+      "channelId": "abler-indexer",
+      "location": "105",
+      "date": {
+        "start": "2-2-2026",
+        "end": "7-3-2027"
+      },
+      "clubname": "Siðmennt",
+      "imageUrl": null,
+      "description": "Fermingarathöfn Siðmenntar 2027\n3. apríl \nAthafnir kl. 10, 12 og 14.\n\nUpplýsingar verða sendar á forráðafólk þegar nær dregur.\n\nÖll börn sem vilja fermast borgaralega verða að hafa lokið fermingarfræðslu námskeiði á vegum Siðmenntar, skráning á námskeið opna haustið 2026 fyrir vorönn 2027.\nAthugið að athafnagjald er ekki endurgreitt ef afbókað er með minna en mánaðarfyrirvara.",
+      "locationName": "Harpa",
+      "signupUrl": "https://abler.io/shop/sidmennt/athofn/product/Q2x1YlNlcnZpY2U6NTMxNTA="
+    },
+    {
+      "id": "aed463c1-6a9c-4a3c-98b2-59610bf2d98b",
+      "tags": [
+        "table_tennis"
+      ],
+      "title": "Borðtennis 2025-2026",
       "age": [],
       "channelId": "abler-indexer",
-      "location": "108",
+      "location": "111",
       "date": {
-        "start": "2-1-2026",
-        "end": "31-12-2026"
+        "start": "26-9-2025",
+        "end": "7-6-2026"
       },
-      "clubname": "Frístundakort Reykjavíkur",
+      "clubname": "Leiknir Reykjavík",
       "imageUrl": null,
-      "description": "13-15 ára námskeið",
-      "locationName": "Ármúli",
-      "signupUrl": "https://abler.io/shop/frirvk/dalecarnegie/product/Q2x1YlNlcnZpY2U6NTE2MDQ="
+      "description": "Borðtennisæfingar í Íþróttahúsi Fellaskóla tvisvar sinnum í viku hjá Íþróttafélaginu Leikni. Allir eru velkomnir. Hægt er að ráðstafa frístundastyrk til að greiða æfingagjöldin.",
+      "locationName": "Fellaskóli,",
+      "signupUrl": "https://abler.io/shop/leiknibordtennis/product/Q2x1YlNlcnZpY2U6NDc0MDg="
+    },
+    {
+      "id": "ad9694c5-8aee-494d-b846-6f673bcef7e0",
+      "tags": [
+        "summer_camp"
+      ],
+      "title": "Askja 8.-10.bekkur - Vika 8",
+      "age": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "channelId": "vala-indexer",
+      "location": "",
+      "date": {
+        "start": "10-8-2026",
+        "end": "14-8-2026"
+      },
+      "clubname": "Kringlumýri",
+      "imageUrl": null,
+      "description": "Sumarnámskeið fyrir börn í 8.-10.bekk í Klettaskóla.",
+      "locationName": "Safamýri 5",
+      "signupUrl": ""
     },
     {
       "id": "e17ef305-83e4-460e-94d9-3a79b761e5a1",
@@ -862,59 +1121,6 @@
       "imageUrl": null,
       "description": "Sumarnámskeið fyrir börn í 1.-4.bekk í Klettaskóla.",
       "locationName": "Vesturhlíð 3",
-      "signupUrl": ""
-    },
-    {
-      "id": "a0a39762-0eda-4fc9-bf63-651a0a3798e9",
-      "tags": [
-        "leisure_",
-        "self_defense",
-        "youth_activity",
-        "other",
-        "dance"
-      ],
-      "title": "Börn 7-13 ára",
-      "age": [
-        16,
-        6
-      ],
-      "channelId": "abler-indexer",
-      "location": "108",
-      "date": {
-        "start": "14-1-2026",
-        "end": "14-6-2026"
-      },
-      "clubname": "Capoeira Félag Íslands",
-      "imageUrl": null,
-      "description": "Capoeira i Vorönn 2026 / Spring Semester 2026ÍS: Brasilísk bardagadans sem er allt í senn sjálsvarnaríþrótt, ﻿loftfimleika og tónlist. Iðkendur æfa snúningsspörk, bein spörk, beygingar og aðferðir til að koma andstæðingum úr jafnvægi. Við æfum jafnvægishreyfingar á fótum og höndum, eins og handstöð, brúar og erfiðari útgafar. Iðkendur læra að spila saman, tengja hreyfingar saman, nota strategíu til að stjórna leiknum, og nota tónlist og söng til að skapa jákvæða og skemmtilega stemmningu.\n\nEN: Brazilian martial dance that is a self-defense sport, acrobatics and music at once. Practitioners practice spinning kicks, straight kicks, defensive movements and techniques to destabilize opponents. We practice movements with hands and feet, such as handstands, bridges and other more advanced movements permutations. Practitioners learn to play together, create movement combinations, use strategy to control the game, and use music and song to create a positive and fun atmosphere.\n\n25% Systkina afsláttur í boði  / 25% Sibling discount available.\n\n​Athugið: börn 14 ára eða eldri æfa með fullorðunum.\n​Note: children 14 years or older train with adults​",
-      "locationName": "Heiðargerði",
-      "signupUrl": "https://abler.io/shop/capoeiraiceland/1/product/Q2x1YlNlcnZpY2U6MTExNzI="
-    },
-    {
-      "id": "76958b03-00d8-4f79-af74-a4abaace6501",
-      "tags": [
-        "summer_camp"
-      ],
-      "title": "Askja 8.-10.bekkur - Vika 4",
-      "age": [
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16
-      ],
-      "channelId": "vala-indexer",
-      "location": "",
-      "date": {
-        "start": "29-6-2026",
-        "end": "3-7-2026"
-      },
-      "clubname": "Kringlumýri",
-      "imageUrl": null,
-      "description": "Sumarnámskeið fyrir börn í 8.-10.bekk í Klettaskóla.",
-      "locationName": "Safamýri 5",
       "signupUrl": ""
     },
     {
@@ -978,26 +1184,26 @@
       "signupUrl": "https://abler.io/shop/frirvk/dalecarnegie/product/Q2x1YlNlcnZpY2U6NTE2MDM="
     },
     {
-      "id": "079d7957-0443-4aeb-a27e-9fe4f00b45e6",
+      "id": "83e3f3d1-fdf0-4486-9ef4-fb33b7344c22",
       "tags": [
-        "education"
+        "football"
       ],
-      "title": "Harpa 2027: 3. apríl",
+      "title": "Markmannsnámskeið Asmir Begovic",
       "age": [
-        14,
-        12
+        19,
+        8
       ],
       "channelId": "abler-indexer",
-      "location": "105",
+      "location": "113",
       "date": {
-        "start": "2-2-2026",
-        "end": "7-3-2027"
+        "start": "19-2-2024",
+        "end": "7-6-2026"
       },
-      "clubname": "Siðmennt",
+      "clubname": "Fram",
       "imageUrl": null,
-      "description": "Fermingarathöfn Siðmenntar 2027\n3. apríl \nAthafnir kl. 10, 12 og 14.\n\nUpplýsingar verða sendar á forráðafólk þegar nær dregur.\n\nÖll börn sem vilja fermast borgaralega verða að hafa lokið fermingarfræðslu námskeiði á vegum Siðmenntar, skráning á námskeið opna haustið 2026 fyrir vorönn 2027.\nAthugið að athafnagjald er ekki endurgreitt ef afbókað er með minna en mánaðarfyrirvara.",
-      "locationName": "Harpa",
-      "signupUrl": "https://abler.io/shop/sidmennt/athofn/product/Q2x1YlNlcnZpY2U6NTMxNTA="
+      "description": "Knattspyrnufélagið Fram býður Asmir Begovic, David Smalley og Alex Balaskas – þjálfara Asmir Begovic goalkeeping academy – hjartanlega velkomna á Lambhagavöll í Úlfarsárdalnum 6. og 7. júní.\nÞetta er þriðja árið í röð sem Fram og Asmir Begovic goalkeeping academy halda markmannsnámskeið fyrir stráka og stelpur í Úlfarsárdalnum, en námskeiðunum hefur verið vel tekið og heppnast með eindæmum vel þar sem mikill fjöldi efnilegra markmanna víðsvegar af landinu æfði undir handleiðslu frábærra þjálfara.\n\n Verð á námskeiðið er 29.500 kr og innifalið er heitur matur í hádeginu og hressing.\n\nÞjálfarar í ár verða Asmir Begovic, David Smalley og Alex Balaskas, ásamt íslenskum þjálfurum.\nAsmir Begovic þarf vart að kynna en hann er í dag á mála hjá Leicester City. Áður hefur hann spilað með stórliðum á borð við Chelsea, Everton, AC Milan, Stoke City og Portsmouth.\nDavid Smalley er núverandi markmannsþjálfari Aldershot Town. Hann er með UEFA A markmannsþjálfaragráðu og spilaði áður sem atvinnumaður hjá Reading og Yeovil Town. Smalley hefur  gegnt sambærilegri stöðu hjá Hampton og Richmond Borough, ásamt því að hafa þjálfað hjá kvennaliði og akademíu Chelsea. Hann er aðalmarkmannsþjálfari í Markmannsakademíu Asmir Begovic.\nAlex Balaskas er markmannsþjálfari hjá Markmannsakademíu Asmir Begovic. Hann er reynslumikill þjálfari sem býr yfir mikilli þekkingu á þjálfun og hefur starfað við markmannsþjálfun hjá Crystal Palace og AFC Wimbledon.  \nNánari upplýsingar er hægt að nálgast hjá steinar@fram.is",
+      "locationName": "Knattspyrnufélagið",
+      "signupUrl": "https://abler.io/shop/fram/fotbolti/product/Q2x1YlNlcnZpY2U6NTM4NjM="
     },
     {
       "id": "7c48b925-e3ee-4e9a-bcf7-221b94184a5d",
@@ -1073,6 +1279,63 @@
       "signupUrl": ""
     },
     {
+      "id": "14c9e7d2-d6f0-4a41-904b-a9fe3c987f8b",
+      "tags": [
+        "education"
+      ],
+      "title": "13-15 ára námskeið - frístundastyrkur 2026",
+      "age": [],
+      "channelId": "abler-indexer",
+      "location": "108",
+      "date": {
+        "start": "2-1-2026",
+        "end": "31-12-2026"
+      },
+      "clubname": "Frístundakort Reykjavíkur",
+      "imageUrl": null,
+      "description": "13-15 ára námskeið",
+      "locationName": "Ármúli",
+      "signupUrl": "https://abler.io/shop/frirvk/dalecarnegie/product/Q2x1YlNlcnZpY2U6NTE2MDQ="
+    },
+    {
+      "id": "c5e6c997-da20-4741-a787-39f96269eff0",
+      "tags": [
+        "athletics"
+      ],
+      "title": "Hlaupahópur ÍR",
+      "age": [],
+      "channelId": "abler-indexer",
+      "location": "109",
+      "date": {
+        "start": "8-1-2026",
+        "end": "31-12-2026"
+      },
+      "clubname": "ÍR",
+      "imageUrl": null,
+      "description": "Æfingagjöld fyrir Hlaupahóp ÍR. \nVeittur er 50% makaafsláttur og einnig 50% afsláttur fyrir foreldra barna sem æfa frjálsar hjá ÍR. Til að virkja afsláttinn þarf að senda tölvupóst á bjarki@ir.is sem skráir viðkomandi á réttu verði.",
+      "locationName": "Skógarsel",
+      "signupUrl": "https://abler.io/shop/ir/frjalsar/product/Q2x1YlNlcnZpY2U6NzQxNA=="
+    },
+    {
+      "id": "5e31b148-f2b2-47f6-8e35-d69dd282417f",
+      "tags": [
+        "cycling"
+      ],
+      "title": "Hjólreiðadeild Víkings 2025-2026",
+      "age": [],
+      "channelId": "abler-indexer",
+      "location": "108",
+      "date": {
+        "start": "3-9-2025",
+        "end": "30-9-2026"
+      },
+      "clubname": "Víkingur",
+      "imageUrl": null,
+      "description": "Hjólreiðadeild Víkings tímabilið 1. október 2025 - 1 október 2026\nInniæfingar í World Class Smáralind hefjast 1.okt 2025\nMánudaga kl. 17:40, miðvikudaga kl. 17:40 og laugardaga kl. 10:10\nAðgangur að æfingum er á TrainingPeaks\nÚtiæfingar í vetur á laugardögum kl. 9 og sunnudögum kl. 10\nSumaræfingar hefjast 1. maí 2026",
+      "locationName": "Víkin,",
+      "signupUrl": "https://abler.io/shop/vikingur/hjol/product/Q2x1YlNlcnZpY2U6NDYyNjM="
+    },
+    {
       "id": "33ffc76b-b642-4eaf-b3f3-4d973acdb966",
       "tags": [
         "education"
@@ -1095,74 +1358,26 @@
       "signupUrl": "https://abler.io/shop/sidmennt/athofn/product/Q2x1YlNlcnZpY2U6NTMwNjg="
     },
     {
-      "id": "c5e6c997-da20-4741-a787-39f96269eff0",
+      "id": "5461c9c0-4d82-496c-b1fd-92f2e0a73203",
       "tags": [
-        "athletics"
+        "gym"
       ],
-      "title": "Hlaupahópur ÍR",
-      "age": [],
+      "title": "Frístundakort Hreyfingar 2026 - 5 mánuðir",
+      "age": [
+        18,
+        15
+      ],
       "channelId": "abler-indexer",
-      "location": "109",
+      "location": "104",
       "date": {
-        "start": "8-1-2026",
+        "start": "1-1-2026",
         "end": "31-12-2026"
       },
-      "clubname": "ÍR",
+      "clubname": "Hreyfing",
       "imageUrl": null,
-      "description": "Æfingagjöld fyrir Hlaupahóp ÍR. \nVeittur er 50% makaafsláttur og einnig 50% afsláttur fyrir foreldra barna sem æfa frjálsar hjá ÍR. Til að virkja afsláttinn þarf að senda tölvupóst á bjarki@ir.is sem skráir viðkomandi á réttu verði.",
-      "locationName": "Skógarsel",
-      "signupUrl": "https://abler.io/shop/ir/frjalsar/product/Q2x1YlNlcnZpY2U6NzQxNA=="
-    },
-    {
-      "id": "20dac62b-48a7-4831-8aaa-2f5291f61c82",
-      "tags": [
-        "summer_camp"
-      ],
-      "title": "Gulahlíð 1.-4.bekkur - Vika 9",
-      "age": [
-        6,
-        7,
-        8,
-        9
-      ],
-      "channelId": "vala-indexer",
-      "location": "105",
-      "date": {
-        "start": "17-8-2026",
-        "end": "19-8-2026"
-      },
-      "clubname": "Kringlumýri",
-      "imageUrl": null,
-      "description": "Sumarnámskeið fyrir börn í 1.-4.bekk í Klettaskóla.",
-      "locationName": "Vesturhlíð 3",
-      "signupUrl": ""
-    },
-    {
-      "id": "ad9694c5-8aee-494d-b846-6f673bcef7e0",
-      "tags": [
-        "summer_camp"
-      ],
-      "title": "Askja 8.-10.bekkur - Vika 8",
-      "age": [
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16
-      ],
-      "channelId": "vala-indexer",
-      "location": "",
-      "date": {
-        "start": "10-8-2026",
-        "end": "14-8-2026"
-      },
-      "clubname": "Kringlumýri",
-      "imageUrl": null,
-      "description": "Sumarnámskeið fyrir börn í 8.-10.bekk í Klettaskóla.",
-      "locationName": "Safamýri 5",
-      "signupUrl": ""
+      "description": "5 mánaða kort í Hreyfingu.\n\nTekur gildi við kaup og gildir í fimm mánuði.",
+      "locationName": "Hreyfing,",
+      "signupUrl": "https://abler.io/shop/hreyfing/1/product/Q2x1YlNlcnZpY2U6NTE2NTQ="
     },
     {
       "id": "8134e225-1a85-45c9-835b-1bd242c16c64",
@@ -1184,92 +1399,48 @@
       "signupUrl": "https://abler.io/shop/jogasetrid/1/product/Q2x1YlNlcnZpY2U6MTI4Nzc="
     },
     {
-      "id": "e4c918fe-1dcf-4964-9a42-44d3a38e1f68",
+      "id": "7e1e09e3-67cf-48a7-8dcd-7ee77028e8d6",
       "tags": [
-        "computer_courses"
+        "football"
       ],
-      "title": "Tæknismiðja",
+      "title": "Knattspyrna 3.fl.kk. - 2026",
       "age": [
-        7,
-        4
-      ],
-      "channelId": "abler-indexer",
-      "location": "101",
-      "date": {
-        "start": "29-12-2025",
-        "end": "6-6-2026"
-      },
-      "clubname": "Skema – skapandi tækninámskeið",
-      "imageUrl": null,
-      "description": "​Um námskeiðið​\n\nAllir geta forritað!\nTæknismiðja er námskeið fyrir yngstu nemendur Skema.\nMarkmið námskeiðsins er að kynna forritun, tækni og tölvur fyrir nemendum með því markmiði að hvetja og auka áhuga.\nNemendur fá að stýra vélmennum, prófa að forrita, smíða sína eigin pappírstölvu, prófa að spila Minecraft, læra á mús og lyklaborð og margt fleira. Með skemmtilegum verkefnum tileinka nemendur sér forritunarlega hugsun og efla rökhugsun og rýmisgreind.",
-      "locationName": "Menntavegur,",
-      "signupUrl": "https://abler.io/shop/skema/2/product/Q2x1YlNlcnZpY2U6NTEzMTQ="
-    },
-    {
-      "id": "b66254f1-b4f1-44ec-b4c2-f26eab417966",
-      "tags": [
-        "jiu_jitsu"
-      ],
-      "title": "Glíma 10-13 ára",
-      "age": [
-        13,
-        9
-      ],
-      "channelId": "abler-indexer",
-      "location": "102",
-      "date": {
-        "start": "8-8-2024",
-        "end": "31-12-2026"
-      },
-      "clubname": "Mjolnir",
-      "imageUrl": null,
-      "description": "Börn 10-13 ára eru tímar sem eru að mestu byggðir upp sem leikir þar sem börnin læra meðvitað og ómeðvitað að glíma og verja sig. Í þessum tímum læra þau öruggar yfirburðastöður til að stýra andstæðingnum og halda honum niðri án þess að meiða hann. Þau læra skemmtilega og heilbrigða íþrótt sem eykur sjálfstraust, líkamsstyrk, liðleika, snerpu og líkamsvitund.\n\nNámskeiðinu er skipt upp í annir (haust, vor, sumar). Í byrjun annar er farið yfir grunninn þannig að byrjendur eru fyrstu vikurnar einungis að læra að beita sér rétt. Þannig eru börnin vel undirbúin til þess að takast á þegar að því kemur. Þannig er hægt að mæta og taka þátt hvenær sem er yfir árið. Mjög ítarlegt beltakerfi er hjá börnunum þar sem þau fá strípur og ný belti með því að taka þátt, sýna góða hegðun og tæknilegar framfarir.\nMikilvægt er að allir iðkendur fari eftir og virði reglur félagsins sem eru aðgengilegar hér á vefnum.\nTímarnir eru kenndir á:\nþriðjudögum, fimmtudögum kl. 16:30 - 17:15\nföstudögum kl. 17:15 - 18:00\nBúnaður: Sá staðalbúnaður sem iðkendur þurfa að hafa með sér í tíma og seldir eru stakir og/eða í sérstökum byrjendapökkum í Óðinsbúð er eftirfarandi:\nGI (BJJ galli og belti)No-Gi (Stuttbuxur og Bol)Á Facebook er sérstök foreldragrúppa fyrir þá sem eiga börn sem æfa í Mjölni.",
-      "locationName": "Mjölnir",
-      "signupUrl": "https://abler.io/shop/mjolnir/bornogunglingar/product/Q2x1YlNlcnZpY2U6MzExOTI="
-    },
-    {
-      "id": "10bbb0f3-f996-4851-a0ad-4ea168e20305",
-      "tags": [
-        "table_tennis"
-      ],
-      "title": "Úrval",
-      "age": [
-        56,
-        14
+        16,
+        15
       ],
       "channelId": "abler-indexer",
       "location": "107",
       "date": {
         "start": "2-1-2026",
-        "end": "1-6-2026"
+        "end": "30-9-2026"
       },
       "clubname": "KR",
       "imageUrl": null,
-      "description": "​Afrekshópur borðtennisdeildar KR. Hentar fólki sem vill bæta sig og ná árangri í borðtenniskeppnum. ​",
-      "locationName": "Neshagi",
-      "signupUrl": "https://abler.io/shop/bordtennis/product/Q2x1YlNlcnZpY2U6NDQzOTI="
+      "description": "3.flokkur karla eru strákar fæddir árin 2010 og 2011. \nÆfingatímar:\nMánudagar 17:15 - 18:30 á gervigrasvelli KR\nÞriðjudagar 19:00 - 20:15 á Meistaravöllum\nFimmtudagar 17:15 - 18:30 á gervigrasvelli KR\nLaugardaga 13:00 - 14:00 á Meistaravöllum\nÞjálfarar flokksins eru: Gabríel Hrannar Eyjólfsson, Óliver Dagur Thorlacius og Eyþór Daði Kjartansson. \n​Skráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
+      "locationName": "KR,",
+      "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU0ODY="
     },
     {
-      "id": "5a04a3d4-3001-47ca-91a1-387e50f5eed5",
+      "id": "15089585-9bcb-4a89-bc50-c059e08fc231",
       "tags": [
-        "athletics"
+        "football"
       ],
-      "title": "ÍR frjalsar meistaraflokkur 2025-2026",
+      "title": "Knattspyrna 8.fl.kk. - 2026",
       "age": [
-        76,
-        17
+        6,
+        4
       ],
       "channelId": "abler-indexer",
-      "location": "109",
+      "location": "107",
       "date": {
-        "start": "25-8-2025",
-        "end": "24-8-2026"
+        "start": "2-1-2026",
+        "end": "30-9-2026"
       },
-      "clubname": "ÍR",
+      "clubname": "KR",
       "imageUrl": null,
-      "description": "Æfingargjöld/árgjald fyrir meistaraflokk ÍR frjalsar.",
-      "locationName": "Laugardalsholl",
-      "signupUrl": "https://abler.io/shop/ir/frjalsar/product/Q2x1YlNlcnZpY2U6NDQ5MTc="
+      "description": "8.flokkur karla eru strákar fæddir á árunum 2020 - 2022. \nÆfingatímar: \nMiðvikudagar 17:15 - 18:15 á gervigrasvelli KR\nSunnudagar 09:00 - 09:50 á Meistaravöllum / Íþróttahúsi Hagaskóla. \nÞjálfarar flokksins eru - Karen Guðmundsdóttir og Vigdís Ayesha\n​Skráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
+      "locationName": "KR,",
+      "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU1NTg="
     },
     {
       "id": "ee844e96-62d5-417e-8b1f-149075b3731c",
@@ -1294,6 +1465,25 @@
       "signupUrl": "https://abler.io/shop/vikingur/fotbolti/product/Q2x1YlNlcnZpY2U6NTE1NDg="
     },
     {
+      "id": "4a093696-1aaa-4010-a520-7dc1c5dc6311",
+      "tags": [
+        "health"
+      ],
+      "title": "Vinnustofa með Graham Music",
+      "age": [],
+      "channelId": "abler-indexer",
+      "location": "104",
+      "date": {
+        "start": "10-12-2025",
+        "end": "1-1-2065"
+      },
+      "clubname": "Grænahlíð fjölskyldumiðstöð ",
+      "imageUrl": null,
+      "description": "Hér er hægt að nálgast vandaða upptöku af 5 klukkustunda vinnustofu með Dr. Graham Music sem fór fram 31.10.2025. \n\nÍ vinnustofunni fjallar Dr. Music um fyrstu 1000 dagana í lífi barns frá getnaði, með sérstaka áherslu á meðgönguna. Hann kynnir rannsóknir sem sýna að tímabilið frá getnaði til fæðingar hafi meiri áhrif á heilsu barnsins en áður hefur verið talið. Hann færir fræðileg rök fyrir nauðsyn þess fyrir barnið og foreldrana að upplifa öryggi og tilfinningalegan stuðning. Hann útskýrir hvernig næm umönnun hefur áhrif á mótun heila og taugakerfis og leggur grunn að líkamlegu og andlegu heilbrigði. Hann fjallar einnig um áhrif vanrækslu og áfalla á heila og líkama ungra barna og alvarlegar afleiðingar þess.\n\nVinnustofan er ætluð heilbrigðisstarfsfólki, kennurum og öllum þeim sem starfa með börnum og ekki síður foreldrum og öllum sem láta sig hag barna varða.\n\nUm Dr. Graham Music\nGraham Music hefur langa reynslu sem meðferðaraðili, kennari, handleiðari og rithöfundur. Hann starfaði í 30 ár við Tavistock Centre í London þar sem hann gegndi stöðu klínísks stjórnanda barna- og fjölskyldumeðferðar. Graham hefur verið í fararbroddi við innleiðingu nýrra úrræða í bresku heilbrigðiskerfi, þar á meðal þjónustu í rúmlega 40 skólum fyrir börn sem hafa orðið fyrir ofbeldi eða vanrækslu. Hann hefur í áratugi sérhæft sig í áfallavinnu. Graham kennir og handleiðir víða, bæði í Englandi og alþjóðlega, en hann leitast við að samtvinna nýjustu rannsóknir í taugavísindum og meðferðarvinnu. Nýjasta bók hans er Womb life (2024) en áður skrifaði hann Nurturing Natures: (2023, 2016, 2010), Respark (2022), Affect and Emotion (2022, 2001), Nurturing Children (2019), The Good Life: (2014) en auk þess ritstýrði hann ásamt öðrum From Trauma to Harming Others (2022).\n\nÞegar þú hefur gengið frá kaupum mun þér berast staðfestingarpóstur með hlekk að fyrirlestrinum. \n* Allur réttur að upptökunni er áskilinn. Upptakan og glærur eru verndaðar samkvæmt höfundalögum og eru einungis ætlaðar persónulegri fræðslu kaupanda. Óheimilt er að deila aðgangshlekknum, afrita efnið, dreifa því eða miðla því með neinum hætti, í heild eða hluta, án skriflegs leyfis höfundar (Dr. Graham Music). Aðgangur er persónulegur og óframseljanlegur og hvers kyns óheimil notkun getur leitt til sviptingar aðgangs án endurgreiðslu",
+      "locationName": "Sundagarðar",
+      "signupUrl": "https://abler.io/shop/graenahlid/1/product/Q2x1YlNlcnZpY2U6NTA0NDc="
+    },
+    {
       "id": "5637f9f6-5ab1-4647-8687-9fe6ca9f8e5a",
       "tags": [
         "table_tennis"
@@ -1316,69 +1506,23 @@
       "signupUrl": "https://abler.io/shop/bordtennis/product/Q2x1YlNlcnZpY2U6NDQzODU="
     },
     {
-      "id": "4a093696-1aaa-4010-a520-7dc1c5dc6311",
+      "id": "e9fdee7b-0b63-46c0-8ae6-4212c73ec50b",
       "tags": [
-        "health"
+        "yoga"
       ],
-      "title": "Vinnustofa með Graham Music",
+      "title": "I AM Yoga Nidra nám með Kamini Desai",
       "age": [],
       "channelId": "abler-indexer",
-      "location": "104",
-      "date": {
-        "start": "10-12-2025",
-        "end": "1-1-2065"
-      },
-      "clubname": "Grænahlíð fjölskyldumiðstöð ",
-      "imageUrl": null,
-      "description": "Hér er hægt að nálgast vandaða upptöku af 5 klukkustunda vinnustofu með Dr. Graham Music sem fór fram 31.10.2025. \n\nÍ vinnustofunni fjallar Dr. Music um fyrstu 1000 dagana í lífi barns frá getnaði, með sérstaka áherslu á meðgönguna. Hann kynnir rannsóknir sem sýna að tímabilið frá getnaði til fæðingar hafi meiri áhrif á heilsu barnsins en áður hefur verið talið. Hann færir fræðileg rök fyrir nauðsyn þess fyrir barnið og foreldrana að upplifa öryggi og tilfinningalegan stuðning. Hann útskýrir hvernig næm umönnun hefur áhrif á mótun heila og taugakerfis og leggur grunn að líkamlegu og andlegu heilbrigði. Hann fjallar einnig um áhrif vanrækslu og áfalla á heila og líkama ungra barna og alvarlegar afleiðingar þess.\n\nVinnustofan er ætluð heilbrigðisstarfsfólki, kennurum og öllum þeim sem starfa með börnum og ekki síður foreldrum og öllum sem láta sig hag barna varða.\n\nUm Dr. Graham Music\nGraham Music hefur langa reynslu sem meðferðaraðili, kennari, handleiðari og rithöfundur. Hann starfaði í 30 ár við Tavistock Centre í London þar sem hann gegndi stöðu klínísks stjórnanda barna- og fjölskyldumeðferðar. Graham hefur verið í fararbroddi við innleiðingu nýrra úrræða í bresku heilbrigðiskerfi, þar á meðal þjónustu í rúmlega 40 skólum fyrir börn sem hafa orðið fyrir ofbeldi eða vanrækslu. Hann hefur í áratugi sérhæft sig í áfallavinnu. Graham kennir og handleiðir víða, bæði í Englandi og alþjóðlega, en hann leitast við að samtvinna nýjustu rannsóknir í taugavísindum og meðferðarvinnu. Nýjasta bók hans er Womb life (2024) en áður skrifaði hann Nurturing Natures: (2023, 2016, 2010), Respark (2022), Affect and Emotion (2022, 2001), Nurturing Children (2019), The Good Life: (2014) en auk þess ritstýrði hann ásamt öðrum From Trauma to Harming Others (2022).\n\nÞegar þú hefur gengið frá kaupum mun þér berast staðfestingarpóstur með hlekk að fyrirlestrinum. \n* Allur réttur að upptökunni er áskilinn. Upptakan og glærur eru verndaðar samkvæmt höfundalögum og eru einungis ætlaðar persónulegri fræðslu kaupanda. Óheimilt er að deila aðgangshlekknum, afrita efnið, dreifa því eða miðla því með neinum hætti, í heild eða hluta, án skriflegs leyfis höfundar (Dr. Graham Music). Aðgangur er persónulegur og óframseljanlegur og hvers kyns óheimil notkun getur leitt til sviptingar aðgangs án endurgreiðslu",
-      "locationName": "Sundagarðar",
-      "signupUrl": "https://abler.io/shop/graenahlid/1/product/Q2x1YlNlcnZpY2U6NTA0NDc="
-    },
-    {
-      "id": "0f3e7ef4-e66f-43e6-bfcc-f4acc5675ca1",
-      "tags": [
-        "public_sports"
-      ],
-      "title": "Rafíþróttir",
-      "age": [
-        16,
-        8
-      ],
-      "channelId": "abler-indexer",
-      "location": "108",
-      "date": {
-        "start": "17-12-2025",
-        "end": "5-6-2026"
-      },
-      "clubname": "Fram",
-      "imageUrl": null,
-      "description": "Nýtt hjá Fram – Rafíþróttir í samstarfi við Next Level Gaming – skráning hefst 1. jan. 2026.\nRafíþróttir hefja göngu sína í samstarfi við Next Level Gaming.\nFram kynnir með stolti nýtt og spennandi skref - rafíþróttir eru nú að hefjast hjá félaginu fyrir iðkendur á aldrinum 7–16 ára. \nÆfingarnar fara fram í samstarfi við Next Level Gaming í Egilshöll og er þar boðið upp á öruggt og faglegt umhverfi þar sem áhersla er lögð á samvinnu, samskipti og góða félagsfærni í gegnum leik. \nRafíþróttir henta bæði byrjendum og þeim sem hafa reynslu og vilja þróa leikni, sjálfstraust og liðsheild. Skráning hefst strax eftir áramót. \nFram hlakkar til að opna nýjan og metnaðarfullan kafla í starfinu og bjóða iðkendum velkomna í rafíþróttir.\nBoðið verður upp á æfingar í 3 hópum eftir aldri og áhugasviði. Hægt verður að æfa 1x eða 2x í viku.Æfingar fara fram í Egilshöll. Sjá æfingatöflu. \n\n​",
-      "locationName": "Egilshöll,",
-      "signupUrl": "https://abler.io/shop/fram/almennings/product/Q2x1YlNlcnZpY2U6NTA5Njg="
-    },
-    {
-      "id": "348f964a-4149-43c1-a9c6-19b14eafb917",
-      "tags": [
-        "summer_camp"
-      ],
-      "title": "Gulahlíð 1.-4.bekkur - Vika 2",
-      "age": [
-        6,
-        7,
-        8,
-        9
-      ],
-      "channelId": "vala-indexer",
       "location": "105",
       "date": {
-        "start": "15-6-2026",
-        "end": "19-6-2026"
+        "start": "1-12-2025",
+        "end": "15-11-2026"
       },
-      "clubname": "Kringlumýri",
+      "clubname": "Jógasetrið",
       "imageUrl": null,
-      "description": "Sumarnámskeið fyrir börn í 1.-4.bekk í Klettaskóla.",
-      "locationName": "Vesturhlíð 3",
-      "signupUrl": ""
+      "description": "Immersion\nDjúp og fræðandi kynning og kennsla í Jóga Nidra og jógafræðunum  með einstökum kennara. Opið fyrir alla.\nCertification\nFyrir þá sem vilja fara dýpra og/eða einnig öðlast leiðbeinenda réttindi.  “Certification”. Hér er farið dýpra í fræðin, 4 dagar í ástundun og handleiðslu. Einungis fyrir þá sem hafa tekið þátt í fyrri lotunni, “IMMERSION”.\nAdvanced\nAðeins fyrir þá sem hafa lokið I AM Yoga Nidra Immersion og Certification. Ný kort og fullt af nýrri tækni.\n\n​",
+      "locationName": "Jógasetrið,",
+      "signupUrl": "https://abler.io/shop/jogasetrid/1/product/Q2x1YlNlcnZpY2U6MzQ3MDA="
     },
     {
       "id": "d217eb1a-be07-4625-8439-f25f859d2dcf",
@@ -1463,48 +1607,26 @@
       "signupUrl": "https://abler.io/shop/bordtennis/product/Q2x1YlNlcnZpY2U6NDQzOTQ="
     },
     {
-      "id": "83e3f3d1-fdf0-4486-9ef4-fb33b7344c22",
+      "id": "a66a40f8-63ce-4f27-aaa0-b9748802dc52",
       "tags": [
-        "football"
+        "yoga"
       ],
-      "title": "Markmannsnámskeið Asmir Begovic",
+      "title": "Krakkajóga 4-7 ára með foreldrum",
       "age": [
-        19,
-        8
+        7,
+        4
       ],
       "channelId": "abler-indexer",
-      "location": "113",
+      "location": "105",
       "date": {
-        "start": "19-2-2024",
+        "start": "25-2-2026",
         "end": "7-6-2026"
       },
-      "clubname": "Fram",
+      "clubname": "Jógasetrið",
       "imageUrl": null,
-      "description": "Knattspyrnufélagið Fram býður Asmir Begovic, David Smalley og Alex Balaskas – þjálfara Asmir Begovic goalkeeping academy – hjartanlega velkomna á Lambhagavöll í Úlfarsárdalnum 6. og 7. júní.\nÞetta er þriðja árið í röð sem Fram og Asmir Begovic goalkeeping academy halda markmannsnámskeið fyrir stráka og stelpur í Úlfarsárdalnum, en námskeiðunum hefur verið vel tekið og heppnast með eindæmum vel þar sem mikill fjöldi efnilegra markmanna víðsvegar af landinu æfði undir handleiðslu frábærra þjálfara.\n\n Verð á námskeiðið er 29.500 kr og innifalið er heitur matur í hádeginu og hressing.\n\nÞjálfarar í ár verða Asmir Begovic, David Smalley og Alex Balaskas, ásamt íslenskum þjálfurum.\nAsmir Begovic þarf vart að kynna en hann er í dag á mála hjá Leicester City. Áður hefur hann spilað með stórliðum á borð við Chelsea, Everton, AC Milan, Stoke City og Portsmouth.\nDavid Smalley er núverandi markmannsþjálfari Aldershot Town. Hann er með UEFA A markmannsþjálfaragráðu og spilaði áður sem atvinnumaður hjá Reading og Yeovil Town. Smalley hefur  gegnt sambærilegri stöðu hjá Hampton og Richmond Borough, ásamt því að hafa þjálfað hjá kvennaliði og akademíu Chelsea. Hann er aðalmarkmannsþjálfari í Markmannsakademíu Asmir Begovic.\nAlex Balaskas er markmannsþjálfari hjá Markmannsakademíu Asmir Begovic. Hann er reynslumikill þjálfari sem býr yfir mikilli þekkingu á þjálfun og hefur starfað við markmannsþjálfun hjá Crystal Palace og AFC Wimbledon.  \nNánari upplýsingar er hægt að nálgast hjá steinar@fram.is",
-      "locationName": "Knattspyrnufélagið",
-      "signupUrl": "https://abler.io/shop/fram/fotbolti/product/Q2x1YlNlcnZpY2U6NTM4NjM="
-    },
-    {
-      "id": "b9ad0cc8-585c-4a8e-93a7-2a81664056ec",
-      "tags": [
-        "jiu_jitsu"
-      ],
-      "title": "Glíma 7-9 ára",
-      "age": [
-        10,
-        6
-      ],
-      "channelId": "abler-indexer",
-      "location": "102",
-      "date": {
-        "start": "7-8-2024",
-        "end": "31-12-2026"
-      },
-      "clubname": "Mjolnir",
-      "imageUrl": null,
-      "description": "Börn 7-9 ára eru tímar sem eru að mestu byggðir upp sem leikir þar sem börnin læra meðvitað og ómeðvitað að glíma og verja sig. Í þessum tímum læra þau öruggar yfirburðastöður til að stýra andstæðingnum og halda honum niðri án þess að meiða hann. Þau læra skemmtilega og heilbrigða íþrótt sem eykur sjálfstraust, líkamsstyrk, liðleika, snerpu og líkamsvitund.\n\nNámskeiðinu er skipt upp í annir (haust, vor, sumar). Í byrjun annar er farið yfir grunninn þannig að byrjendur eru fyrstu vikurnar einungis að læra að beita sér rétt. Þannig eru börnin vel undirbúin til þess að takast á þegar að því kemur. Þannig er hægt að mæta og taka þátt hvenær sem er yfir árið. Mjög ítarlegt beltakerfi er hjá börnunum þar sem þau fá strípur og ný belti með því að taka þátt, sýna góða hegðun og tæknilegar framfarir.\nMikilvægt er að allir iðkendur fari eftir og virði reglur félagsins sem eru aðgengilegar hér á vefnum.\nTímarnir eru kenndir á þriðjudögum, fimmtudögum og föstudögum kl. 16:30 - 17:15.\nBúnaður: Sá staðalbúnaður sem iðkendur þurfa að hafa með sér í tíma og seldir eru stakir og/eða í sérstökum byrjendapökkum í Óðinsbúð er eftirfarandi:\nGI (BJJ galli og belti)No-Gi (Stuttbuxur og Bol)Á Facebook er sérstök foreldragrúppa fyrir þá sem eiga börn sem æfa í Mjölni.",
-      "locationName": "Mjölnir",
-      "signupUrl": "https://abler.io/shop/mjolnir/bornogunglingar/product/Q2x1YlNlcnZpY2U6MzExODc="
+      "description": "​KRAKKAJÓGA 4 – 7 ára með foreldrum 18. janúar - 15. mars 2026\nSunnudagar kl. 11.30 – 12.15 (8 vikur) - Ath Vetrarfrí 22. febrúar.\nVerð: 17.000 kr\nKennt á sunnudögum 18.janúar til 15. mars 2026. Frí sunnudagurinn 22.febrúar vegna vetrarfrís og framlengjum þess vegna til 15. mars.\nÍ krakkajóga er lögð áhersla á leik og gleði. Börnin læra jógastöður og æfingar sem styrkja jafnvægi, einbeitingu og samhæfingu. Kenndar eru ýmsar hugleiðsluaðferðir sem talinn er góður undirbúningur fyrir innri ró og einbeitingu. Í lok tímans eru nemendur leiddir áfram í stutta slökun sem er jafn mikilvæg jógahreyfingum og öndun. Börnin eru dásamlega fljót að tileinka sér jógað og finna að það hjálpar þeim í lífi og leik!\nÁ námskeiðinu læra börnin öndunaræfingar, jóga og slökun í gegnum leiki, sögur og hreyfingu. Í yngri hópnum tekur foreldri virkan þátt, hjálpar og hvetur barnið. ” Saman gaman”.",
+      "locationName": "Jógasetrið,",
+      "signupUrl": "https://abler.io/shop/jogasetrid/1/product/Q2x1YlNlcnZpY2U6MzE5MzA="
     },
     {
       "id": "1be17d27-f970-4ab2-be21-c59e281abf01",
@@ -1527,6 +1649,28 @@
       "description": "7.flokkur kvenna - Fótbolti\nÞað er boðið uppá hópa bæði í Víkinni og Virkinu (Safamýri), mikilvægt að skrá í réttan hóp.",
       "locationName": "Víkin,",
       "signupUrl": "https://abler.io/shop/vikingur/fotbolti/product/Q2x1YlNlcnZpY2U6NTE1NTM="
+    },
+    {
+      "id": "b9ad0cc8-585c-4a8e-93a7-2a81664056ec",
+      "tags": [
+        "jiu_jitsu"
+      ],
+      "title": "Glíma 7-9 ára",
+      "age": [
+        10,
+        6
+      ],
+      "channelId": "abler-indexer",
+      "location": "102",
+      "date": {
+        "start": "7-8-2024",
+        "end": "31-12-2026"
+      },
+      "clubname": "Mjolnir",
+      "imageUrl": null,
+      "description": "Börn 7-9 ára eru tímar sem eru að mestu byggðir upp sem leikir þar sem börnin læra meðvitað og ómeðvitað að glíma og verja sig. Í þessum tímum læra þau öruggar yfirburðastöður til að stýra andstæðingnum og halda honum niðri án þess að meiða hann. Þau læra skemmtilega og heilbrigða íþrótt sem eykur sjálfstraust, líkamsstyrk, liðleika, snerpu og líkamsvitund.\n\nNámskeiðinu er skipt upp í annir (haust, vor, sumar). Í byrjun annar er farið yfir grunninn þannig að byrjendur eru fyrstu vikurnar einungis að læra að beita sér rétt. Þannig eru börnin vel undirbúin til þess að takast á þegar að því kemur. Þannig er hægt að mæta og taka þátt hvenær sem er yfir árið. Mjög ítarlegt beltakerfi er hjá börnunum þar sem þau fá strípur og ný belti með því að taka þátt, sýna góða hegðun og tæknilegar framfarir.\nMikilvægt er að allir iðkendur fari eftir og virði reglur félagsins sem eru aðgengilegar hér á vefnum.\nTímarnir eru kenndir á þriðjudögum, fimmtudögum og föstudögum kl. 16:30 - 17:15.\nBúnaður: Sá staðalbúnaður sem iðkendur þurfa að hafa með sér í tíma og seldir eru stakir og/eða í sérstökum byrjendapökkum í Óðinsbúð er eftirfarandi:\nGI (BJJ galli og belti)No-Gi (Stuttbuxur og Bol)Á Facebook er sérstök foreldragrúppa fyrir þá sem eiga börn sem æfa í Mjölni.",
+      "locationName": "Mjölnir",
+      "signupUrl": "https://abler.io/shop/mjolnir/bornogunglingar/product/Q2x1YlNlcnZpY2U6MzExODc="
     },
     {
       "id": "ea7ba6ef-2516-46ac-9e63-babd856a10ec",
@@ -1592,6 +1736,28 @@
       "signupUrl": "https://abler.io/shop/vikingur/fotbolti/product/Q2x1YlNlcnZpY2U6NTE1NTQ="
     },
     {
+      "id": "6c0365d6-2cbc-412c-8114-8eddf3821148",
+      "tags": [
+        "education"
+      ],
+      "title": "Lestrarmiðstöð Auðar",
+      "age": [
+        19,
+        9
+      ],
+      "channelId": "abler-indexer",
+      "location": "109",
+      "date": {
+        "start": "1-1-2026",
+        "end": "31-12-2026"
+      },
+      "clubname": "Frístundakort Reykjavíkur",
+      "imageUrl": null,
+      "description": "Námskeið: Lestur til alls\nLæsi í víðum skilningi, lestur, talað mál, tjáning, ritun og tölvu- og upplýsingafærni. Kennt er einu sinni í viku 60 mínútur í senn. Markmið námskeiðsins er: \nAð auka lestrarfærni og sjálfstraust nemenda gegnum vinnu með tjáningu, lestur og ritun.\nAð þjálfa nemendurí að nýta sér fjölbreytta möguleika tækninnar við lestur og ritun.\nEinstaklingstímar eða fámennir hópar. Hafið samband audur@lestur.is\nÞað sem við gerum\nLestrarmiðstöðin veitir sérhæfða kennslu í lestri fyrir börn og fullorðna með leshömlun (dyslexia). Einnig kennslu í lestrartengdum námsgreinum því erfiðleikar í lestri koma víða fram í námi svo sem í lesskilningi, ritun, stafsetningu og erlendum tungumálum. Lestrarmiðstöð í Mjódd er með síðu á facebook.\nAðferðin okkar\nÍ Lestrarmiðstöð er unnið með grunnþætti lestrar samkvæmt kennsluaðferðum sem byggja á rannsóknum á leshömlun og aðferðum sem reynst hafa árangursríkar við lestrarkennslu. Markmið okkar hefur frá upphafi verið að allir sem til okkar koma sýni framfarir, við byggjum kennsluna upp á jákvæðni, nýtum fjölbreyttar leiðir við þjálfun, nýtum tölvutæknina, rafbækur og hljóðefni. Við höfum síðan árið 2001 sinnt nemendum á öllum aldri og verið farsæl í störfum okkar.",
+      "locationName": "Álfabakki",
+      "signupUrl": "https://abler.io/shop/frirvk/lestrarmidstod/product/Q2x1YlNlcnZpY2U6NTAxODI="
+    },
+    {
       "id": "6b3ae914-5493-460e-8162-2c5a4095010f",
       "tags": [
         "football"
@@ -1636,25 +1802,6 @@
       "signupUrl": "https://abler.io/shop/vikingur/fotbolti/product/Q2x1YlNlcnZpY2U6NTE1NTI="
     },
     {
-      "id": "d509b152-edb0-4412-b704-90bba005b095",
-      "tags": [
-        "education"
-      ],
-      "title": "Sumarbúðir 10-12 ára - Frístundastyrkur 2026",
-      "age": [],
-      "channelId": "abler-indexer",
-      "location": "108",
-      "date": {
-        "start": "2-1-2026",
-        "end": "31-12-2026"
-      },
-      "clubname": "Kópavogsbær - Frístundagátt",
-      "imageUrl": null,
-      "description": "Sumarbúðir 10-12 ára",
-      "locationName": "Ármúli",
-      "signupUrl": "https://abler.io/shop/kopfri/dalecarnegie/product/Q2x1YlNlcnZpY2U6NTE2MDk="
-    },
-    {
       "id": "0e677bb7-7c84-4e8e-bb5a-ce2ed33cf827",
       "tags": [
         "cycling"
@@ -1676,26 +1823,70 @@
       "signupUrl": "https://abler.io/shop/hr/hjolreidar/product/Q2x1YlNlcnZpY2U6NDY1OTY="
     },
     {
-      "id": "11cddab7-214b-4f86-bb91-eeffdb357123",
+      "id": "802f3854-4ce5-4947-b091-cdf110594d6d",
       "tags": [
-        "swimming"
+        "yoga"
       ],
-      "title": "B-Hópur",
+      "title": "Krakkajóga 8-11 ára",
+      "age": [
+        11,
+        8
+      ],
+      "channelId": "abler-indexer",
+      "location": "105",
+      "date": {
+        "start": "25-2-2026",
+        "end": "7-6-2026"
+      },
+      "clubname": "Jógasetrið",
+      "imageUrl": null,
+      "description": "Krakkajóga fyrir 8 - 11 ára í Jógasetrinu 18. janúar - 15. mars 2026\nSunnudagar kl. 12.30 – 13.30 (8 vikur) - Ath Vetrarfrí 22. febrúar.\nVerð: 17.000 kr\nKennt á sunnudögum 18. janúar - 15. mars 2026. Frí sunnudagurinn 22. febrúar vegna vetrarfrís og framlengjum þess vegna til 15. mars.\nÍ krakkajóga er lögð áhersla á leik og gleði. Börnin læra jógastöður og æfingar sem styrkja jafnvægi, einbeitingu og samhæfingu. Kenndar eru ýmsar hugleiðsluaðferðir sem talinn er góður undirbúningur fyrir innri ró og einbeitingu. Í lok tímans eru nemendur leiddir áfram í stutta slökun sem er jafn mikilvæg jógahreyfingum og öndun. Börnin eru dásamlega fljót að tileinka sér jógað og finna að það hjálpar þeim í lífi og leik!\nÁ námskeiðinu læra börnin öndunaræfingar, jóga og slökun í gegnum leiki, sögur og hreyfingu. Í yngri hópnum tekur foreldri virkan þátt, hjálpar og hvetur barnið. ” Saman gaman”.\nKennari:María Shanko\n„Gefðu barninu þínu gjöf að anda, slaka, leika, finna, njóta og vera“",
+      "locationName": "Jógasetrið,",
+      "signupUrl": "https://abler.io/shop/jogasetrid/1/product/Q2x1YlNlcnZpY2U6MzU1Mzc="
+    },
+    {
+      "id": "3ef6ac88-40bf-445b-8867-d9a904e99da3",
+      "tags": [
+        "judo"
+      ],
+      "title": "11-14 ára",
       "age": [
         14,
-        13
+        11
+      ],
+      "channelId": "abler-indexer",
+      "location": "108",
+      "date": {
+        "start": "26-12-2025",
+        "end": "19-6-2026"
+      },
+      "clubname": "Judofélag Reykjavíkur",
+      "imageUrl": null,
+      "description": "Hér eru greidd æfingagjöld fyrir byrjendur og framhaldsflokka 11-14 ára\n\nÍ þennan flokk skrást þeir sem eru 11-14 ára á árinu og bæði stúkur og drengir. \nÍ kaupferlinu er hægt að nýta frístundastyrk frá sveitarfélögunum. \nVeittur er 10% afsláttur af öllum æfingagjöldum ef greitt er fyrir fleiri en einn fjölskyldumeðlim.\nTil að virkja afsláttinn hafið þá samband við félagið á jr@judo.is áður en greitt er.\nMinnum á að sækja appið fyrir þá sem eru ekki með það til að fylgjast með æfingadagskrá.",
+      "locationName": "Ármúli",
+      "signupUrl": "https://abler.io/shop/jfr/jr/product/Q2x1YlNlcnZpY2U6MzYzNjk="
+    },
+    {
+      "id": "9228f0ed-feee-4d97-82f0-2183dc1a1469",
+      "tags": [
+        "football"
+      ],
+      "title": "Knattspyrna 2.fl.kvk. - 2026",
+      "age": [
+        19,
+        17
       ],
       "channelId": "abler-indexer",
       "location": "107",
       "date": {
-        "start": "1-8-2025",
-        "end": "30-6-2026"
+        "start": "2-1-2026",
+        "end": "30-9-2026"
       },
       "clubname": "KR",
       "imageUrl": null,
-      "description": "Hópur fyrir sundmenn sem hafa það að markmiði að komast upp í A-Hóp. Krakkarnir eru á aldrinum 11-13 ára og æfa 6 sinnum í viku.  Sundmennirnir taka þátt í fjölmörgum mótum ár hvert auk þess farið er í æfingabúðir.",
-      "locationName": "Sundhöllin,",
-      "signupUrl": "https://abler.io/shop/kr/sund/product/Q2x1YlNlcnZpY2U6NDMxNTg="
+      "description": "2.flokkur kvenna eru stelpur fæddar 2007 - 2009. \nÆfingatímar: \nMánudagar 20:00 - 21:00 á Meistaravöllum\nMiðvikudaga 19:15 - 20:30 á gervigrasvelli KR\nFöstudaga 17:15 - 18:30 á gervigrasvelli KR\nLaugardagar 12:00 - 13:15 á gervigrasvelli KR\n​Skráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
+      "locationName": "KR,",
+      "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU0OTE="
     },
     {
       "id": "694e0376-aacb-4a10-a879-89874de5989d",
@@ -1742,30 +1933,6 @@
       "signupUrl": "https://abler.io/shop/vikingur/fotbolti/product/Q2x1YlNlcnZpY2U6NTE1NTg="
     },
     {
-      "id": "31b4457b-959b-46b8-a811-6b0911029d3d",
-      "tags": [
-        "leisure_",
-        "scouts",
-        "summer_camp"
-      ],
-      "title": "Sumarbúðir vika 6",
-      "age": [
-        11,
-        9
-      ],
-      "channelId": "abler-indexer",
-      "location": "110",
-      "date": {
-        "start": "1-3-2026",
-        "end": "28-7-2026"
-      },
-      "clubname": "Skátarnir",
-      "imageUrl": null,
-      "description": "Sumarbúðir dagana 4.-7. ágúst (4 dagar / 9-11 ára).​\n\n​Innifalið í verði er rúta, gisting, \nmatur og öll dagskrá.\nBókunarskilmálar fyrir sumarbúðir og útivistarnámskeið",
-      "locationName": "Iceland,",
-      "signupUrl": "https://abler.io/shop/skatarnir/utilifsmidst/product/Q2x1YlNlcnZpY2U6Mzg0NTA="
-    },
-    {
       "id": "ca3224f2-da38-4136-8f8d-0d5815a331e0",
       "tags": [
         "football"
@@ -1786,25 +1953,6 @@
       "description": "5.flokkur karla - Fótbolti",
       "locationName": "Víkin,",
       "signupUrl": "https://abler.io/shop/vikingur/fotbolti/product/Q2x1YlNlcnZpY2U6NTE1NTc="
-    },
-    {
-      "id": "e9fdee7b-0b63-46c0-8ae6-4212c73ec50b",
-      "tags": [
-        "yoga"
-      ],
-      "title": "I AM Yoga Nidra nám með Kamini Desai",
-      "age": [],
-      "channelId": "abler-indexer",
-      "location": "105",
-      "date": {
-        "start": "1-12-2025",
-        "end": "15-11-2026"
-      },
-      "clubname": "Jógasetrið",
-      "imageUrl": null,
-      "description": "Immersion\nDjúp og fræðandi kynning og kennsla í Jóga Nidra og jógafræðunum  með einstökum kennara. Opið fyrir alla.\nCertification\nFyrir þá sem vilja fara dýpra og/eða einnig öðlast leiðbeinenda réttindi.  “Certification”. Hér er farið dýpra í fræðin, 4 dagar í ástundun og handleiðslu. Einungis fyrir þá sem hafa tekið þátt í fyrri lotunni, “IMMERSION”.\nAdvanced\nAðeins fyrir þá sem hafa lokið I AM Yoga Nidra Immersion og Certification. Ný kort og fullt af nýrri tækni.\n\n​",
-      "locationName": "Jógasetrið,",
-      "signupUrl": "https://abler.io/shop/jogasetrid/1/product/Q2x1YlNlcnZpY2U6MzQ3MDA="
     },
     {
       "id": "82dfbdde-85bb-46d6-934f-5f8af121ea6b",
@@ -1829,11 +1977,11 @@
       "signupUrl": "https://abler.io/shop/vikingur/fotbolti/product/Q2x1YlNlcnZpY2U6NTE1NjA="
     },
     {
-      "id": "d6280ffb-107e-4de5-bd3e-76b7a9994e0f",
+      "id": "a9adb5c6-31c3-4f21-825f-f99a2f2cdead",
       "tags": [
         "football"
       ],
-      "title": "Knattspyrna 5.fl.kvk. - 2026",
+      "title": "Knattspyrna 5.fl.kk. - 2026",
       "age": [
         12,
         11
@@ -1846,9 +1994,31 @@
       },
       "clubname": "KR",
       "imageUrl": null,
-      "description": "5.flokkur kvenna eru stelpur sem eru fæddar 2014 og 2015\nÆfingatímar: \nMánudagar 15:00 - 16:00 á Meistaravöllum\nÞriðjudagar 15:00 - 16:00 á Meistaravöllum\nFimmtudagar 15:00 - 16:00 á gervigrasvelli KR\nSunnudagar 11:00 - 12:00 á Meistaravöllum\nÞjálfarar flokksins eru: Karen Guðmundsdóttir og Vigdís Ayesha\nSkráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
+      "description": "5.flokkur karla eru strákar fæddir árin 2014 og 2015. \nÆfingatímar: \nÞriðjudagar 15:00 - 16:15 á gervigrasvelli KR\nFimmtudagar 16:00 - 17:15 á gervigrasvelli KR\nFöstudagar 16:15 - 17:30 á Meistaravöllum\nLaugardagar 10:00 - 11:00 á gervigrasvelli KR\nÞjálfarar flokksins eru Björn Breiðfjörð, Óliver Dagur Thorlacius og Davíð Guðrúnarson. \n​Skráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
       "locationName": "KR,",
-      "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU1Mzk="
+      "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU1Mzc="
+    },
+    {
+      "id": "11cddab7-214b-4f86-bb91-eeffdb357123",
+      "tags": [
+        "swimming"
+      ],
+      "title": "B-Hópur",
+      "age": [
+        14,
+        13
+      ],
+      "channelId": "abler-indexer",
+      "location": "107",
+      "date": {
+        "start": "1-8-2025",
+        "end": "30-6-2026"
+      },
+      "clubname": "KR",
+      "imageUrl": null,
+      "description": "Hópur fyrir sundmenn sem hafa það að markmiði að komast upp í A-Hóp. Krakkarnir eru á aldrinum 11-13 ára og æfa 6 sinnum í viku.  Sundmennirnir taka þátt í fjölmörgum mótum ár hvert auk þess farið er í æfingabúðir.",
+      "locationName": "Sundhöllin,",
+      "signupUrl": "https://abler.io/shop/kr/sund/product/Q2x1YlNlcnZpY2U6NDMxNTg="
     },
     {
       "id": "ca4a2c89-fff5-4d77-a96b-d742aebfbfb0",
@@ -1871,6 +2041,28 @@
       "description": "Sund í Laugardalslaug",
       "locationName": "Laugardalslaug,",
       "signupUrl": "https://abler.io/shop/ifosp/sund/product/Q2x1YlNlcnZpY2U6MzI2MjU="
+    },
+    {
+      "id": "d6280ffb-107e-4de5-bd3e-76b7a9994e0f",
+      "tags": [
+        "football"
+      ],
+      "title": "Knattspyrna 5.fl.kvk. - 2026",
+      "age": [
+        12,
+        11
+      ],
+      "channelId": "abler-indexer",
+      "location": "107",
+      "date": {
+        "start": "2-1-2026",
+        "end": "30-9-2026"
+      },
+      "clubname": "KR",
+      "imageUrl": null,
+      "description": "5.flokkur kvenna eru stelpur sem eru fæddar 2014 og 2015\nÆfingatímar: \nMánudagar 15:00 - 16:00 á Meistaravöllum\nÞriðjudagar 15:00 - 16:00 á Meistaravöllum\nFimmtudagar 15:00 - 16:00 á gervigrasvelli KR\nSunnudagar 11:00 - 12:00 á Meistaravöllum\nÞjálfarar flokksins eru: Karen Guðmundsdóttir og Vigdís Ayesha\nSkráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
+      "locationName": "KR,",
+      "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU1Mzk="
     },
     {
       "id": "649558f8-4d91-4b4a-99cc-55506f405d77",
@@ -1915,25 +2107,6 @@
       "description": "Æfingagjöld 2.flokkur kvenna Fótbolti\nTvær skráningar í boði:\nAllt tímabilið og Heimaleikjagjald*\n*25.000 króna afsláttur ef unnið er við 3 heimaleiki mfl kk og kvk. ef ekki er búið að sinna leikjunum fyrir 1. ágúst 2026 er sendur greiðsluseðill fyrir 25.000 kr",
       "locationName": "Víkingsvöllur,",
       "signupUrl": "https://abler.io/shop/vikingur/fotbolti/product/Q2x1YlNlcnZpY2U6NTA2NTY="
-    },
-    {
-      "id": "5e31b148-f2b2-47f6-8e35-d69dd282417f",
-      "tags": [
-        "cycling"
-      ],
-      "title": "Hjólreiðadeild Víkings 2025-2026",
-      "age": [],
-      "channelId": "abler-indexer",
-      "location": "108",
-      "date": {
-        "start": "3-9-2025",
-        "end": "30-9-2026"
-      },
-      "clubname": "Víkingur",
-      "imageUrl": null,
-      "description": "Hjólreiðadeild Víkings tímabilið 1. október 2025 - 1 október 2026\nInniæfingar í World Class Smáralind hefjast 1.okt 2025\nMánudaga kl. 17:40, miðvikudaga kl. 17:40 og laugardaga kl. 10:10\nAðgangur að æfingum er á TrainingPeaks\nÚtiæfingar í vetur á laugardögum kl. 9 og sunnudögum kl. 10\nSumaræfingar hefjast 1. maí 2026",
-      "locationName": "Víkin,",
-      "signupUrl": "https://abler.io/shop/vikingur/hjol/product/Q2x1YlNlcnZpY2U6NDYyNjM="
     },
     {
       "id": "6c0e4d53-3aac-4d8c-9321-1cd924546dcc",
@@ -1996,28 +2169,6 @@
       "signupUrl": "https://abler.io/shop/klifurhusid/kort/product/Q2x1YlNlcnZpY2U6MTU4NDI="
     },
     {
-      "id": "382688e1-1c8b-4318-bb1a-0dc19ba6e492",
-      "tags": [
-        "football"
-      ],
-      "title": "Knattspyrna 4.fl.kvk. - 2026",
-      "age": [
-        14,
-        13
-      ],
-      "channelId": "abler-indexer",
-      "location": "107",
-      "date": {
-        "start": "2-1-2026",
-        "end": "30-9-2026"
-      },
-      "clubname": "KR",
-      "imageUrl": null,
-      "description": "4.flokkur kvenna eru stelpur fæddar 2012 og 2013. \nÆfingatímar:\nMánudagar 19:00 - 20:00 á Meistaravöllum\nMiðvikudagar 18:15 - 19:30 á gervigrasvelli KR\nFöstudagar 16:00 - 17:15 á Meistaravöllum\nLaugardagar 11:00 - 12:00 á gervigrasvelli KR\n​Skráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
-      "locationName": "KR,",
-      "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU1MzI="
-    },
-    {
       "id": "56ceb81b-f263-4d7e-b741-5f5263ce7283",
       "tags": [
         "karate"
@@ -2038,6 +2189,28 @@
       "description": "Næsta skref á þínum Karate-ferli!\nTaktu karatehæfileika barnsins þíns á nýtt stig! Þessi pakki leggur áherslu á tækni, styrk og liðsheild, auk þess að efla sjálfsaga og þrautseigju. Tímar eru hannaðir til að áskorun barna í skemmtilegu og stuðningsríku umhverfi, undirbúa þau fyrir flóknari tækni, keppnir og persónulegan þroska. Frábær leið til að byggja upp sjálfstraust, þrautseigju og heilbrigðan lífsstíl.",
       "locationName": "Skógarsel",
       "signupUrl": "https://abler.io/shop/ir/karate/product/Q2x1YlNlcnZpY2U6NDQxMzk="
+    },
+    {
+      "id": "382688e1-1c8b-4318-bb1a-0dc19ba6e492",
+      "tags": [
+        "football"
+      ],
+      "title": "Knattspyrna 4.fl.kvk. - 2026",
+      "age": [
+        14,
+        13
+      ],
+      "channelId": "abler-indexer",
+      "location": "107",
+      "date": {
+        "start": "2-1-2026",
+        "end": "30-9-2026"
+      },
+      "clubname": "KR",
+      "imageUrl": null,
+      "description": "4.flokkur kvenna eru stelpur fæddar 2012 og 2013. \nÆfingatímar:\nMánudagar 19:00 - 20:00 á Meistaravöllum\nMiðvikudagar 18:15 - 19:30 á gervigrasvelli KR\nFöstudagar 16:00 - 17:15 á Meistaravöllum\nLaugardagar 11:00 - 12:00 á gervigrasvelli KR\n​Skráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
+      "locationName": "KR,",
+      "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU1MzI="
     },
     {
       "id": "c59c5178-0f1f-4da8-9543-14cc2f93527c",
@@ -2081,26 +2254,48 @@
       "signupUrl": "https://abler.io/shop/nes24/1/product/Q2x1YlNlcnZpY2U6NDAyMDE="
     },
     {
-      "id": "802f3854-4ce5-4947-b091-cdf110594d6d",
+      "id": "e4c918fe-1dcf-4964-9a42-44d3a38e1f68",
       "tags": [
-        "yoga"
+        "computer_courses"
       ],
-      "title": "Krakkajóga 8-11 ára",
+      "title": "Tæknismiðja",
       "age": [
-        11,
-        8
+        7,
+        4
       ],
       "channelId": "abler-indexer",
-      "location": "105",
+      "location": "101",
       "date": {
-        "start": "25-2-2026",
-        "end": "7-6-2026"
+        "start": "29-12-2025",
+        "end": "6-6-2026"
       },
-      "clubname": "Jógasetrið",
+      "clubname": "Skema – skapandi tækninámskeið",
       "imageUrl": null,
-      "description": "Krakkajóga fyrir 8 - 11 ára í Jógasetrinu 18. janúar - 15. mars 2026\nSunnudagar kl. 12.30 – 13.30 (8 vikur) - Ath Vetrarfrí 22. febrúar.\nVerð: 17.000 kr\nKennt á sunnudögum 18. janúar - 15. mars 2026. Frí sunnudagurinn 22. febrúar vegna vetrarfrís og framlengjum þess vegna til 15. mars.\nÍ krakkajóga er lögð áhersla á leik og gleði. Börnin læra jógastöður og æfingar sem styrkja jafnvægi, einbeitingu og samhæfingu. Kenndar eru ýmsar hugleiðsluaðferðir sem talinn er góður undirbúningur fyrir innri ró og einbeitingu. Í lok tímans eru nemendur leiddir áfram í stutta slökun sem er jafn mikilvæg jógahreyfingum og öndun. Börnin eru dásamlega fljót að tileinka sér jógað og finna að það hjálpar þeim í lífi og leik!\nÁ námskeiðinu læra börnin öndunaræfingar, jóga og slökun í gegnum leiki, sögur og hreyfingu. Í yngri hópnum tekur foreldri virkan þátt, hjálpar og hvetur barnið. ” Saman gaman”.\nKennari:María Shanko\n„Gefðu barninu þínu gjöf að anda, slaka, leika, finna, njóta og vera“",
-      "locationName": "Jógasetrið,",
-      "signupUrl": "https://abler.io/shop/jogasetrid/1/product/Q2x1YlNlcnZpY2U6MzU1Mzc="
+      "description": "​Um námskeiðið​\n\nAllir geta forritað!\nTæknismiðja er námskeið fyrir yngstu nemendur Skema.\nMarkmið námskeiðsins er að kynna forritun, tækni og tölvur fyrir nemendum með því markmiði að hvetja og auka áhuga.\nNemendur fá að stýra vélmennum, prófa að forrita, smíða sína eigin pappírstölvu, prófa að spila Minecraft, læra á mús og lyklaborð og margt fleira. Með skemmtilegum verkefnum tileinka nemendur sér forritunarlega hugsun og efla rökhugsun og rýmisgreind.",
+      "locationName": "Menntavegur,",
+      "signupUrl": "https://abler.io/shop/skema/2/product/Q2x1YlNlcnZpY2U6NTEzMTQ="
+    },
+    {
+      "id": "e81ec562-9295-4908-92a4-145f60992dc0",
+      "tags": [
+        "judo"
+      ],
+      "title": "15 ára og eldri byrjendur og framhald",
+      "age": [
+        85,
+        15
+      ],
+      "channelId": "abler-indexer",
+      "location": "108",
+      "date": {
+        "start": "26-12-2025",
+        "end": "31-12-2026"
+      },
+      "clubname": "Judofélag Reykjavíkur",
+      "imageUrl": null,
+      "description": "Hér eru greidd æfingagjöld fyrir byrjendur og framhaldsflokka 15 ára og eldri\nÍ þennan flokk skrást þeir sem eru 15 ára og eldri og bæði konur og karlar. \nÍ kaupferlinu er hægt að nýta frístundastyrk frá sveitarfélögunum ef aldursskilyrði eru uppfyllt. \nVeittur er 10% afsláttur af öllum æfingagjöldum ef greitt er fyrir fleiri en einn fjölskyldumeðlim.\nTil að virkja afsláttinn hafið þá samband við félagið á jr@judo.is áður en greitt er.\nMinnum á að sækja appið fyrir þá sem eru ekki með það til að fylgjast með æfingadagskrá.",
+      "locationName": "Ármúli",
+      "signupUrl": "https://abler.io/shop/jfr/jr/product/Q2x1YlNlcnZpY2U6MzYzNzA="
     },
     {
       "id": "5a7c8f3e-f662-4aea-9509-b896925248b4",
@@ -2139,28 +2334,6 @@
       "description": "Þetta gjafakort gildir fyrir almennt frönskunámskeið (32 klst.)\nFrönskunámskeiðin eru skipulögð samkvæmt hinum sex stigum CECRL (Evrópski viðmiðunarramminn fyrir tungumálakunnáttu), frá byrjendastigi (A1) upp á efsta stig (C2). Þau gera nemendum kleift að öðlast, rifja upp og festa í sessi hin fjögur hæfnistig tungumálsins: Ritun og lesskilning, munnlega tjáningu og skilning á töluðu máli. Kennsluaðferðirnar gera ráð fyrir virkni og þátttöku og eru fjölbreyttar. Tvenns konar fyrirkomulag er í boði: tvisvar sinnum 2 klukkustundir í viku eða einu sinni 2 klukkustundir í viku.\n\nHægt er líka að nota þetta kort sem inneign.",
       "locationName": "Tryggvagata",
       "signupUrl": "https://abler.io/shop/alliancefrancai/gjafakort/product/Q2x1YlNlcnZpY2U6NTAxNDA="
-    },
-    {
-      "id": "650d4f04-a4ca-4848-97f5-edba6e6e307d",
-      "tags": [
-        "scouts"
-      ],
-      "title": "Útilífsskóli Ægisbúa 2026",
-      "age": [
-        13,
-        8
-      ],
-      "channelId": "abler-indexer",
-      "location": "107",
-      "date": {
-        "start": "1-3-2026",
-        "end": "10-8-2026"
-      },
-      "clubname": "Skátafélagið Ægisbúar",
-      "imageUrl": null,
-      "description": "Fylla texta út",
-      "locationName": "Neshagi",
-      "signupUrl": "https://abler.io/shop/aegisbuar/1/product/Q2x1YlNlcnZpY2U6NTM0ODk="
     },
     {
       "id": "0263492c-ad07-43bd-82d7-66d342e5d66b",
@@ -2207,47 +2380,6 @@
       "signupUrl": "https://abler.io/shop/bordtennis/product/Q2x1YlNlcnZpY2U6NDQzODg="
     },
     {
-      "id": "fe088be8-774f-4647-bbba-3bb92553395d",
-      "tags": [
-        "basketball"
-      ],
-      "title": "Ármannshendur",
-      "age": [],
-      "channelId": "abler-indexer",
-      "location": "104",
-      "date": {
-        "start": "18-9-2025",
-        "end": "29-6-2026"
-      },
-      "clubname": "Ármann",
-      "imageUrl": null,
-      "description": "Leitum að sjálfboðaliðum fyrir heimaleiki Ármanns í körfuknattleik!\nVið erum að leita að sjálfboðaliðum sem vilja leggja sitt af mörkum og aðstoða við framkvæmd leikja meistaraflokka félagsins. Ef þú hefur áhuga á að taka þátt og styðja við samfélagið okkar, þá er þetta tækifæri fyrir þig!\nMeð því að skrá þig hér, gefur þú deildinni leyfi til að hafa samband við þig varðandi möguleg störf á leikjum meistaraflokka Ármanns. Við metum öll framlög og stuðning sem við fáum !\nTakk fyrir að vera hluti af liðinu!",
-      "locationName": "Engjavegur",
-      "signupUrl": "https://abler.io/shop/armann/korfubolti/product/Q2x1YlNlcnZpY2U6NDcwMTg="
-    },
-    {
-      "id": "e591f0d8-ea59-4a99-a192-ec89340ce1a1",
-      "tags": [
-        "football"
-      ],
-      "title": "Knattspyrna 7.fl.kvk. - 2026",
-      "age": [
-        8,
-        7
-      ],
-      "channelId": "abler-indexer",
-      "location": "107",
-      "date": {
-        "start": "2-1-2026",
-        "end": "30-9-2026"
-      },
-      "clubname": "KR",
-      "imageUrl": null,
-      "description": "7.flokkur kvenna eru stelpur fæddar á árunum 2018 - 2019. \nÆfingatímar: \nMánudagar: 16:15 - 17:15 á gervigrasvelli KR\nMiðvikudagar: 16:15 - 17:15 á gervigrasvelli KR\nSunnudagar: 10:00 - 11:00 á Meistaravöllum / Íþróttahúsi Hagaskóla\nÞjálfarar flokksins eru Karen Guðmundsdóttir og Vigdís Ayesha\n​Skráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
-      "locationName": "KR,",
-      "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU1NTU="
-    },
-    {
       "id": "ac3488de-26a8-453b-90cb-83048e7ea1fc",
       "tags": [
         "gym",
@@ -2269,155 +2401,23 @@
       "signupUrl": "https://abler.io/shop/kr/krafturikr/product/Q2x1YlNlcnZpY2U6NTI2MTc="
     },
     {
-      "id": "3ef6ac88-40bf-445b-8867-d9a904e99da3",
+      "id": "fe088be8-774f-4647-bbba-3bb92553395d",
       "tags": [
-        "judo"
+        "basketball"
       ],
-      "title": "11-14 ára",
-      "age": [
-        14,
-        11
-      ],
-      "channelId": "abler-indexer",
-      "location": "108",
-      "date": {
-        "start": "26-12-2025",
-        "end": "19-6-2026"
-      },
-      "clubname": "Judofélag Reykjavíkur",
-      "imageUrl": null,
-      "description": "Hér eru greidd æfingagjöld fyrir byrjendur og framhaldsflokka 11-14 ára\n\nÍ þennan flokk skrást þeir sem eru 11-14 ára á árinu og bæði stúkur og drengir. \nÍ kaupferlinu er hægt að nýta frístundastyrk frá sveitarfélögunum. \nVeittur er 10% afsláttur af öllum æfingagjöldum ef greitt er fyrir fleiri en einn fjölskyldumeðlim.\nTil að virkja afsláttinn hafið þá samband við félagið á jr@judo.is áður en greitt er.\nMinnum á að sækja appið fyrir þá sem eru ekki með það til að fylgjast með æfingadagskrá.",
-      "locationName": "Ármúli",
-      "signupUrl": "https://abler.io/shop/jfr/jr/product/Q2x1YlNlcnZpY2U6MzYzNjk="
-    },
-    {
-      "id": "34aaa35d-ffa8-4a10-b65c-333b7cc65bfd",
-      "tags": [
-        "music"
-      ],
-      "title": "Nýi tónlistarskólinn-vorönn 2026",
+      "title": "Ármannshendur",
       "age": [],
       "channelId": "abler-indexer",
-      "location": "108",
+      "location": "104",
       "date": {
-        "start": "1-1-2026",
-        "end": "31-7-2026"
+        "start": "18-9-2025",
+        "end": "29-6-2026"
       },
-      "clubname": "Frístundakort Reykjavíkur",
+      "clubname": "Ármann",
       "imageUrl": null,
-      "description": "Þessi þjónusta er einungis fyrir þá sem voru búnir að semja um að nýta frístundastyrk vorannar uppí skólagjöldin. Hér er hægt að ráðstafa frístundastyrkur á vorönn 2026 vegna skólagjalda við Nýja Tónlistarskólanns. Opið er fyrir ráðstöfun til 30.janúar.  Vinsamlega hakið við að þið ætlið að nýta frístundastyrkinn þegar þið farið í gegnum greiðslukerfið.   Það er gert með því að samþykkja ráðstöfun áhttps://www.abler.io/shop/frirvkog velja þar Nýji tónlistarskólinn í Reykjavík, haustönn 2025\n\nKær kveðja,\nVinsamlega sendið tölvupóst ápostur@nyitonlistarskolinn.isef það eru spurningar.\n\nThis service is only for the ones who had allready made a contract with the office to use the leisure grant for spring 2026 towards the fees. Here you can allocate the leisure grant for the autumn semester of 2025 for tuition fees at the music school. You have until30.thof january to allocate this grant.  Please check that you intend to use the leisure grant when you go through the payment system. In order to do this you can go to this link:https://www.abler.io/shop/frirvk\n\nBest regards,\nPlease send an email topostur@nyitonlistarskolinn.isif you have any questions.",
-      "locationName": "Grensásvegur",
-      "signupUrl": "https://abler.io/shop/frirvk/nyi/product/Q2x1YlNlcnZpY2U6NTIzNzk="
-    },
-    {
-      "id": "9228f0ed-feee-4d97-82f0-2183dc1a1469",
-      "tags": [
-        "football"
-      ],
-      "title": "Knattspyrna 2.fl.kvk. - 2026",
-      "age": [
-        19,
-        17
-      ],
-      "channelId": "abler-indexer",
-      "location": "107",
-      "date": {
-        "start": "2-1-2026",
-        "end": "30-9-2026"
-      },
-      "clubname": "KR",
-      "imageUrl": null,
-      "description": "2.flokkur kvenna eru stelpur fæddar 2007 - 2009. \nÆfingatímar: \nMánudagar 20:00 - 21:00 á Meistaravöllum\nMiðvikudaga 19:15 - 20:30 á gervigrasvelli KR\nFöstudaga 17:15 - 18:30 á gervigrasvelli KR\nLaugardagar 12:00 - 13:15 á gervigrasvelli KR\n​Skráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
-      "locationName": "KR,",
-      "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU0OTE="
-    },
-    {
-      "id": "15089585-9bcb-4a89-bc50-c059e08fc231",
-      "tags": [
-        "football"
-      ],
-      "title": "Knattspyrna 8.fl.kk. - 2026",
-      "age": [
-        6,
-        4
-      ],
-      "channelId": "abler-indexer",
-      "location": "107",
-      "date": {
-        "start": "2-1-2026",
-        "end": "30-9-2026"
-      },
-      "clubname": "KR",
-      "imageUrl": null,
-      "description": "8.flokkur karla eru strákar fæddir á árunum 2020 - 2022. \nÆfingatímar: \nMiðvikudagar 17:15 - 18:15 á gervigrasvelli KR\nSunnudagar 09:00 - 09:50 á Meistaravöllum / Íþróttahúsi Hagaskóla. \nÞjálfarar flokksins eru - Karen Guðmundsdóttir og Vigdís Ayesha\n​Skráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
-      "locationName": "KR,",
-      "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU1NTg="
-    },
-    {
-      "id": "a9adb5c6-31c3-4f21-825f-f99a2f2cdead",
-      "tags": [
-        "football"
-      ],
-      "title": "Knattspyrna 5.fl.kk. - 2026",
-      "age": [
-        12,
-        11
-      ],
-      "channelId": "abler-indexer",
-      "location": "107",
-      "date": {
-        "start": "2-1-2026",
-        "end": "30-9-2026"
-      },
-      "clubname": "KR",
-      "imageUrl": null,
-      "description": "5.flokkur karla eru strákar fæddir árin 2014 og 2015. \nÆfingatímar: \nÞriðjudagar 15:00 - 16:15 á gervigrasvelli KR\nFimmtudagar 16:00 - 17:15 á gervigrasvelli KR\nFöstudagar 16:15 - 17:30 á Meistaravöllum\nLaugardagar 10:00 - 11:00 á gervigrasvelli KR\nÞjálfarar flokksins eru Björn Breiðfjörð, Óliver Dagur Thorlacius og Davíð Guðrúnarson. \n​Skráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
-      "locationName": "KR,",
-      "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU1Mzc="
-    },
-    {
-      "id": "a66a40f8-63ce-4f27-aaa0-b9748802dc52",
-      "tags": [
-        "yoga"
-      ],
-      "title": "Krakkajóga 4-7 ára með foreldrum",
-      "age": [
-        7,
-        4
-      ],
-      "channelId": "abler-indexer",
-      "location": "105",
-      "date": {
-        "start": "25-2-2026",
-        "end": "7-6-2026"
-      },
-      "clubname": "Jógasetrið",
-      "imageUrl": null,
-      "description": "​KRAKKAJÓGA 4 – 7 ára með foreldrum 18. janúar - 15. mars 2026\nSunnudagar kl. 11.30 – 12.15 (8 vikur) - Ath Vetrarfrí 22. febrúar.\nVerð: 17.000 kr\nKennt á sunnudögum 18.janúar til 15. mars 2026. Frí sunnudagurinn 22.febrúar vegna vetrarfrís og framlengjum þess vegna til 15. mars.\nÍ krakkajóga er lögð áhersla á leik og gleði. Börnin læra jógastöður og æfingar sem styrkja jafnvægi, einbeitingu og samhæfingu. Kenndar eru ýmsar hugleiðsluaðferðir sem talinn er góður undirbúningur fyrir innri ró og einbeitingu. Í lok tímans eru nemendur leiddir áfram í stutta slökun sem er jafn mikilvæg jógahreyfingum og öndun. Börnin eru dásamlega fljót að tileinka sér jógað og finna að það hjálpar þeim í lífi og leik!\nÁ námskeiðinu læra börnin öndunaræfingar, jóga og slökun í gegnum leiki, sögur og hreyfingu. Í yngri hópnum tekur foreldri virkan þátt, hjálpar og hvetur barnið. ” Saman gaman”.",
-      "locationName": "Jógasetrið,",
-      "signupUrl": "https://abler.io/shop/jogasetrid/1/product/Q2x1YlNlcnZpY2U6MzE5MzA="
-    },
-    {
-      "id": "7e1e09e3-67cf-48a7-8dcd-7ee77028e8d6",
-      "tags": [
-        "football"
-      ],
-      "title": "Knattspyrna 3.fl.kk. - 2026",
-      "age": [
-        16,
-        15
-      ],
-      "channelId": "abler-indexer",
-      "location": "107",
-      "date": {
-        "start": "2-1-2026",
-        "end": "30-9-2026"
-      },
-      "clubname": "KR",
-      "imageUrl": null,
-      "description": "3.flokkur karla eru strákar fæddir árin 2010 og 2011. \nÆfingatímar:\nMánudagar 17:15 - 18:30 á gervigrasvelli KR\nÞriðjudagar 19:00 - 20:15 á Meistaravöllum\nFimmtudagar 17:15 - 18:30 á gervigrasvelli KR\nLaugardaga 13:00 - 14:00 á Meistaravöllum\nÞjálfarar flokksins eru: Gabríel Hrannar Eyjólfsson, Óliver Dagur Thorlacius og Eyþór Daði Kjartansson. \n​Skráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
-      "locationName": "KR,",
-      "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU0ODY="
+      "description": "Leitum að sjálfboðaliðum fyrir heimaleiki Ármanns í körfuknattleik!\nVið erum að leita að sjálfboðaliðum sem vilja leggja sitt af mörkum og aðstoða við framkvæmd leikja meistaraflokka félagsins. Ef þú hefur áhuga á að taka þátt og styðja við samfélagið okkar, þá er þetta tækifæri fyrir þig!\nMeð því að skrá þig hér, gefur þú deildinni leyfi til að hafa samband við þig varðandi möguleg störf á leikjum meistaraflokka Ármanns. Við metum öll framlög og stuðning sem við fáum !\nTakk fyrir að vera hluti af liðinu!",
+      "locationName": "Engjavegur",
+      "signupUrl": "https://abler.io/shop/armann/korfubolti/product/Q2x1YlNlcnZpY2U6NDcwMTg="
     },
     {
       "id": "4c31ccb2-9607-42bf-a6ed-5e7b93b5ce1e",
@@ -2505,28 +2505,26 @@
       "signupUrl": "https://abler.io/shop/bordtennis/product/Q2x1YlNlcnZpY2U6NDQzOTE="
     },
     {
-      "id": "4f44b3c4-e6ca-453d-b484-c41fc125062d",
+      "id": "e591f0d8-ea59-4a99-a192-ec89340ce1a1",
       "tags": [
-        "leisure_",
-        "scouts",
-        "summer_camp"
+        "football"
       ],
-      "title": "Sumarbúðir vika 1",
+      "title": "Knattspyrna 7.fl.kvk. - 2026",
       "age": [
-        11,
-        9
+        8,
+        7
       ],
       "channelId": "abler-indexer",
-      "location": "110",
+      "location": "107",
       "date": {
-        "start": "1-3-2026",
-        "end": "1-6-2026"
+        "start": "2-1-2026",
+        "end": "30-9-2026"
       },
-      "clubname": "Skátarnir",
+      "clubname": "KR",
       "imageUrl": null,
-      "description": "Sumarbúðir vikuna 8.-10. júní (3 dagar / 9-11 ára)​\n\n​Innifalið í verði er rúta, gisting, \nmatur og öll dagskrá.\n​Bókunarskilmálar fyrir sumarbúðir og útivistarnámskeið​",
-      "locationName": "Iceland,",
-      "signupUrl": "https://abler.io/shop/skatarnir/utilifsmidst/product/Q2x1YlNlcnZpY2U6Mzg0NDU="
+      "description": "7.flokkur kvenna eru stelpur fæddar á árunum 2018 - 2019. \nÆfingatímar: \nMánudagar: 16:15 - 17:15 á gervigrasvelli KR\nMiðvikudagar: 16:15 - 17:15 á gervigrasvelli KR\nSunnudagar: 10:00 - 11:00 á Meistaravöllum / Íþróttahúsi Hagaskóla\nÞjálfarar flokksins eru Karen Guðmundsdóttir og Vigdís Ayesha\n​Skráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
+      "locationName": "KR,",
+      "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU1NTU="
     },
     {
       "id": "3d716079-d1da-493c-8fec-56583d3d7202",
@@ -2551,48 +2549,26 @@
       "signupUrl": "https://abler.io/shop/frirvk/gitarskoli/product/Q2x1YlNlcnZpY2U6NTE5NTk="
     },
     {
-      "id": "e81ec562-9295-4908-92a4-145f60992dc0",
+      "id": "650d4f04-a4ca-4848-97f5-edba6e6e307d",
       "tags": [
-        "judo"
+        "scouts"
       ],
-      "title": "15 ára og eldri byrjendur og framhald",
+      "title": "Útilífsskóli Ægisbúa 2026",
       "age": [
-        85,
-        15
+        13,
+        8
       ],
       "channelId": "abler-indexer",
-      "location": "108",
+      "location": "107",
       "date": {
-        "start": "26-12-2025",
-        "end": "31-12-2026"
+        "start": "1-3-2026",
+        "end": "10-8-2026"
       },
-      "clubname": "Judofélag Reykjavíkur",
+      "clubname": "Skátafélagið Ægisbúar",
       "imageUrl": null,
-      "description": "Hér eru greidd æfingagjöld fyrir byrjendur og framhaldsflokka 15 ára og eldri\nÍ þennan flokk skrást þeir sem eru 15 ára og eldri og bæði konur og karlar. \nÍ kaupferlinu er hægt að nýta frístundastyrk frá sveitarfélögunum ef aldursskilyrði eru uppfyllt. \nVeittur er 10% afsláttur af öllum æfingagjöldum ef greitt er fyrir fleiri en einn fjölskyldumeðlim.\nTil að virkja afsláttinn hafið þá samband við félagið á jr@judo.is áður en greitt er.\nMinnum á að sækja appið fyrir þá sem eru ekki með það til að fylgjast með æfingadagskrá.",
-      "locationName": "Ármúli",
-      "signupUrl": "https://abler.io/shop/jfr/jr/product/Q2x1YlNlcnZpY2U6MzYzNzA="
-    },
-    {
-      "id": "6c0365d6-2cbc-412c-8114-8eddf3821148",
-      "tags": [
-        "education"
-      ],
-      "title": "Lestrarmiðstöð Auðar",
-      "age": [
-        19,
-        9
-      ],
-      "channelId": "abler-indexer",
-      "location": "109",
-      "date": {
-        "start": "1-1-2026",
-        "end": "31-12-2026"
-      },
-      "clubname": "Frístundakort Reykjavíkur",
-      "imageUrl": null,
-      "description": "Námskeið: Lestur til alls\nLæsi í víðum skilningi, lestur, talað mál, tjáning, ritun og tölvu- og upplýsingafærni. Kennt er einu sinni í viku 60 mínútur í senn. Markmið námskeiðsins er: \nAð auka lestrarfærni og sjálfstraust nemenda gegnum vinnu með tjáningu, lestur og ritun.\nAð þjálfa nemendurí að nýta sér fjölbreytta möguleika tækninnar við lestur og ritun.\nEinstaklingstímar eða fámennir hópar. Hafið samband audur@lestur.is\nÞað sem við gerum\nLestrarmiðstöðin veitir sérhæfða kennslu í lestri fyrir börn og fullorðna með leshömlun (dyslexia). Einnig kennslu í lestrartengdum námsgreinum því erfiðleikar í lestri koma víða fram í námi svo sem í lesskilningi, ritun, stafsetningu og erlendum tungumálum. Lestrarmiðstöð í Mjódd er með síðu á facebook.\nAðferðin okkar\nÍ Lestrarmiðstöð er unnið með grunnþætti lestrar samkvæmt kennsluaðferðum sem byggja á rannsóknum á leshömlun og aðferðum sem reynst hafa árangursríkar við lestrarkennslu. Markmið okkar hefur frá upphafi verið að allir sem til okkar koma sýni framfarir, við byggjum kennsluna upp á jákvæðni, nýtum fjölbreyttar leiðir við þjálfun, nýtum tölvutæknina, rafbækur og hljóðefni. Við höfum síðan árið 2001 sinnt nemendum á öllum aldri og verið farsæl í störfum okkar.",
-      "locationName": "Álfabakki",
-      "signupUrl": "https://abler.io/shop/frirvk/lestrarmidstod/product/Q2x1YlNlcnZpY2U6NTAxODI="
+      "description": "Fylla texta út",
+      "locationName": "Neshagi",
+      "signupUrl": "https://abler.io/shop/aegisbuar/1/product/Q2x1YlNlcnZpY2U6NTM0ODk="
     },
     {
       "id": "b886b2d5-c9f6-475d-9e63-f068da5e80e1",
@@ -2617,6 +2593,30 @@
       "signupUrl": "https://abler.io/shop/ir/karate/product/Q2x1YlNlcnZpY2U6NDQxMzg="
     },
     {
+      "id": "4f44b3c4-e6ca-453d-b484-c41fc125062d",
+      "tags": [
+        "leisure_",
+        "scouts",
+        "summer_camp"
+      ],
+      "title": "Sumarbúðir vika 1",
+      "age": [
+        11,
+        9
+      ],
+      "channelId": "abler-indexer",
+      "location": "110",
+      "date": {
+        "start": "1-3-2026",
+        "end": "1-6-2026"
+      },
+      "clubname": "Skátarnir",
+      "imageUrl": null,
+      "description": "Sumarbúðir vikuna 8.-10. júní (3 dagar / 9-11 ára)​\n\n​Innifalið í verði er rúta, gisting, \nmatur og öll dagskrá.\n​Bókunarskilmálar fyrir sumarbúðir og útivistarnámskeið​",
+      "locationName": "Iceland,",
+      "signupUrl": "https://abler.io/shop/skatarnir/utilifsmidst/product/Q2x1YlNlcnZpY2U6Mzg0NDU="
+    },
+    {
       "id": "e0d83640-0c25-4651-86f7-f8bacce9aa0e",
       "tags": [
         "football"
@@ -2637,6 +2637,49 @@
       "description": "6.flokkur karla eru strákar fæddir 2016 og 2017.\nÆfingatímar: \nÞriðjudagar 14:15 - 15:15 á gervigrasvelli KR\nFimmtudagar 15:15 - 16:15 á Meistaravöllum\nFöstudagar 14:15 - 15:15 á Meistaravöllum\nÞjálfarar flokksins eru Gabríel Hrannar Eyjólfsson, Davíð Guðrúnarson, Atli Fannar Írisarson og Bjartur Máni Sigmundsson. \n​Skráningartímabilið hefst 1.september en aðeins er innheimt fyrir tímabilið október - desember 2025.​",
       "locationName": "KR,",
       "signupUrl": "https://abler.io/shop/kr/fotbolti/product/Q2x1YlNlcnZpY2U6NDU1NDA="
+    },
+    {
+      "id": "fe92903b-40f1-4323-a25d-d0907fcb4961",
+      "tags": [
+        "ice_hockey"
+      ],
+      "title": "Bakland SR",
+      "age": [],
+      "channelId": "abler-indexer",
+      "location": "104",
+      "date": {
+        "start": "11-1-2026",
+        "end": "31-7-2026"
+      },
+      "clubname": "Skautafélag Reykjavíkur Íshokkí",
+      "imageUrl": null,
+      "description": "Rekstur íþróttafélaga byggir að stórum hluta á sjálfboðaliðum og er SR engin undantekning. Sjálfboðaliðar eru hjartað í starfinu okkar – án þeirra væri einfaldlega ekki hægt að halda úti öflugu félagsstarfi, mótum og viðburðum fyrir iðkendur á öllum aldri. Við erum ótrúlega þakklát fyrir alla þá sem leggja hönd á plóg, stórt sem smátt, og hjálpa til við að gera SR að því frábæra félagi sem það er.\n\nVið leitum því til ykkar SR-inga og hvetjum ykkur til að skrá ykkur í Bakland SR, svo við getum haft samband þegar okkur vantar auka hendur.\nBaklandið er ætlað til að styðja við félagið þegar stór verkefni og viðburðir eru framundan, til dæmis í tengslum við úrslitaleiki, mót, fjáröflunarviðburði og annað slíkt.\nAð skrá sig í hópinn felur enga skuldbindingu í sér – þetta er einfaldlega listi yfir fólk sem við getum leitað til þegar þörf er á aðstoð.\nDæmi um verkefni:\nGæsla, grilla, afgreiðsla, hella upp á kaffi og ýmis önnur hlutverk í kringum stóra viðburði og leiki.",
+      "locationName": "Skautahöllin",
+      "signupUrl": "https://abler.io/shop/srishokki/ishokki/product/Q2x1YlNlcnZpY2U6NTI3MDg="
+    },
+    {
+      "id": "797ce5b3-4f9d-43b4-9fe4-a9c306538247",
+      "tags": [
+        "leisure_",
+        "scouts",
+        "summer_camp"
+      ],
+      "title": "Sumarbúðir vika 3",
+      "age": [
+        11,
+        9
+      ],
+      "channelId": "abler-indexer",
+      "location": "110",
+      "date": {
+        "start": "1-3-2026",
+        "end": "15-6-2026"
+      },
+      "clubname": "Skátarnir",
+      "imageUrl": null,
+      "description": "Sumarbúðir vikuna 22.-26. júní (5 dagar / 9-11 ára).​\n​Innifalið í verði er rúta, gisting, \nmatur og öll dagskrá.\n\n​Bókunarskilmálar fyrir sumarbúðir og útivistarnámskeið​",
+      "locationName": "Iceland,",
+      "signupUrl": "https://abler.io/shop/skatarnir/utilifsmidst/product/Q2x1YlNlcnZpY2U6Mzg0NDc="
     },
     {
       "id": "e8cc605a-1585-4eb5-ab54-5ec2a08a1081",
@@ -2700,30 +2743,6 @@
       "description": "ÍR - Shammy úr Buffalo leðri merkt félaginu - Færð ekki betri klút til að þurka olíuna af kúlunni",
       "locationName": "Keiluhöllin,",
       "signupUrl": "https://abler.io/shop/ir/keila/product/Q2x1YlNlcnZpY2U6MTc0MzE="
-    },
-    {
-      "id": "797ce5b3-4f9d-43b4-9fe4-a9c306538247",
-      "tags": [
-        "leisure_",
-        "scouts",
-        "summer_camp"
-      ],
-      "title": "Sumarbúðir vika 3",
-      "age": [
-        11,
-        9
-      ],
-      "channelId": "abler-indexer",
-      "location": "110",
-      "date": {
-        "start": "1-3-2026",
-        "end": "15-6-2026"
-      },
-      "clubname": "Skátarnir",
-      "imageUrl": null,
-      "description": "Sumarbúðir vikuna 22.-26. júní (5 dagar / 9-11 ára).​\n​Innifalið í verði er rúta, gisting, \nmatur og öll dagskrá.\n\n​Bókunarskilmálar fyrir sumarbúðir og útivistarnámskeið​",
-      "locationName": "Iceland,",
-      "signupUrl": "https://abler.io/shop/skatarnir/utilifsmidst/product/Q2x1YlNlcnZpY2U6Mzg0NDc="
     },
     {
       "id": "bcf21085-f936-4949-bc22-daeda7f375e3",
@@ -3193,25 +3212,6 @@
       "signupUrl": "https://abler.io/shop/landnemar/1/product/Q2x1YlNlcnZpY2U6NDUyMzM="
     },
     {
-      "id": "fe92903b-40f1-4323-a25d-d0907fcb4961",
-      "tags": [
-        "ice_hockey"
-      ],
-      "title": "Bakland SR",
-      "age": [],
-      "channelId": "abler-indexer",
-      "location": "104",
-      "date": {
-        "start": "11-1-2026",
-        "end": "31-7-2026"
-      },
-      "clubname": "Skautafélag Reykjavíkur Íshokkí",
-      "imageUrl": null,
-      "description": "Rekstur íþróttafélaga byggir að stórum hluta á sjálfboðaliðum og er SR engin undantekning. Sjálfboðaliðar eru hjartað í starfinu okkar – án þeirra væri einfaldlega ekki hægt að halda úti öflugu félagsstarfi, mótum og viðburðum fyrir iðkendur á öllum aldri. Við erum ótrúlega þakklát fyrir alla þá sem leggja hönd á plóg, stórt sem smátt, og hjálpa til við að gera SR að því frábæra félagi sem það er.\n\nVið leitum því til ykkar SR-inga og hvetjum ykkur til að skrá ykkur í Bakland SR, svo við getum haft samband þegar okkur vantar auka hendur.\nBaklandið er ætlað til að styðja við félagið þegar stór verkefni og viðburðir eru framundan, til dæmis í tengslum við úrslitaleiki, mót, fjáröflunarviðburði og annað slíkt.\nAð skrá sig í hópinn felur enga skuldbindingu í sér – þetta er einfaldlega listi yfir fólk sem við getum leitað til þegar þörf er á aðstoð.\nDæmi um verkefni:\nGæsla, grilla, afgreiðsla, hella upp á kaffi og ýmis önnur hlutverk í kringum stóra viðburði og leiki.",
-      "locationName": "Skautahöllin",
-      "signupUrl": "https://abler.io/shop/srishokki/ishokki/product/Q2x1YlNlcnZpY2U6NTI3MDg="
-    },
-    {
       "id": "1b54edbe-729d-4f59-b024-dd7ece29aa89",
       "tags": [
         "triathlon"
@@ -3291,25 +3291,6 @@
       "signupUrl": "https://abler.io/shop/suzukipianoskoli/1/product/Q2x1YlNlcnZpY2U6NTE5NTc="
     },
     {
-      "id": "1c5cf416-c803-4fee-a3a5-f4a47afd4b16",
-      "tags": [
-        "ice_hockey"
-      ],
-      "title": "Þín treyja - á ísnum allt tímabilið",
-      "age": [],
-      "channelId": "abler-indexer",
-      "location": "104",
-      "date": {
-        "start": "4-12-2025",
-        "end": "31-7-2026"
-      },
-      "clubname": "Skautafélag Reykjavíkur Íshokkí",
-      "imageUrl": null,
-      "description": "Viltu eignast hluta af sögu SR? \n\nNú getur þú keypt „game worn“ keppnistreyju þíns uppáhalds leikmanns og mun hann spila í henni út tímabilið. Leikmaðurinn afhendir síðan eigandanum treyjuna sína eftir að tímabilinu lýkur sem fær einnig áritaða mynd af honum.\n\nVið kaupin fæst skírteini sem staðfestir eign treyjunnar sem er einkar hentugt ef gefa á treyjuna í jóla-, afmælis- eða tækifærisgjöf.\n\nÍ þessum treyjum hefur kvennalið SR sett markið sífellt hærra, unnu sinn fyrsta leik í sögu liðsins og hafa unnið fleiri með hverju tímabili. Þær spila til úrslita í fyrsta skipti í sögu félagsins í ár.\n\nÍ þessum treyjum hefur karlalið SR tvisvar komist í úrslit og unnið einn íslandsmeistaratitil og tvisvar keppt í Continental Cup og vann þar sinn fyrsta Evrópusigur gegn Spánarmeisturunum.\n\nVerð 15.000 kr.\n\nHægt er að óska eftir ákveðnum treyjum í sölu í næsta skammti á sr.ishokki@gmail.com\n\nVertu hluti af liðinu og eignastu leiktreyjuna þína í dag.",
-      "locationName": "Skautahöllin",
-      "signupUrl": "https://abler.io/shop/srishokki/vefverslun/product/Q2x1YlNlcnZpY2U6NTAxNzI="
-    },
-    {
       "id": "fd96bc08-ab8e-4084-9db2-fcbd80b7f576",
       "tags": [
         "scouts"
@@ -3330,6 +3311,25 @@
       "description": "Félagsskráning í drekaskáta í Skátafélaginu Landnemum starfsárið 2025-2026.\nATH. Mikil aðsókn er í skátastarfið. Þau sem voru skráð í fyrra fá forgang og því er drekaskátasveitin strax orðin full.\nVið hvetjum ykkur til að skrá ykkur á biðlista ef þið náið ekki inn. Unnið verður úr biðlistanum og foreldrar látnir vita mánudaginn 1. september hvort barnið kemst inn af biðlistanum 🙂​\n Drekaskátar hittast á þriðjudögum kl. 17:30 - 18:45. \nSveitarforingjar eru Pálína Björg, Guðrún, Una Signý, Erna Sigríður, Inga Jóna, Oddný og Þorsteinn.\nDrekaskátar eru fyrir öll 7-9 ára börn (fædd 2016-2018).Í félagsgjaldi er innifalin vikuleg fundardagskrá, félagsútilega og einkenni sem eru skátaklútur, merki sem skátinn vinnur að og flíspeysa frá félaginu.\n\nHér má sjá skilmála frá Bandalagi íslenskra skáta sem foreldrar og forráðamenn samþykkja við skráningu barna í félagið: https://skatarnir.is/skilmalar/",
       "locationName": "Skátaheimili",
       "signupUrl": "https://abler.io/shop/landnemar/1/product/Q2x1YlNlcnZpY2U6NDUyMjc="
+    },
+    {
+      "id": "1c5cf416-c803-4fee-a3a5-f4a47afd4b16",
+      "tags": [
+        "ice_hockey"
+      ],
+      "title": "Þín treyja - á ísnum allt tímabilið",
+      "age": [],
+      "channelId": "abler-indexer",
+      "location": "104",
+      "date": {
+        "start": "4-12-2025",
+        "end": "31-7-2026"
+      },
+      "clubname": "Skautafélag Reykjavíkur Íshokkí",
+      "imageUrl": null,
+      "description": "Viltu eignast hluta af sögu SR? \n\nNú getur þú keypt „game worn“ keppnistreyju þíns uppáhalds leikmanns og mun hann spila í henni út tímabilið. Leikmaðurinn afhendir síðan eigandanum treyjuna sína eftir að tímabilinu lýkur sem fær einnig áritaða mynd af honum.\n\nVið kaupin fæst skírteini sem staðfestir eign treyjunnar sem er einkar hentugt ef gefa á treyjuna í jóla-, afmælis- eða tækifærisgjöf.\n\nÍ þessum treyjum hefur kvennalið SR sett markið sífellt hærra, unnu sinn fyrsta leik í sögu liðsins og hafa unnið fleiri með hverju tímabili. Þær spila til úrslita í fyrsta skipti í sögu félagsins í ár.\n\nÍ þessum treyjum hefur karlalið SR tvisvar komist í úrslit og unnið einn íslandsmeistaratitil og tvisvar keppt í Continental Cup og vann þar sinn fyrsta Evrópusigur gegn Spánarmeisturunum.\n\nVerð 15.000 kr.\n\nHægt er að óska eftir ákveðnum treyjum í sölu í næsta skammti á sr.ishokki@gmail.com\n\nVertu hluti af liðinu og eignastu leiktreyjuna þína í dag.",
+      "locationName": "Skautahöllin",
+      "signupUrl": "https://abler.io/shop/srishokki/vefverslun/product/Q2x1YlNlcnZpY2U6NTAxNzI="
     },
     {
       "id": "e00a01d1-52f3-4c83-8679-e40453734824",
